@@ -8,42 +8,65 @@
 ```C++
 class Thread1 : public ThreadHandle {
 public:
-	Thread1(){}
+	Thread1()
+    {
+        _pth = new ThreadImp("Thread1", this, 1000, true);
+    }
 
-	~Thread1(){}
+	~Thread1()
+    {
+        delete _pth;
+    }
 
 	virtual int cycle()
 	{
 		printf("cycle !\n");
+        return 0;
 	}
 
-}
+    virtual void on_thread_start()
+    {
+        printf("on thread start! \n");
+    }
 
-Thread1 t1 = new Thread1;
-t1.start();
+    virtual void on_thread_stop()
+    {
+        printf("on thread stop! \n");
+    }
+
+    void start()
+    {
+        _pth->start();
+    }
+private:
+    ThreadImp* _pth;
+}
+Thread1 t = new Thread1();
+t->start();
+
 ```
 
 ### queue
 
 ```C++
-struct sitem
+struct qmessage
 {
     int seq;
     int id;
 };
-typedef Queue<sitem> TypeQueue;
+typedef Queue<qmessage> TypeQueue;
 
 TypeQueue* _q  = new TypeQueue;
 
 // thread safe
-sitem* i = _q->pop_front();
-if (i) delete i;
+qmessage* m = _q->pop_front();
+if (m) delete m;
 
-sitem* i = new sitem();
-i->seq = num++;
-i->id = 1122;
+qmessage* m = new qmessage();
+m->seq = num++;
+m->id = 1122;
 // thread safe
-_q->push_back(i);
+_q->push_back(m);
 
 ```
 
@@ -51,22 +74,22 @@ block queue
 
 ```C++
 
-struct sitem
+struct qmessage
 {
     int seq;
     int id;
 };
-typedef BlockQueue<sitem> TypeQueue;
+typedef BlockQueue<qmessage> TypeQueue;
 
 TypeQueue * _q = new TypeQueue;
 
 // thread safe
-_q->push_back(new sitem());
+_q->push_back(new qmessage());
 
 
 // will hug when queue empty
-sitem* i = _q->pop_front();
-if(i) delete i;
+qmessage* m = _q->pop_front();
+if(m) delete m;
 
 ```
 
