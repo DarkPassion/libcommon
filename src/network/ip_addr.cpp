@@ -7,6 +7,7 @@
 #include <netdb.h>
 #include <stdint.h>
 #include <unistd.h>
+#include <string.h>
 #include "util/log.h"
 #include "ip_addr.h"
 
@@ -149,4 +150,57 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
     }
     return 0;
 }
+
+bind_addr_t::bind_addr_t(const char* ip, int port) : _ip(ip), _port(port)
+{
+
+}
+
+bind_addr_t::~bind_addr_t()
+{
+
+}
+
+int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
+{
+    if (info == NULL) {
+        LOGE("%s == info == NULL !", __FUNCTION__);
+        return -1;
+    }
+    
+    len = 0;
+    std::string localhost = "localhost";
+    if (af == AF_INET) {
+        struct in_addr addr;
+        int ret = inet_pton(af, _ip.c_str(), &addr);
+        if (ret == 0) {
+            LOGE("%s error inet_pton == ", __FUNCTION__);
+            return -1;
+        }
+        struct sockaddr_in sa;
+        sa.sin_family = AF_INET;
+        sa.sin_port = htons(_port);
+        sa.sin_addr.s_addr = addr.s_addr;
+        memcpy(info, &sa, sizeof(sa));
+        len = sizeof(sa);
+    } else if (af == AF_INET6){
+        struct in6_addr addr;
+        int ret = inet_pton(af, _ip.c_str(), &addr);
+        if (ret == 0) {
+            LOGE("%s error inet_pton == ", __FUNCTION__);
+            return -1;
+        }
+        struct sockaddr_in6 sa;
+        sa.sin6_family = AF_INET6;
+        sa.sin6_port = htons(_port);
+        memcpy(&(sa.sin6_addr.s6_addr), &addr.s6_addr, sizeof(struct in6_addr));
+        memcpy(info, &sa, sizeof(sa));
+        len = sizeof(sa);
+    }
+    
+    return 0;
+}
+
+
+
 

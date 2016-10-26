@@ -36,6 +36,19 @@ private:
 };
 
 
+class bind_addr_t
+{
+public:
+    bind_addr_t(const char* ip, int port);
+    
+    ~bind_addr_t();
+    
+    int get_bind_addr(int af, struct sockaddr* info, int &len);
+    
+private:
+    std::string _ip;
+    std::string _port;
+};
 
 #endif
 
