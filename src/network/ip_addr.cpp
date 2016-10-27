@@ -38,11 +38,13 @@ int ip_addr_t::get_ip_addr(int af, char* outdata)
             /* ipv4 */
             if (inet_ntop(rp->ai_family, &(((struct sockaddr_in*)(rp->ai_addr))->sin_addr), buf, sizeof(buf))) {
                 strcpy(outdata, buf);
+                break;
             }
         } else if (rp->ai_family == AF_INET6 && af == AF_INET6){
             /* ipv6 */
             if (inet_ntop(rp->ai_family, &(((struct sockaddr_in6*)(rp->ai_addr))->sin6_addr), buf, sizeof(buf))) {
                 strcpy(outdata, buf);
+                break;
             }
         }
     }
@@ -75,12 +77,14 @@ int ip_addr_t::get_ip_addr2(int af, int port, struct sockaddr* info, int& len)
             struct sockaddr_in* s_addr_i = (struct sockaddr_in*) info;
             s_addr_i->sin_port = htons(port);
             len = sizeof(struct sockaddr_in);
+            break;
         } else if (rp->ai_family == AF_INET6 && af == AF_INET6){
             /* ipv6 */
             memcpy(info, rp->ai_addr, sizeof(struct sockaddr_in6));
             struct sockaddr_in6* s_addr_i6 = (struct sockaddr_in6*) info;
             s_addr_i6->sin6_port = htons(port);
             len = sizeof(struct sockaddr_in6);
+            break;
         }
     }
     freeaddrinfo(result);
@@ -200,6 +204,79 @@ int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
     
     return 0;
 }
+
+connect_addr_t::connect_addr_t()
+{
+
+}
+
+connect_addr_t::~connect_addr_t()
+{
+
+}
+
+int connect_addr_t::connect(int fd, struct sockaddr* addr, int len)
+{
+    // default ipv4
+    if (connect(fd, addr, len) == 0) {
+        struct sockaddr_in* sa = addr;
+        LOGD("%s == %s", __FUNCTION__, inet_ntoa(sa->sin_addr));
+        return 0;
+    } else {
+        LOGD("%s == %s error[%s]", __FUNCTION__, inet_ntoa(sa->sin_addr), strerror(errno));
+    }
+    
+    return -1;
+}
+
+int connect_addr_t::connect(int fd, const char* host, int port)
+{
+    int ret = -1;
+    struct sockaddr_in sa;
+    memset(&sa, 0, sizeof(struct sockaddr_in));
+    sa.sin_family = AF_INET;
+    sa.sin_addr.s_addr = inet_addr(host);
+    sa.sin_port = htons(port);
+    if (sa.sin_addr.s_addr == INADDR_NONE) {
+        ip_addr_t t(host);
+        char ip_buff[64] = {0};
+        if (t.get_ip_addr(ip_buff) == 0) {
+            sa.sin_addr.s_addr = inet_addr(ip_buff);
+            sa.sin_port = htons(port);
+        } else {
+            LOGD("get ip addr failed !! %s [%s]", __FUNCTION__, host);
+            return -1;
+        }
+    }
+    
+    if (connect(fd, (struct sockaddr *)&sa, sizeof(struct sockaddr)) == 0) {
+        LOGD("%s == connect success %s", __FUNCTION__, host);
+        ret = 0;
+    } else {
+        LOGD("%s == connect failed %s", __FUNCTION__, host);
+    }
+
+
+    return -1;
+
+}
+
+
+int connect_addr_t::connect_ex(int fd, struct sockaddr* addr, int len, int timeout)
+{
+    
+    return 0;
+}
+
+int connect_addr_t::connect_ex(int fd, const char* host, int port, int timeout);
+{
+    
+}
+
+
+
+
+
 
 
 

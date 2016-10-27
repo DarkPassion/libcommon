@@ -50,6 +50,22 @@ private:
     int _port;
 };
 
+class connect_addr_t
+{
+public:
+    connect_addr_t();
+    
+    ~connect_addr_t();
+    
+    int connect(int fd, struct sockaddr* addr, int len);
+    
+    int connect(int fd, const char* host, int port);
+    
+    int connect_ex(int fd, struct sockaddr* addr, int len, int timeout);
+    
+    int connect_ex(int fd, const char* host, int port, int timeout);
+};
+
 #endif
 
 
