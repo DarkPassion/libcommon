@@ -96,8 +96,11 @@ void test_bind_func_obj0()
     typedef void(obj0::*pf)();
     obj0 _obj;
     pf _pf = &obj0::invoke;
+
+#if 0
     task_t t = task_t::bind_memfunc<obj0*, pf>(&_obj, _pf);
     t();
+#endif
 }
 
 class obj0

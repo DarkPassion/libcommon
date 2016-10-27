@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <queue/block_queue.h>
 #include <thread/lock.h>
 #include <thread/thread.h>

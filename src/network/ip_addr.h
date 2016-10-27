@@ -47,7 +47,7 @@ public:
     
 private:
     std::string _ip;
-    std::string _port;
+    int _port;
 };
 
 #endif
