@@ -1,6 +1,7 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
+#include <sys/select.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -8,6 +9,7 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
+#include <fcntl.h>
 #include "util/log.h"
 #include "ip_addr.h"
 
@@ -205,7 +207,7 @@ int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
     return 0;
 }
 
-connect_addr_t::connect_addr_t()
+connect_addr_t::connect_addr_t(int fd) : _fd(fd)
 {
 
 }
@@ -215,11 +217,11 @@ connect_addr_t::~connect_addr_t()
 
 }
 
-int connect_addr_t::connect(int fd, struct sockaddr* addr, int len)
+int connect_addr_t::connect(struct sockaddr* addr, int len)
 {
     // default ipv4
-    if (connect(fd, addr, len) == 0) {
-        struct sockaddr_in* sa = addr;
+    struct sockaddr_in* sa = (struct sockaddr_in*)addr;
+    if (::connect(_fd, addr, len) == 0) {
         LOGD("%s == %s", __FUNCTION__, inet_ntoa(sa->sin_addr));
         return 0;
     } else {
@@ -229,7 +231,7 @@ int connect_addr_t::connect(int fd, struct sockaddr* addr, int len)
     return -1;
 }
 
-int connect_addr_t::connect(int fd, const char* host, int port)
+int connect_addr_t::connect(const char* host, int port)
 {
     int ret = -1;
     struct sockaddr_in sa;
@@ -249,7 +251,7 @@ int connect_addr_t::connect(int fd, const char* host, int port)
         }
     }
     
-    if (connect(fd, (struct sockaddr *)&sa, sizeof(struct sockaddr)) == 0) {
+    if (::connect(_fd, (struct sockaddr *)&sa, sizeof(struct sockaddr)) == 0) {
         LOGD("%s == connect success %s", __FUNCTION__, host);
         ret = 0;
     } else {
@@ -262,15 +264,68 @@ int connect_addr_t::connect(int fd, const char* host, int port)
 }
 
 
-int connect_addr_t::connect_ex(int fd, struct sockaddr* addr, int len, int timeout)
+int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
 {
+    int flags = fcntl(_fd, F_GETFL, 0);
+    int old_flags = flags;
+    if (flags & O_NONBLOCK) {
     
-    return 0;
+    } else {
+        flags |= O_NONBLOCK;
+        fcntl(_fd, F_SETFL, flags);
+    }
+    
+    int result = SOCK_CONNECT_ERR;
+    do {
+    
+        int ret = ::connect(_fd, addr, len);
+        if (ret == 0) {
+            // connect ok
+            break;
+        } else {
+            fd_set rset;
+            FD_ZERO(&rset);
+            FD_SET(_fd, &rset);
+            
+            timeval tv;
+            tv.tv_sec = timeout_ms / 1000;
+            tv.tv_usec = (timeout_ms % 1000) * 1000;
+            
+            ret = select(_fd + 1, &rset, NULL, NULL, &tv);
+            if (ret < 0) {
+                // select error
+                LOGE("%s == select error %s ", __FUNCTION__, strerror(errno));
+                result = SOCK_CONNECT_ERR;
+                break;
+            } else if (ret == 0) {
+                // timeout
+                struct sockaddr_in* sina = (struct sockaddr_in*)addr;
+                LOGD("%s == select timeout %s", __FUNCTION__, inet_ntoa(sina->sin_addr));
+                result = SOCK_CONNECT_TIMEOUT;
+                break;
+            } else {
+                if (FD_ISSET(_fd, &rset)) {
+                    int error = 0;
+                    int error_len = sizeof(error);
+                    if (getsockopt(_fd, SOL_SOCKET, SO_ERROR, &error, (socklen_t*)&error_len) == -1) {
+                        LOGE("%s select got socket error %s ", __FUNCTION__, strerror(errno));
+                        result = SOCK_CONNECT_ERR;
+                    } else {
+                        result = SOCK_CONNECTED;
+                    }
+                }
+            }
+        }
+    } while (0);
+    
+    
+    fcntl(_fd, F_SETFL, old_flags);
+    return result;
 }
 
-int connect_addr_t::connect_ex(int fd, const char* host, int port, int timeout);
+int connect_addr_t::connect_ex(const char* host, int port, int timeout)
 {
-    
+    return 0;
 }
 
 

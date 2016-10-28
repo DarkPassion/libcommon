@@ -5,6 +5,11 @@
 
 #include <string>
 #include <vector>
+enum {
+    SOCK_CONNECTED = 0, // 链接成功
+    SOCK_CONNECT_ERR = 1,   // 出现错误
+    SOCK_CONNECT_TIMEOUT = 2, // 链接timeout
+};
 
 struct sockaddr;
 class ip_addr_t
@@ -53,17 +58,19 @@ private:
 class connect_addr_t
 {
 public:
-    connect_addr_t();
+    connect_addr_t(int fd);
     
     ~connect_addr_t();
     
-    int connect(int fd, struct sockaddr* addr, int len);
+    int connect(struct sockaddr* addr, int len);
     
-    int connect(int fd, const char* host, int port);
+    int connect(const char* host, int port);
     
-    int connect_ex(int fd, struct sockaddr* addr, int len, int timeout);
+    int connect_ex(struct sockaddr* addr, int len, int timeout);
     
-    int connect_ex(int fd, const char* host, int port, int timeout);
+    int connect_ex(const char* host, int port, int timeout);
+private:
+    int _fd;
 };
 
 #endif
