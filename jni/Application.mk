@@ -4,8 +4,8 @@ APP_CPPFLAGS += -frtti
 APP_PLATFORM := android-19
 APP_ABI := armeabi-v7a
 #armeabi
-#APP_OPTIM := debug
-APP_OPTIM := release
+APP_OPTIM := debug
+#APP_OPTIM := release
 
 ifeq ($(APP_OPTIM), debug)
     APP_CFLAGS := -O0 -g $(APP_CFLAGS)

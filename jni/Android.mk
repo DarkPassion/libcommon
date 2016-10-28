@@ -28,9 +28,9 @@ LOCAL_C_INCLUDES := ../include  \
 	../3rd/jsoncpp/include 
 
 
-LOCAL_CFLAGS := -O2 -g -pipe -W -Wall -DWEBRTC_POSIX 
+LOCAL_CFLAGS := -O2 -g -pipe -W -Wall -DWEBRTC_POSIX  -DPLATFORM_ANDROID
 	
-
+LOCAL_LDLIBS := -landroid -llog
 
 ifeq ($(APP_OPTIM), debug)
     LOCAL_CFLAGS += -DANDROID_DEV
