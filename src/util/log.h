@@ -19,7 +19,7 @@
 
 #define LOGE    log::cr_error
 
-
+#define OUTPUT_LOG_FILE     1
 class log
 {
 public:

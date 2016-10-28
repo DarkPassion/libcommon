@@ -4,6 +4,10 @@
 #include <sys/stat.h>       // mkdir
 #include <sstream>
 #include <time.h>
+#ifdef ANROID_DEV
+#include <android/log.h>
+#define ANDROID_LOG_TAG     "libcommon"
+#endif
 #include "log.h"
 
 using namespace std;
@@ -66,7 +70,8 @@ void log::write_log(int severity, const char* msg)
         memcpy(severity_str, "Error", strlen("Error"));
         break;
     }
-
+    
+#if OUTPUT_LOG_FILE
     mkdir("Log", 0755);
     string dir = "Log/" + get_cur_time();
     const char *file_name = dir.data();
@@ -74,6 +79,15 @@ void log::write_log(int severity, const char* msg)
     fs.open(file_name, ios::app);
     fs << "[" << severity_str << "]"<< "[" << get_cur_sec().c_str() << "] " << msg << endl;
     fs.close();
+#endif
+    
+#ifdef ANDROID_DEV
+    if (severity <_CR_LOG_WARN) {
+        __android_log_printf(ANDROID_LOG_DEBUG, ANDROID_LOG_TAG, __VA_ARGS__);
+    } else {
+        __android_log_printf(ANDROID_LOG_ERROR, ANDROID_LOG_TAG, __VA_ARGS__);
+    }
+#endif
 }
 
 void log::cr_log(int severity, const char *fmt, va_list ap)
