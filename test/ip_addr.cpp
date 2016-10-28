@@ -203,6 +203,10 @@ void test_connect()
     
     if (true) {
         // connect_ex with timeout
+        int s = socket(AF_INET, SOCK_STREAM, 0);
+        connect_addr_t t(s);
+        
+        // connect with timeout 1s
         int result = t.connect_ex(host, 80, 1000);
         if (result == SOCK_CONNECTED) {
             printf("socket connect with timeout [connected] \n");
@@ -215,8 +219,23 @@ void test_connect()
         close(s);
     }
     
-    
-    
+    if (true) {
+        // connect_ex with timeout
+        int s = socket(AF_INET, SOCK_STREAM, 0);
+        connect_addr_t t(s);
+        
+        // connect with timeout 10s
+        int result = t.connect_ex(host, 80, 10 * 1000);
+        if (result == SOCK_CONNECTED) {
+            printf("socket connect with timeout [connected] \n");
+        } else if (result == SOCK_CONNECT_TIMEOUT) {
+            printf("socket connect with timeout [timeout] \n");
+        } else if (result == SOCK_CONNECT_ERR) {
+            printf("socket connect with timeout [error] \n");
+        }
+        
+        close(s);
+    }
 
 }
 

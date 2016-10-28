@@ -2,6 +2,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/select.h>
+#include <sys/stat.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -285,17 +286,20 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
             break;
         } else {
             fd_set rset;
+            fd_set wset;
             FD_ZERO(&rset);
+            FD_ZERO(&wset);
             FD_SET(_fd, &rset);
+            FD_SET(_fd, &wset);
             
             timeval tv;
             tv.tv_sec = timeout_ms / 1000;
             tv.tv_usec = (timeout_ms % 1000) * 1000;
             
-            ret = select(_fd + 1, &rset, NULL, NULL, &tv);
+            ret = select(_fd + 1, &rset, &wset, NULL, &tv);
             if (ret < 0) {
                 // select error
-                LOGE("%s == select error %s ", __FUNCTION__, strerror(errno));
+                LOGE("%s == select error %s fd %d", __FUNCTION__, strerror(errno), _fd);
                 result = SOCK_CONNECT_ERR;
                 break;
             } else if (ret == 0) {
@@ -305,7 +309,7 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
                 result = SOCK_CONNECT_TIMEOUT;
                 break;
             } else {
-                if (FD_ISSET(_fd, &rset)) {
+                if (FD_ISSET(_fd, &rset) || FD_ISSET(_fd, &wset)) {
                     int error = 0;
                     int error_len = sizeof(error);
                     if (getsockopt(_fd, SOL_SOCKET, SO_ERROR, &error, (socklen_t*)&error_len) == -1) {
@@ -314,6 +318,9 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
                     } else {
                         result = SOCK_CONNECTED;
                     }
+                } else {
+                    // select fd unable read
+                    LOGD("%s == select fd unable read!", __FUNCTION__);
                 }
             }
         }
@@ -340,11 +347,16 @@ int connect_addr_t::connect_ex(const char* host, int port, int timeout)
             sa.sin_addr.s_addr = inet_addr(ip_buff);
             sa.sin_port = htons(port);
         } else {
-            LOGD("get ip addr failed !! %s [%s]", __FUNCTION__, host);
+            LOGE("get ip addr failed !! %s [%s]", __FUNCTION__, host);
             return result;
         }
     }
+    struct stat st;
+    if (fstat(_fd, &st) != 0) {
+        LOGE("%s == fd invalid! ", __FUNCTION__);
+    }
     
+    LOGD("%s == host %s port %d", __FUNCTION__, host, port);
     // connect_ex(struct sockaddr* addr, int len, int timeout_ms)
     result = connect_ex((struct sockaddr*)&sa, sizeof(struct sockaddr_in), timeout);
     
