@@ -158,6 +158,58 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
     return 0;
 }
 
+int ip_addr_t::get_socket_name(int fd, char* ip, int& port)
+{
+    struct sockaddr_in sa;
+    socklen_t salen = sizeof(sa);
+    
+    port = 0;
+    if (ip != NULL) {
+        ip[0] = '\0';
+        ip[1] = '\0';
+    }
+    
+    int ret = getsockname(fd, (struct sockaddr*)&sa, &salen);
+    if (ret == 0) {
+        LOGD("%s == getsockname succ ", __FUNCTION__);
+        
+        if (ip)
+            strcpy(ip, inet_ntoa(sa.sin_addr));
+        port = ntohs(sa.sin_port);
+        
+    } else {
+        LOGD("%s == getsockname fail", __FUNCTION__);
+        return -1;
+    }
+    
+    
+    return 0;
+}
+
+int ip_addr_t::get_peer_name(int fd, char* ip, int& port)
+{
+    struct sockaddr_in sa;
+    socklen_t salen = sizeof(sa);
+    
+    port = 0;
+    if (getpeername(fd, (struct sockaddr*) &sa, &salen) == -1) {
+        LOGE("%s == getpeername error!", __FUNCTION__);
+        if (ip) {
+            ip[0] = '\0';
+            ip[1] = '\0';
+        }
+        return -1;
+    }
+    LOGD("%s == getpeername succ! ", __FUNCTION__);
+    
+    if (ip)
+        strcpy(ip, inet_ntoa(sa.sin_addr));
+    
+    port = ntohs(sa.sin_port);
+    return 0;
+}
+
+
 bind_addr_t::bind_addr_t(const char* ip, int port) : _ip(ip), _port(port)
 {
 

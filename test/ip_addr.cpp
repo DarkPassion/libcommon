@@ -42,6 +42,14 @@ void test_ip_addr()
 
         printf("got succ connect !! \n");
 
+        char ip_buf[64];
+        int p = 0;
+        if (t.get_socket_name(s, ip_buf, p) == 0) {
+            
+            printf("got succ get socket name ! [%s %d] \n", ip_buf, p);
+        } else {
+            printf("got fail get socket name! \n");
+        }
         close(s);
     }
 

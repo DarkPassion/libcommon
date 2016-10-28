@@ -35,6 +35,12 @@ public:
     
     // 获取所有ip地址
     int get_ip_addr(std::vector<std::string>& iplist);
+
+    // getsockname
+    int get_socket_name(int fd, char* ip, int& port);
+    
+    // getpeername
+    int get_peer_name(int fd, char* ip, int& port);
     
 private:
     std::string _host;
