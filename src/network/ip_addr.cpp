@@ -281,6 +281,7 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
         int ret = ::connect(_fd, addr, len);
         if (ret == 0) {
             // connect ok
+            result = SOCK_CONNECTED;
             break;
         } else {
             fd_set rset;
@@ -325,7 +326,29 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
 
 int connect_addr_t::connect_ex(const char* host, int port, int timeout)
 {
-    return 0;
+    int result = SOCK_CONNECT_ERR;
+
+    struct sockaddr_in sa;
+    memset(&sa, 0, sizeof(struct sockaddr_in));
+    sa.sin_family = AF_INET;
+    sa.sin_addr.s_addr = inet_addr(host);
+    sa.sin_port = htons(port);
+    if (sa.sin_addr.s_addr == INADDR_NONE) {
+        ip_addr_t t(host);
+        char ip_buff[64] = {0};
+        if (t.get_ip_addr(ip_buff) == 0) {
+            sa.sin_addr.s_addr = inet_addr(ip_buff);
+            sa.sin_port = htons(port);
+        } else {
+            LOGD("get ip addr failed !! %s [%s]", __FUNCTION__, host);
+            return result;
+        }
+    }
+    
+    // connect_ex(struct sockaddr* addr, int len, int timeout_ms)
+    result = connect_ex((struct sockaddr*)&sa, sizeof(struct sockaddr_in), timeout);
+    
+    return result;
 }
 
 

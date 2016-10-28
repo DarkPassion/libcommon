@@ -11,6 +11,7 @@
 
 void test_ip_addr();
 void test_ip_addr2();
+void test_connect();
 
 void test_ip_addr()
 {
@@ -155,10 +156,75 @@ void test_ip_addr2()
 
 }
 
+
+void test_connect()
+{
+    int s = socket(AF_INET, SOCK_STREAM, 0);
+    if (s < 0) {
+        printf("got error socket ! \n");
+        return ;
+    }
+    connect_addr_t t(s);
+    const char* host = "www.baidu.com";
+    if (t.connect(host, 80)) {
+        printf("connect baidu.com succ !\n");
+    } else {
+        printf("connect baidu.com fail !\n");
+    }
+    close(s);
+    
+    
+    ip_addr_t ip(host);
+    char buff[64] = {0};
+    if (ip.get_ip_addr(buff) == 0) {
+        
+        printf("got ip address %s \n", buff);
+        
+        int s = socket(AF_INET, SOCK_STREAM, 0);
+        if (s < 0) {
+            printf("got error socket ! \n");
+            return ;
+        }
+        
+        struct sockaddr_in addr;
+        memset(&addr, 0, sizeof(addr));
+        addr.sin_family = AF_INET;
+        addr.sin_port = htons(80);
+        addr.sin_addr.s_addr = inet_addr(buff);
+        
+        if (t.connect((struct sockaddr*)&addr, sizeof(sockaddr_in)) < 0) {
+            printf("got error socket connect! [%s]\n", strerror(errno));
+            close(s);
+            return ;
+        }
+        printf("got succ connect %s baidu.com !! \n", __FUNCTION__);
+        close(s);
+    }
+    
+    if (true) {
+        // connect_ex with timeout
+        int result = t.connect_ex(host, 80, 1000);
+        if (result == SOCK_CONNECTED) {
+            printf("socket connect with timeout [connected] \n");
+        } else if (result == SOCK_CONNECT_TIMEOUT) {
+            printf("socket connect with timeout [timeout] \n");
+        } else if (result == SOCK_CONNECT_ERR) {
+            printf("socket connect with timeout [error] \n");
+        }
+    
+        close(s);
+    }
+    
+    
+    
+
+}
+
 int main()
 {
     test_ip_addr();
     test_ip_addr2();
+    test_connect();
     return 0;
 }
 
