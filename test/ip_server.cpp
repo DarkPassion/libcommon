@@ -80,7 +80,7 @@ public:
             printf("accept success! \n");
             struct sockaddr_in * sa = (struct sockaddr_in *)(&addr);
             printf("accept client ip: [%s] port [%d] \n", inet_ntoa(sa->sin_addr), ntohs(sa->sin_port));
-            // process client fd 
+            // process client fd
         }
         return 0;
     }
