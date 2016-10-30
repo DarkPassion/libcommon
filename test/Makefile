@@ -58,7 +58,10 @@ gfw_dns_resolver:
 ip_addr:
 	@($(CC) -I$(INC_PATH) $(CFLAGS)  ip_addr.cpp $(LIB_PATH) -o ip_addr.out)
 
-all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util dns_detect gfw_dns_resolver ip_addr
+ip_server:
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  ip_server.cpp $(LIB_PATH) -o ip_server.out)
+
+all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util dns_detect gfw_dns_resolver ip_addr ip_server
 
 clean:
 	@($(RM) *.a *.so *.o *.out)

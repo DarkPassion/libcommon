@@ -309,10 +309,11 @@ int connect_addr_t::connect(const char* host, int port)
         ret = 0;
     } else {
         LOGD("%s == connect failed %s", __FUNCTION__, host);
+        ret = -1;
     }
 
 
-    return -1;
+    return ret;
 
 }
 
