@@ -28,13 +28,13 @@ int ip_addr_t::get_ip_addr(int af, char* outdata)
 {
     int ret = 0;
     struct addrinfo *result, *rp;
-    
+
     ret = getaddrinfo(_host.c_str(), NULL, NULL, &result);
     if (ret != 0) {
         LOGD("%s fail to getaddrinfo: host [%s], err [%s]", __FUNCTION__, _host.c_str(), gai_strerror(ret));
         return -1;
     }
-    
+
     char buf[256] = {0};
     for (rp = result; rp != NULL; rp = rp->ai_next) {
         if (rp->ai_family == AF_INET && af == AF_INET) {
@@ -60,19 +60,19 @@ int ip_addr_t::get_ip_addr2(int af, int port, struct sockaddr* info, int& len)
 {
     int ret = 0;
     struct addrinfo *result, *rp;
-    
+
     if (info == NULL) {
         LOGD("%s error info == NULL ", __FUNCTION__);
         return -1;
     }
-    
+
     len = 0;
     ret = getaddrinfo(_host.c_str(), NULL, NULL, &result);
     if (ret != 0) {
         LOGD("%s fail to getaddrinfo: host [%s], err [%s]", __FUNCTION__, _host.c_str(), gai_strerror(ret));
         return -1;
     }
-    
+
     for (rp = result; rp != NULL; rp = rp->ai_next) {
         if (rp->ai_family == AF_INET && af == AF_INET) {
             /* ipv4 */
@@ -98,13 +98,13 @@ int ip_addr_t::get_ip_addr(char* outdata)
 {
     int ret = 0;
     struct addrinfo *result, *rp;
-    
+
     ret = getaddrinfo(_host.c_str(), NULL, NULL, &result);
     if (ret != 0) {
         LOGD("%s fail to getaddrinfo: host [%s], err [%s]", __FUNCTION__, _host.c_str(), gai_strerror(ret));
         return -1;
     }
-    
+
     char buf[256] = {0};
     for (rp = result; rp != NULL; rp = rp->ai_next) {
         if (rp->ai_family == AF_INET) {
@@ -125,13 +125,13 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
 
     int ret = 0;
     struct addrinfo *result, *rp;
-    
+
     ret = getaddrinfo(_host.c_str(), NULL, NULL, &result);
     if (ret != 0) {
         LOGD("%s fail to getaddrinfo: host [%s], err [%s]", __FUNCTION__, _host.c_str(), gai_strerror(ret));
         return -1;
     }
-    
+
     ip_list.clear();
     for (rp = result; rp != NULL; rp = rp->ai_next) {
         char buf[256] = {0};
@@ -150,7 +150,7 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
         }
     }
     freeaddrinfo(result);
-    
+
     if (ip_list.empty()) {
         LOGD((char*) "%s : ip_list is empty", __FUNCTION__);
         return -1;
@@ -158,31 +158,32 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
     return 0;
 }
 
+<<<<<<< HEAD
 int ip_addr_t::get_socket_name(int fd, char* ip, int& port)
 {
     struct sockaddr_in sa;
     socklen_t salen = sizeof(sa);
-    
+
     port = 0;
     if (ip != NULL) {
         ip[0] = '\0';
         ip[1] = '\0';
     }
-    
+
     int ret = getsockname(fd, (struct sockaddr*)&sa, &salen);
     if (ret == 0) {
         LOGD("%s == getsockname succ ", __FUNCTION__);
-        
+
         if (ip)
             strcpy(ip, inet_ntoa(sa.sin_addr));
         port = ntohs(sa.sin_port);
-        
+
     } else {
         LOGD("%s == getsockname fail", __FUNCTION__);
         return -1;
     }
-    
-    
+
+
     return 0;
 }
 
@@ -190,7 +191,7 @@ int ip_addr_t::get_peer_name(int fd, char* ip, int& port)
 {
     struct sockaddr_in sa;
     socklen_t salen = sizeof(sa);
-    
+
     port = 0;
     if (getpeername(fd, (struct sockaddr*) &sa, &salen) == -1) {
         LOGE("%s == getpeername error!", __FUNCTION__);
@@ -201,10 +202,10 @@ int ip_addr_t::get_peer_name(int fd, char* ip, int& port)
         return -1;
     }
     LOGD("%s == getpeername succ! ", __FUNCTION__);
-    
+
     if (ip)
         strcpy(ip, inet_ntoa(sa.sin_addr));
-    
+
     port = ntohs(sa.sin_port);
     return 0;
 }
@@ -226,7 +227,7 @@ int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
         LOGE("%s == info == NULL !", __FUNCTION__);
         return -1;
     }
-    
+
     len = 0;
     std::string localhost = "localhost";
     if (af == AF_INET) {
@@ -256,10 +257,11 @@ int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
         memcpy(info, &sa, sizeof(sa));
         len = sizeof(sa);
     }
-    
+
     return 0;
 }
 
+<<<<<<< HEAD
 connect_addr_t::connect_addr_t(int fd) : _fd(fd)
 {
 
@@ -280,7 +282,7 @@ int connect_addr_t::connect(struct sockaddr* addr, int len)
     } else {
         LOGD("%s == %s error[%s]", __FUNCTION__, inet_ntoa(sa->sin_addr), strerror(errno));
     }
-    
+
     return -1;
 }
 
@@ -303,7 +305,7 @@ int connect_addr_t::connect(const char* host, int port)
             return -1;
         }
     }
-    
+
     if (::connect(_fd, (struct sockaddr *)&sa, sizeof(struct sockaddr)) == 0) {
         LOGD("%s == connect success %s", __FUNCTION__, host);
         ret = 0;
@@ -323,15 +325,15 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
     int flags = fcntl(_fd, F_GETFL, 0);
     int old_flags = flags;
     if (flags & O_NONBLOCK) {
-    
+
     } else {
         flags |= O_NONBLOCK;
         fcntl(_fd, F_SETFL, flags);
     }
-    
+
     int result = SOCK_CONNECT_ERR;
     do {
-    
+
         int ret = ::connect(_fd, addr, len);
         if (ret == 0) {
             // connect ok
@@ -344,11 +346,11 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
             FD_ZERO(&wset);
             FD_SET(_fd, &rset);
             FD_SET(_fd, &wset);
-            
+
             timeval tv;
             tv.tv_sec = timeout_ms / 1000;
             tv.tv_usec = (timeout_ms % 1000) * 1000;
-            
+
             ret = select(_fd + 1, &rset, &wset, NULL, &tv);
             if (ret < 0) {
                 // select error
@@ -378,8 +380,8 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
             }
         }
     } while (0);
-    
-    
+
+
     fcntl(_fd, F_SETFL, old_flags);
     return result;
 }
@@ -408,11 +410,11 @@ int connect_addr_t::connect_ex(const char* host, int port, int timeout)
     if (fstat(_fd, &st) != 0) {
         LOGE("%s == fd invalid! ", __FUNCTION__);
     }
-    
+
     LOGD("%s == host %s port %d", __FUNCTION__, host, port);
     // connect_ex(struct sockaddr* addr, int len, int timeout_ms)
     result = connect_ex((struct sockaddr*)&sa, sizeof(struct sockaddr_in), timeout);
-    
+
     return result;
 }
 
