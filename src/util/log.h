@@ -19,7 +19,7 @@
 
 #define LOGE    log::cr_error
 
-
+#define OUTPUT_LOG_FILE     1
 class log
 {
 public:
@@ -29,8 +29,7 @@ public:
     static void cr_info(const char *fmt, ...);
     static void cr_warn(const char *fmt, ...);
     static void cr_error(const char *fmt, ...);
-
-
+    
     static std::string get_cur_sec();
     static std::string get_cur_time();
 };

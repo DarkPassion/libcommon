@@ -4,6 +4,13 @@
 #include <sys/stat.h>       // mkdir
 #include <sstream>
 #include <time.h>
+#ifdef PLATFORM_ANDROID
+#include <android/log.h>
+#define ANDROID_LOG_TAG     "libcommon"
+#define AND_LOG_INFO(...) __android_log_print(ANDROID_LOG_INFO, ANDROID_LOG_TAG, __VA_ARGS__)
+#define AND_LOG_DEBUG(...) __android_log_print(ANDROID_LOG_DEBUG, ANDROID_LOG_TAG, __VA_ARGS__)
+#define AND_LOG_ERROR(...) __android_log_print(ANDROID_LOG_ERROR, ANDROID_LOG_TAG, __VA_ARGS__)
+#endif
 #include "log.h"
 
 using namespace std;
@@ -66,7 +73,8 @@ void log::write_log(int severity, const char* msg)
         memcpy(severity_str, "Error", strlen("Error"));
         break;
     }
-
+    
+#if OUTPUT_LOG_FILE
     mkdir("Log", 0755);
     string dir = "Log/" + get_cur_time();
     const char *file_name = dir.data();
@@ -74,6 +82,17 @@ void log::write_log(int severity, const char* msg)
     fs.open(file_name, ios::app);
     fs << "[" << severity_str << "]"<< "[" << get_cur_sec().c_str() << "] " << msg << endl;
     fs.close();
+#endif
+    
+#ifdef ANDROID_DEV
+    if (severity == _CR_LOG_DEBUG) {
+        AND_LOG_DEBUG("%s", msg);
+    } else if (severity == _CR_LOG_INFO) {
+        AND_LOG_INFO("%s", msg);
+    } else {
+        AND_LOG_ERROR("%s", msg);
+    }
+#endif
 }
 
 void log::cr_log(int severity, const char *fmt, va_list ap)

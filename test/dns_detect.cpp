@@ -8,6 +8,7 @@
 #include <sys/socket.h>
 #include <netdb.h>
 #include <arpa/inet.h>
+#include <string.h>
 #include <errno.h>
 #include "thread/thread.h"
 #include "thread/lock.h"

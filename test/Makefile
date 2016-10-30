@@ -11,48 +11,57 @@ LIB_PATH="../libs/libcommon.a"
 # "-Wno-xxxx" remove gcc warning
 CFLAGS="-Wno-local-type-template-args"
 
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+        CFLAGS += -l pthread
+endif
+
+
 default: all
 block_queue:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) block_queue.cpp -o block_queue.out)
+	@$(echo $(CFLAGS))
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  block_queue.cpp $(LIB_PATH) -o block_queue.out)
 
 byte_buffer:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) byte_buffer.cpp  -o byte_buffer.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) byte_buffer.cpp $(LIB_PATH) -o byte_buffer.out)
 
 digest:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) digest.cpp -o digest.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) digest.cpp $(LIB_PATH) -o digest.out)
 
 queue:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) queue.cpp -o queue.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) queue.cpp  $(LIB_PATH) -o queue.out)
 
 scoped_ptr:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) scoped_ptr.cpp -o scoped_ptr.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) scoped_ptr.cpp $(LIB_PATH) -o scoped_ptr.out)
 
 task_test:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) $(CFLAGS) task_test.cpp -o task_test.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) task_test.cpp $(LIB_PATH) -o task_test.out)
 
 thread:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) thread.cpp -o thread.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) thread.cpp $(LIB_PATH) -o thread.out)
 
 timer:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) timer.cpp -o timer.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) timer.cpp $(LIB_PATH) -o timer.out)
 
 util:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) util.cpp -o util.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) util.cpp $(LIB_PATH) -o util.out)
 
 json:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) json.cpp -o json.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) json.cpp $(LIB_PATH) -o json.out)
 
 dns_detect:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH) dns_detect.cpp -o dns_detect.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS) dns_detect.cpp $(LIB_PATH) -o dns_detect.out)
 
 gfw_dns_resolver:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH)  gfw_dns_resolver.cpp -o gfw_dns_resolver.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  gfw_dns_resolver.cpp $(LIB_PATH) -o gfw_dns_resolver.out)
 
 ip_addr:
-	@($(CC) -I$(INC_PATH) $(LIB_PATH)  ip_addr.cpp -o ip_addr.out)
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  ip_addr.cpp $(LIB_PATH) -o ip_addr.out)
 
-all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util dns_detect gfw_dns_resolver ip_addr
+ip_server:
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  ip_server.cpp $(LIB_PATH) -o ip_server.out)
 
+all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util dns_detect gfw_dns_resolver ip_addr ip_server
 
 clean:
 	@($(RM) *.a *.so *.o *.out)

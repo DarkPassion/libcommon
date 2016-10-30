@@ -3,6 +3,11 @@
 
 ## README
 
+### Cross platform common library
+support android
+support ios
+support linux
+
 
 ### thread
 ```C++
