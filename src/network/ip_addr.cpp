@@ -158,7 +158,6 @@ int ip_addr_t::get_ip_addr(std::vector<std::string>& ip_list)
     return 0;
 }
 
-<<<<<<< HEAD
 int ip_addr_t::get_socket_name(int fd, char* ip, int& port)
 {
     struct sockaddr_in sa;
@@ -261,7 +260,6 @@ int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
     return 0;
 }
 
-<<<<<<< HEAD
 connect_addr_t::connect_addr_t(int fd) : _fd(fd)
 {
 
