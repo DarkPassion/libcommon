@@ -100,7 +100,7 @@ int ThreadImp::stop()
     }
 
     _status = THREAD_INIT;
-    _pth = NULL;
+    _pth = 0;
 
     return 0;
 }
