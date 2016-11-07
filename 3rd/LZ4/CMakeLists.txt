@@ -1,11 +1,18 @@
+cmake_minimum_required(VERSION 2.8)
 
-# Define target name
-set (TARGET_NAME LZ4)
 
-# Define source files
-define_source_files (GLOB_CPP_PATTERNS *.c)
+PROJECT(LZ4${MYVER})
+
 
 
 set (LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/libs/)
+
+
+file(GLOB LIB_SRC_C  *.c)
+file(GLOB LIB_SRC_CXX  *.cpp)
+
+add_library(LZ4${MYVER}
+    ${LIB_SRC_C}
+    ${LIB_SRC_CXX})
 
 
