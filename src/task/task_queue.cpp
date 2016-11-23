@@ -1,5 +1,6 @@
 
 #include <unistd.h>
+#include <algorithm>    // std::find
 #include "task/task_queue.h"
 #include "task/task.h"
 #include "util/log.h"
