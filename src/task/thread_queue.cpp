@@ -1,5 +1,6 @@
 
 #include <unistd.h>
+#include <algorithm>
 #include "task/thread_queue.h"
 #include "util/log.h"
 
