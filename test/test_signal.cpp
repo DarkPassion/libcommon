@@ -12,7 +12,8 @@
 
 #include "util/Delegate.h"
 #include "util/Signal.h"
-using namespace Gallant;
+
+using namespace libcommon;
 
 
 class Button

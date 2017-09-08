@@ -1,5 +1,9 @@
 #include "lock.h"
 
+namespace libcommon
+{
+
+
 CMutex::CMutex()
 {
     pthread_mutex_init(&_mutex, NULL);
@@ -74,4 +78,7 @@ void CSem::signal_up()
 void CSem::signal_down()
 {
     sem_wait(&_sem);
+}
+
+
 }

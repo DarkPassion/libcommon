@@ -110,7 +110,7 @@ using ::ptrdiff_t;
 };
 #endif // WEBRTC_WIN
 
-namespace rtc
+namespace libcommon
 {
 
 // Function object which deletes its parameter, which must be a pointer.
@@ -340,7 +340,7 @@ private:
 // unique_ptr<> features. Known deficiencies include not supporting move-only
 // deleteres, function pointers as deleters, and deleters with reference
 // types.
-template <class T, class D = rtc::DefaultDeleter<T> >
+template <class T, class D = libcommon::DefaultDeleter<T> >
 class scoped_ptr
 {
     RTC_MOVE_ONLY_TYPE_FOR_CPP_03(scoped_ptr, RValue)
@@ -438,7 +438,7 @@ public:
     // scoped_ptr2" will compile but do the wrong thing (i.e., convert
     // to Testable and then do the comparison).
 private:
-    typedef rtc::internal::scoped_ptr_impl<element_type, deleter_type>
+    typedef libcommon::internal::scoped_ptr_impl<element_type, deleter_type>
     scoped_ptr::*Testable;
 
 public:
@@ -503,7 +503,7 @@ public:
 private:
     // Needed to reach into |impl_| in the constructor.
     template <typename U, typename V> friend class scoped_ptr;
-    rtc::internal::scoped_ptr_impl<element_type, deleter_type> impl_;
+    libcommon::internal::scoped_ptr_impl<element_type, deleter_type> impl_;
 
     // Forbidden for API compatibility with std::unique_ptr.
     explicit scoped_ptr(int disallow_construction_from_null);
@@ -588,7 +588,7 @@ public:
     // Allow scoped_ptr<element_type> to be used in boolean expressions, but not
     // implicitly convertible to a real bool (which is dangerous).
 private:
-    typedef rtc::internal::scoped_ptr_impl<element_type, deleter_type>
+    typedef libcommon::internal::scoped_ptr_impl<element_type, deleter_type>
     scoped_ptr::*Testable;
 
 public:
@@ -643,7 +643,7 @@ private:
     enum { type_must_be_complete = sizeof(element_type) };
 
 // Actually hold the data.
-    rtc::internal::scoped_ptr_impl<element_type, deleter_type> impl_;
+    libcommon::internal::scoped_ptr_impl<element_type, deleter_type> impl_;
 
 // Disable initialization from any type other than element_type*, by
 // providing a constructor that matches such an initialization, but is
@@ -666,23 +666,23 @@ private:
     template <class U> bool operator!=(scoped_ptr<U> const& p2) const;
 };
 
-}  // namespace rtc
+}  // namespace libcommon
 
 // Free functions
 template <class T, class D>
-void swap(rtc::scoped_ptr<T, D>& p1, rtc::scoped_ptr<T, D>& p2)
+void swap(libcommon::scoped_ptr<T, D>& p1, libcommon::scoped_ptr<T, D>& p2)
 {
     p1.swap(p2);
 }
 
 template <class T, class D>
-bool operator==(T* p1, const rtc::scoped_ptr<T, D>& p2)
+bool operator==(T* p1, const libcommon::scoped_ptr<T, D>& p2)
 {
     return p1 == p2.get();
 }
 
 template <class T, class D>
-bool operator!=(T* p1, const rtc::scoped_ptr<T, D>& p2)
+bool operator!=(T* p1, const libcommon::scoped_ptr<T, D>& p2)
 {
     return p1 != p2.get();
 }

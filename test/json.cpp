@@ -8,7 +8,7 @@
 // g++ json.cpp -I../include/ -I../3rd/jsoncpp/include -L../libs/ -L../3rd/jsoncpp/lib -lcommon -ljsoncpp -o json.out
 
 
-using namespace rtc;
+using namespace libcommon;
 using namespace std;
 
 void test_json_func();
@@ -41,13 +41,13 @@ void test_json_func()
     o["bool"] = in_b;
     string s = JsonValueToString(o);
     printf("jsonvalueToString [%s]\n", s.c_str());
-    
+
     assert(GetValueFromJsonObject(o, "int", &out));
     assert(GetValueFromJsonObject(o, "bool", &out));
     assert(!GetValueFromJsonObject(o, "foo", &out));
     assert(!GetValueFromJsonObject(o, "", &out));
-    
-    
+
+
     Json::Reader reader;
     Json::Value root;
     if (reader.parse(s, root))
@@ -59,11 +59,11 @@ void test_json_func()
         int ival = 0;
         GetIntFromJson(out, &ival);
         printf("jsoncpp GetStringFromJson %s %d\n", jval.c_str(), ival);
-        
-        
+
+
     }
-    
-   
+
+
 
 }
 

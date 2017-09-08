@@ -14,6 +14,10 @@
 #include "util/log.h"
 #include "ip_addr.h"
 
+namespace libcommon
+{
+
+
 ip_addr_t::ip_addr_t(const char* host) : _host(host)
 {
 
@@ -56,7 +60,7 @@ int ip_addr_t::get_ip_addr(int af, char* outdata)
     return 0;
 }
 
-int ip_addr_t::get_ip_addr2(int af, int port, struct sockaddr* info, int& len)
+int ip_addr_t::get_ip_addr2(int af, int port, sockaddr* info, int& len)
 {
     int ret = 0;
     struct addrinfo *result, *rp;
@@ -169,7 +173,7 @@ int ip_addr_t::get_socket_name(int fd, char* ip, int& port)
         ip[1] = '\0';
     }
 
-    int ret = getsockname(fd, (struct sockaddr*)&sa, &salen);
+    int ret = ::getsockname(fd, (struct sockaddr*)&sa, (socklen_t *)&salen);
     if (ret == 0) {
         LOGD("%s == getsockname succ ", __FUNCTION__);
 
@@ -192,7 +196,7 @@ int ip_addr_t::get_peer_name(int fd, char* ip, int& port)
     socklen_t salen = sizeof(sa);
 
     port = 0;
-    if (getpeername(fd, (struct sockaddr*) &sa, &salen) == -1) {
+    if (::getpeername(fd, (struct sockaddr*) &sa, &salen) == -1) {
         LOGE("%s == getpeername error!", __FUNCTION__);
         if (ip) {
             ip[0] = '\0';
@@ -220,7 +224,7 @@ bind_addr_t::~bind_addr_t()
 
 }
 
-int bind_addr_t::get_bind_addr(int af, struct sockaddr* info, int& len)
+int bind_addr_t::get_bind_addr(int af, sockaddr* info, int& len)
 {
     if (info == NULL) {
         LOGE("%s == info == NULL !", __FUNCTION__);
@@ -270,11 +274,11 @@ connect_addr_t::~connect_addr_t()
 
 }
 
-int connect_addr_t::connect(struct sockaddr* addr, int len)
+int connect_addr_t::connect_addr(sockaddr* addr, int len)
 {
     // default ipv4
     struct sockaddr_in* sa = (struct sockaddr_in*)addr;
-    if (::connect(_fd, addr, len) == 0) {
+    if (::connect(_fd, (struct sockaddr*)addr, len) == 0) {
         LOGD("%s == %s", __FUNCTION__, inet_ntoa(sa->sin_addr));
         return 0;
     } else {
@@ -284,7 +288,7 @@ int connect_addr_t::connect(struct sockaddr* addr, int len)
     return -1;
 }
 
-int connect_addr_t::connect(const char* host, int port)
+int connect_addr_t::connect_addr(const char* host, int port)
 {
     int ret = -1;
     struct sockaddr_in sa;
@@ -318,7 +322,7 @@ int connect_addr_t::connect(const char* host, int port)
 }
 
 
-int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
+int connect_addr_t::connect_addr_ex(sockaddr* addr, int len, int timeout_ms)
 {
     int flags = fcntl(_fd, F_GETFL, 0);
     int old_flags = flags;
@@ -332,7 +336,7 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
     int result = SOCK_CONNECT_ERR;
     do {
 
-        int ret = ::connect(_fd, addr, len);
+        int ret = ::connect(_fd, (struct sockaddr*)addr, len);
         if (ret == 0) {
             // connect ok
             result = SOCK_CONNECTED;
@@ -384,7 +388,7 @@ int connect_addr_t::connect_ex(struct sockaddr* addr, int len, int timeout_ms)
     return result;
 }
 
-int connect_addr_t::connect_ex(const char* host, int port, int timeout)
+int connect_addr_t::connect_addr_ex(const char* host, int port, int timeout)
 {
     int result = SOCK_CONNECT_ERR;
 
@@ -411,13 +415,13 @@ int connect_addr_t::connect_ex(const char* host, int port, int timeout)
 
     LOGD("%s == host %s port %d", __FUNCTION__, host, port);
     // connect_ex(struct sockaddr* addr, int len, int timeout_ms)
-    result = connect_ex((struct sockaddr*)&sa, sizeof(struct sockaddr_in), timeout);
+    result = connect_addr_ex((struct sockaddr*)&sa, sizeof(struct sockaddr_in), timeout);
 
     return result;
 }
 
 
-
+}
 
 
 

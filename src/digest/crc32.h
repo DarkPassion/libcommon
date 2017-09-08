@@ -15,7 +15,7 @@
 
 #include "util/basictypes.h"
 
-namespace rtc
+namespace libcommon
 {
 
 // Updates a CRC32 checksum with |len| bytes from |buf|. |initial| holds the
@@ -32,6 +32,6 @@ inline uint32 ComputeCrc32(const std::string& str)
     return ComputeCrc32(str.c_str(), str.size());
 }
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_CRC32_H_

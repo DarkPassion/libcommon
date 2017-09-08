@@ -16,6 +16,10 @@
 
 // can be replaced by other error mechanism
 #include <cassert>
+
+namespace libcommon
+{
+    
 #define SHARED_ASSERT(x)    assert(x)
 
 
@@ -172,5 +176,7 @@ template<class T, class U> inline bool operator>=(const unique_ptr<T>& l, const 
 template<class T, class U> inline bool operator>(const unique_ptr<T>& l, const unique_ptr<U>& r) throw() // never throws
 {
     return (l.get() > r.get());
+}
+
 }
 

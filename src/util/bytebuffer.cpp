@@ -18,7 +18,7 @@
 #include "util/basictypes.h"
 #include "util/byteorder.h"
 
-namespace rtc
+namespace libcommon
 {
 
 static const int DEFAULT_SIZE = 4096;
@@ -286,4 +286,4 @@ void ByteBuffer::Clear()
     ++version_;
 }
 
-}  // namespace rtc
+}  // namespace libcommon

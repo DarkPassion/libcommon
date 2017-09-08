@@ -16,7 +16,7 @@
 #include <vector>
 
 
-namespace rtc
+namespace libcommon
 {
 
 //////////////////////////////////////////////////////////////////////
@@ -216,6 +216,6 @@ char make_char_safe_for_filename(char c);
 
 //////////////////////////////////////////////////////////////////////
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_STRINGENCODE_H__

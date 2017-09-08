@@ -7,84 +7,86 @@
 #include "util/util.h"
 #include "thread/lock.h"
 
-template <class T>
-class BlockQueue
+namespace libcommon
 {
-public:
-    BlockQueue() : _cond(_mutex)
+    template <class T>
+    class BlockQueue
     {
+    public:
+        BlockQueue() : _cond(_mutex)
+        {
+            
+        }
         
-    }
-
-    ~BlockQueue()
-    {
-        clear();
-    }
-
-    void push_back(T* val)
-    {
-        AutoLock __lock(_mutex);
-
-        _q.push_back(val);
+        ~BlockQueue()
+        {
+            clear();
+        }
         
-        _cond.notify_all();
-    }
-
-    T* pop_front()
-    {
-        AutoLock __lock(_mutex);
-        T* val = NULL;
-        while (_q.size() == 0)
+        void push_back(T* val)
         {
-            _cond.wait();
+            AutoLock __lock(_mutex);
+            
+            _q.push_back(val);
+            
+            _cond.notify_all();
         }
-
-        if (_q.size())
+        
+        T* pop_front()
         {
-            val = _q.front();
-            _q.erase(_q.begin());
+            AutoLock __lock(_mutex);
+            T* val = NULL;
+            while (_q.size() == 0)
+            {
+                _cond.wait();
+            }
+            
+            if (_q.size())
+            {
+                val = _q.front();
+                _q.erase(_q.begin());
+            }
+            
+            return val;
+            
         }
-
-        return val;
-
-    }
-
-    void clear()
-    {
-        AutoLock __lock(_mutex);
-        while (_q.size())
+        
+        void clear()
         {
-
-            T* val = _q.front();
-            _q.erase(_q.begin());
-            freep(val);
-
+            AutoLock __lock(_mutex);
+            while (_q.size())
+            {
+                
+                T* val = _q.front();
+                _q.erase(_q.begin());
+                freep(val);
+                
+            }
         }
-    }
+        
+        size_t size()
+        {
+            size_t s = 0;
+            AutoLock __lock(_mutex);
+            
+            s = _q.size();
+            
+            return s;
+        }
+        
+    private:
+        
+        typedef std::vector<T*> TypeQueue;
+        TypeQueue       _q;
+        
+        CMutex          _mutex;
+        CCond           _cond;
+        //pthread_mutex_t _mutex;
+        //pthread_cond_t  _cond;
+        
+    };
 
-    size_t size()
-    {
-        size_t s = 0;
-        AutoLock __lock(_mutex);
-
-        s = _q.size();
-
-        return s;
-    }
-
-private:
-
-    typedef std::vector<T*> TypeQueue;
-    TypeQueue       _q;
-
-    CMutex          _mutex;
-    CCond           _cond;
-    //pthread_mutex_t _mutex;
-    //pthread_cond_t  _cond;
-
-};
-
-
+}
 
 #endif
 

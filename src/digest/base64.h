@@ -15,7 +15,7 @@
 #include <string>
 #include <vector>
 
-namespace rtc
+namespace libcommon
 {
 
 class Base64
@@ -103,6 +103,6 @@ private:
                                         size_t* data_used);
 };
 
-} // namespace rtc
+} // namespace libcommon
 
 #endif // WEBRTC_BASE_BASE64_H__

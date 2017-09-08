@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "util/util.h"
 
+using namespace libcommon;
+
 // g++ util.cpp -I../include/ -L../libs/ -lcommon -o util.out
 // valgrind --tool=memcheck --leak-check=full ./util.out
 

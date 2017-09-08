@@ -61,9 +61,14 @@ ip_addr:
 ip_server:
 	@($(CC) -I$(INC_PATH) $(CFLAGS)  ip_server.cpp $(LIB_PATH) -o ip_server.out)
 
-all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util dns_detect gfw_dns_resolver ip_addr ip_server
+signal_test:
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  test_signal.cpp $(LIB_PATH) -o signal_test.out)
+
+
+all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util  dns_detect gfw_dns_resolver ip_addr ip_server signal_test
 
 clean:
 	@($(RM) *.a *.so *.o *.out)
+
 
 

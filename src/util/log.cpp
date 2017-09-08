@@ -15,6 +15,10 @@
 
 using namespace std;
 
+namespace libcommon
+{
+
+
 std::string log::get_cur_time()
 {
     std::string s;
@@ -149,4 +153,6 @@ void log::cr_error(const char *fmt, ...)
     cr_log(_CR_LOG_ERROR, fmt, ap);
 
     va_end(ap);
+}
+
 }

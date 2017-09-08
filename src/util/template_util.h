@@ -15,7 +15,7 @@
 
 #include <stddef.h>  // For size_t.
 
-namespace rtc
+namespace libcommon
 {
 
 // Template definitions from tr1.
@@ -117,6 +117,6 @@ struct is_class
   {
   };
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_TEMPLATE_UTIL_H_

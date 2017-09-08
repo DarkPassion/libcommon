@@ -6,6 +6,8 @@
 #include "thread.h"
 #include "util/log.h"
 
+namespace libcommon
+{
 enum ThreadStatus
 {
     THREAD_INIT = 1,
@@ -161,7 +163,7 @@ int ThreadImp::can_loop()
     return _loop;
 }
 
-
+}
 
 
 

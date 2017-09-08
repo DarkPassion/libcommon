@@ -10,7 +10,7 @@
 
 #include "string/stringutils.h"
 
-namespace rtc
+namespace libcommon
 {
 
 bool memory_check(const void* memory, int c, size_t count)
@@ -155,4 +155,4 @@ std::string string_trim(const std::string& s)
     return s.substr(first, last - first + 1);
 }
 
-}  // namespace rtc
+}  // namespace libcommon

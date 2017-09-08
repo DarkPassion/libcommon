@@ -24,7 +24,7 @@
 
 using std::vector;
 
-namespace rtc
+namespace libcommon
 {
 
 static const char kPad = '=';
@@ -307,4 +307,4 @@ bool Base64::DecodeFromArrayTemplate(const char* data, size_t len,
     return success;
 }
 
-} // namespace rtc
+} // namespace libcommon

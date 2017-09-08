@@ -162,7 +162,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 
-namespace Gallant {
+namespace libcommon {
 
 namespace detail {	// we'll hide the implementation details in a nested namespace.
 

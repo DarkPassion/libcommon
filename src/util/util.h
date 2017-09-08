@@ -4,7 +4,9 @@
 
 #include <stdlib.h>  // NULL
 
-
+namespace libcommon
+{
+    
 // Undefine macros first, just in case. Some third-party includes have their own
 // version.
 
@@ -124,5 +126,6 @@ public:
 #define AutoFreeScopePtr(cls, val) scope_ptr_c<cls> scope_ptr_c##val(&val)
 
 
+}
 #endif
 

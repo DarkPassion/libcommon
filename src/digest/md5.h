@@ -25,7 +25,7 @@
 #include <stddef.h>
 #include "util/basictypes.h"
 
-namespace rtc
+namespace libcommon
 {
 
 // Canonical name for a MD5 context structure, used in many crypto libs.
@@ -43,6 +43,6 @@ void MD5Update(MD5Context* context, const uint8* data, size_t len);
 void MD5Final(MD5Context* context, uint8 digest[16]);
 void MD5Transform(uint32 buf[4], const uint32 in[16]);
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_MD5_H_

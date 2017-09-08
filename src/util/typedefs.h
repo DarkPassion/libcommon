@@ -146,7 +146,7 @@ typedef unsigned __int64    uint64_t;
 // macro is provided, this can still be used for explicit runtime asserts
 // and allow applications to override the assert behavior.
 
-namespace rtc {
+namespace libcommon {
     
     
     // If a debugger is attached, triggers a debugger breakpoint. If a debugger is
@@ -175,11 +175,11 @@ namespace rtc {
     
     bool IsEven(int n);
     
-}  // namespace rtc
+}  // namespace libcommon
 
 #if ENABLE_DEBUG
 
-namespace rtc {
+namespace libcommon {
     
     inline bool Assert(bool result, const char* function, const char* file,
                        int line, const char* expression) {
@@ -199,7 +199,7 @@ namespace rtc {
         return result;
     }
     
-}  // namespace rtc
+}  // namespace libcommon
 
 #if defined(_MSC_VER) && _MSC_VER < 1300
 #define __FUNCTION__ ""
@@ -231,11 +231,11 @@ true : (__debugbreak(), false))
 
 #else  // !ENABLE_DEBUG
 
-namespace rtc {
+namespace libcommon {
     
     inline bool ImplicitCastToBool(bool result) { return result; }
     
-}  // namespace rtc
+}  // namespace libcommon
 
 #ifndef ASSERT
 #define ASSERT(x) (void)0

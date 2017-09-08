@@ -4,6 +4,10 @@
 #include "timer.h"
 #include "util/log.h"
 
+namespace libcommon
+{
+
+
 
 struct stimer_t_0
 {
@@ -163,3 +167,4 @@ void CTimer::kill_timer(int id)
     }
 }
 
+}

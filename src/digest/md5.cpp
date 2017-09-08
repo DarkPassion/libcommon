@@ -25,7 +25,7 @@
 
 #include "util/byteorder.h"  // for ARCH_CPU_LITTLE_ENDIAN.
 
-namespace rtc
+namespace libcommon
 {
 
 #ifdef ARCH_CPU_LITTLE_ENDIAN
@@ -233,4 +233,4 @@ void MD5Transform(uint32 buf[4], const uint32 in[16])
     buf[3] += d;
 }
 
-}  // namespace rtc
+}  // namespace libcommon

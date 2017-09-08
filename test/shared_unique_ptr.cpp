@@ -16,6 +16,8 @@
 #include "shared_ptr.hpp"
 #include "unique_ptr.hpp"
 
+using namespace libcommon;
+
 class Xxx
 {
 public:

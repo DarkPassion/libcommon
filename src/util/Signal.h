@@ -12,7 +12,7 @@
 #include "Delegate.h"
 #include <set>
 
-namespace Gallant {
+namespace libcommon {
 
 template< class Param0 = void >
 class Signal0

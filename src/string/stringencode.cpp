@@ -17,7 +17,7 @@
 #include "util/basictypes.h"
 #include "string/stringutils.h"
 
-namespace rtc
+namespace libcommon
 {
 
 /////////////////////////////////////////////////////////////////////////////
@@ -810,4 +810,4 @@ char make_char_safe_for_filename(char c)
 
 /////////////////////////////////////////////////////////////////////////////
 
-}  // namespace rtc
+}  // namespace libcommon

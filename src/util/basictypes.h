@@ -102,7 +102,7 @@ typedef signed char int8;
 
 // The following only works for C++
 #ifdef __cplusplus
-namespace rtc
+namespace libcommon
 {
 template<class T> inline T _min(T a, T b)
 {

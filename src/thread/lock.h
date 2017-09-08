@@ -5,85 +5,89 @@
 #include <semaphore.h>
 #include "util/util.h"
 
-class ILock
+namespace libcommon
 {
-public:
-    virtual ~ILock() {};
-
-    virtual void lock() = 0;
-
-    virtual void unlock() = 0;
-};
-
-class CMutex;
-class CCond
-{
-public:
-    CCond(CMutex& mutex);
+    class ILock
+    {
+    public:
+        virtual ~ILock() {};
+        
+        virtual void lock() = 0;
+        
+        virtual void unlock() = 0;
+    };
     
-    ~CCond();
+    class CMutex;
+    class CCond
+    {
+    public:
+        CCond(CMutex& mutex);
+        
+        ~CCond();
+        
+        void notify();
+        
+        void notify_all();
+        
+        void wait();
+        
+    private:
+        DISALLOW_COPY_AND_ASSIGN(CCond);
+        CMutex&     _lock;
+        pthread_cond_t  _cond;
+    };
     
-    void notify();
+    class CMutex : public ILock
+    {
+        
+    public:
+        CMutex();
+        
+        virtual ~CMutex();
+        
+        virtual void lock();
+        
+        virtual void unlock();
+        
+        friend class CCond;
+    private:
+        DISALLOW_COPY_AND_ASSIGN(CMutex);
+        pthread_mutex_t _mutex;
+    };
     
-    void notify_all();
     
-    void wait();
+    class AutoLock
+    {
+        
+    public:
+        AutoLock(ILock& mutex);
+        
+        ~AutoLock();
+        
+    private:
+        DISALLOW_COPY_AND_ASSIGN(AutoLock);
+        ILock&     _lock;
+        
+    };
     
-private:
-    DISALLOW_COPY_AND_ASSIGN(CCond);
-    CMutex&     _lock;
-    pthread_cond_t  _cond;
-};
-
-class CMutex : public ILock
-{
-
-public:
-    CMutex();
-
-    virtual ~CMutex();
-
-    virtual void lock();
-
-    virtual void unlock();
-
-    friend class CCond;
-private:
-    DISALLOW_COPY_AND_ASSIGN(CMutex);
-    pthread_mutex_t _mutex;
-};
-
-
-class AutoLock
-{
-
-public:
-    AutoLock(ILock& mutex);
-
-    ~AutoLock();
-
-private:
-    DISALLOW_COPY_AND_ASSIGN(AutoLock);
-    ILock&     _lock;
-
-};
-
-
-class CSem
-{
-public:
     
-    CSem(int num);
-    
-    ~CSem();
-    
-    void signal_up();
-    
-    void signal_down();
-    
-private:
-    DISALLOW_COPY_AND_ASSIGN(CSem);
-    sem_t   _sem;
-    
-};
+    class CSem
+    {
+    public:
+        
+        CSem(int num);
+        
+        ~CSem();
+        
+        void signal_up();
+        
+        void signal_down();
+        
+    private:
+        DISALLOW_COPY_AND_ASSIGN(CSem);
+        sem_t   _sem;
+        
+    };
+}
+
 #endif

@@ -21,7 +21,7 @@
 
 #include "util/basictypes.h"
 
-namespace rtc
+namespace libcommon
 {
 
 // Reading and writing of little and big-endian numbers from memory
@@ -185,6 +185,6 @@ inline uint64 NetworkToHost64(uint64 n)
     return GetBE64(&n);
 }
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_BYTEORDER_H_

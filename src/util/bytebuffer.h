@@ -16,7 +16,7 @@
 #include "util/basictypes.h"
 #include "util/util.h"
 
-namespace rtc
+namespace libcommon
 {
 
 class ByteBuffer
@@ -130,6 +130,6 @@ private:
     DISALLOW_COPY_AND_ASSIGN(ByteBuffer);
 };
 
-}  // namespace rtc
+}  // namespace libcommon
 
 #endif  // WEBRTC_BASE_BYTEBUFFER_H_

@@ -3,6 +3,8 @@
 
 #include "task/task.h"
 
+using namespace libcommon;
+
 // g++ task_test.cpp -I../include/ -L../libs/ -lcommon -o task_test.out
 
 

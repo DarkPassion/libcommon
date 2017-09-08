@@ -15,6 +15,8 @@
 #include "queue/block_queue.h"
 #include "util/log.h"
 
+using namespace libcommon;
+
 class DNSServ : public ThreadHandle
 {
 public:

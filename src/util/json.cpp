@@ -15,7 +15,7 @@
 #include <stdlib.h>
 
 #include <sstream>
-namespace rtc
+namespace libcommon
 {
 bool GetStringFromJson(const Json::Value& in, std::string* out)
 {
