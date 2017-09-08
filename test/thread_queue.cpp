@@ -27,16 +27,16 @@ void test_thread_queue()
 
     typedef void (obj3::*PFN)(int, int, int);
     PFN _pf = &obj3::invoke;
-    task_t* val1 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 11, 11, 11, 100);
-    task_t* val2 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 22, 22, 22, 100);
-    task_t* val3 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 33, 33, 33, 0);
+    task_t* val1 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 11, 11, 11, 3000);
+    task_t* val2 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 22, 22, 22, 2000);
+    task_t* val3 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 33, 33, 33, 1000);
 
 
     _queue.enqueue(val1);
     _queue.enqueue(val2);
     _queue.enqueue(val3);
 
-    usleep(1000*1000);
+    usleep(8000*1000);
 }
 
 int main()

@@ -85,7 +85,7 @@ namespace libcommon {
     
     bool _ThreadQueueCompare(const task_t* lhs, const task_t* rhs)
     {
-        return lhs->get_timestamp() > rhs->get_timestamp();
+        return lhs->get_timestamp() < rhs->get_timestamp();
     }
     
     void ThreadQueue::enqueue(libcommon::task_t *param)
