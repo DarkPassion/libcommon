@@ -1,4 +1,4 @@
-#include "lock.h"
+#include "thread/lock.h"
 
 namespace libcommon
 {

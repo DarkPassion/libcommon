@@ -11,7 +11,7 @@
 #define AND_LOG_DEBUG(...) __android_log_print(ANDROID_LOG_DEBUG, ANDROID_LOG_TAG, __VA_ARGS__)
 #define AND_LOG_ERROR(...) __android_log_print(ANDROID_LOG_ERROR, ANDROID_LOG_TAG, __VA_ARGS__)
 #endif
-#include "log.h"
+#include "util/log.h"
 
 using namespace std;
 

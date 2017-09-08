@@ -57,7 +57,7 @@ source_group("timer\\Source Files" FILES ${TIMER_SRCS})
 source_group("timer\\Header Files" FILES ${TIMER_INCS})
 
 source_group("task\\Source Files" FILES ${TASK_SRCS})
-source_group("taks\\Header Files" FILES ${TASK_INCS})
+source_group("task\\Header Files" FILES ${TASK_INCS})
 
 source_group("network\\Source Files" FILES ${NETWORK_SRCS})
 source_group("network\\Header Files" FILES ${NETWORK_INCS})

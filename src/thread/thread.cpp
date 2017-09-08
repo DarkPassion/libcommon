@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <assert.h>
 
-#include "thread.h"
+#include "thread/thread.h"
 #include "util/log.h"
 
 namespace libcommon

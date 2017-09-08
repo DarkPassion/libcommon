@@ -31,8 +31,8 @@ void test_ff()
 void test_bind_function0()
 {
     typedef void (* pf)(void);
-    task_t t = task_t::bind_func<pf>(test_ff);
-    t();
+    task_t* t = task_t::bind_func_delay<pf>(test_ff, 0);
+    t->exec();
 }
 
 void test_ff1(int cc)
@@ -42,8 +42,8 @@ void test_ff1(int cc)
 void test_bind_function1()
 {
     typedef void (*pf)(int);
-    task_t t = task_t::bind_func<pf>(test_ff1, 11);
-    t();
+    task_t* t = task_t::bind_func_delay<pf>(test_ff1, 11, 0);
+    t->exec();
 }
 
 void test_ff2(int cc1, int cc2)
@@ -53,8 +53,8 @@ void test_ff2(int cc1, int cc2)
 void test_bind_function2()
 {
     typedef void (*pf)(int, int);
-    task_t t = task_t::bind_func<pf>(test_ff2, 11, 22);
-    t();
+    task_t* t = task_t::bind_func_delay<pf>(test_ff2, 11, 22, 0);
+    t->exec();
 }
 
 void test_ff3(int cc1, int cc2, int cc3)
@@ -66,8 +66,8 @@ void test_ff3(int cc1, int cc2, int cc3)
 void test_bind_function3()
 {
     typedef void (*pf)(int, int, int);
-    task_t t = task_t::bind_func<pf>(test_ff3, 11, 22, 33);
-    t();
+    task_t* t = task_t::bind_func_delay<pf>(test_ff3, 11, 22, 33, 0);
+    t->exec();
 }
 
 
@@ -80,8 +80,8 @@ void test_ff4(int cc1, int cc2, int cc3, int cc4)
 void test_bind_function4()
 {
     typedef void (*pf)(int, int, int, int);
-    task_t t = task_t::bind_func<pf>(test_ff4, 11, 22, 33, 44);
-    t();
+    task_t* t = task_t::bind_func_delay<pf>(test_ff4, 11, 22, 33, 44, 0);
+    t->exec();
 }
 
 
@@ -100,8 +100,8 @@ void test_bind_func_obj0()
     pf _pf = &obj0::invoke;
 
 #if 0
-    task_t t = task_t::bind_memfunc<obj0*, pf>(&_obj, _pf);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj0*, pf>(&_obj, _pf, 0);
+    t->exec();
 #endif
 }
 
@@ -118,8 +118,8 @@ void test_bind_object0()
     typedef void (obj0::*pf)();
     obj0 _obj;
     pf _pf = &obj0::invoke;
-    task_t t = task_t::bind_memfunc<obj0*, pf>(&_obj, _pf);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj0*, pf>(&_obj, _pf, 0);
+    t->exec();
 }
 
 class obj1
@@ -137,8 +137,8 @@ void test_bind_object1()
     typedef void (obj1::*pf)(int);
     obj1 _obj;
     pf _pf = &obj1::invoke;
-    task_t t = task_t::bind_memfunc<obj1*, pf, int>(&_obj, _pf, 11);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj1*, pf, int>(&_obj, _pf, 11, 0);
+    t->exec();
 }
 
 class obj2
@@ -155,8 +155,8 @@ void test_bind_object2()
     typedef void (obj2::*pf)(int, int);
     obj2 _obj;
     pf _pf = &obj2::invoke;
-    task_t t = task_t::bind_memfunc<obj2*, pf, int, int>(&_obj, _pf, 11, 22);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj2*, pf, int, int>(&_obj, _pf, 11, 22, 0);
+    t->exec();
 }
 
 class obj3
@@ -173,8 +173,8 @@ void test_bind_object3()
     typedef void (obj3::*pf)(int, int, int);
     obj3 _obj;
     pf _pf = &obj3::invoke;
-    task_t t = task_t::bind_memfunc<obj3*, pf, int, int, int>(&_obj, _pf, 11, 22, 33);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj3*, pf, int, int, int>(&_obj, _pf, 11, 22, 33, 0);
+    t->exec();
 }
 
 
@@ -192,8 +192,8 @@ void test_bind_object4()
     typedef void (obj4::*pf)(int, int, int, int);
     obj4 _obj;
     pf _pf = &obj4::invoke;
-    task_t t = task_t::bind_memfunc<obj4*, pf, int, int, int, int>(&_obj, _pf, 11, 22, 33, 44);
-    t();
+    task_t* t = task_t::bind_memfunc_delay<obj4*, pf, int, int, int, int>(&_obj, _pf, 11, 22, 33, 44, 0);
+    t->exec();
 }
 
 int main()
