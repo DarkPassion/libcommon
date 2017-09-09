@@ -6,6 +6,8 @@ GCC=gcc
 
 RM=rm -f
 INC_PATH="../include"
+JSON_CPP_PATH="../3rd/jsoncpp/include"
+SOCKET_SERVER_PATH="../3rd/socket_server/"
 LIB_PATH="../libs/libcommon.a"
 
 # "-Wno-xxxx" remove gcc warning
@@ -47,7 +49,7 @@ util:
 	@($(CC) -I$(INC_PATH) $(CFLAGS) util.cpp $(LIB_PATH) -o util.out)
 
 json:
-	@($(CC) -I$(INC_PATH) $(CFLAGS) json.cpp $(LIB_PATH) -o json.out)
+	@($(CC) -I$(INC_PATH) -I$(JSON_CPP_PATH) $(CFLAGS) json.cpp $(LIB_PATH) -o json.out)
 
 dns_detect:
 	@($(CC) -I$(INC_PATH) $(CFLAGS) dns_detect.cpp $(LIB_PATH) -o dns_detect.out)
@@ -67,10 +69,19 @@ signal_test:
 thread_queue:
 	@($(CC) -I$(INC_PATH) $(CFLAGS)  thread_queue.cpp $(LIB_PATH) -o thread_queue.out)
 
+http_server:
+	@($(GCC) -I$(INC_PATH) -I$(SOCKET_SERVER_PATH) $(CFLAGS)  http_server.c $(LIB_PATH) -o http_server.out)
+
+http_client:
+	@($(GCC) -I$(INC_PATH) -I$(SOCKET_SERVER_PATH) $(CFLAGS)  http_client.c $(LIB_PATH) -o http_client.out)
 
 
 
-all:  block_queue byte_buffer digest queue scoped_ptr task_test thread timer util  dns_detect gfw_dns_resolver ip_addr ip_server signal_test thread_queue
+
+
+all:  block_queue byte_buffer digest queue scoped_ptr task_test \
+	thread timer util json dns_detect gfw_dns_resolver ip_addr ip_server signal_test thread_queue \
+	http_server http_client
 
 clean:
 	@($(RM) *.a *.so *.o *.out)

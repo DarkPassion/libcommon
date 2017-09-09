@@ -37,6 +37,21 @@ file(GLOB TASK_INCS src/task/*.h)
 file(GLOB NETWORK_SRCS src/network/*.cpp)
 file(GLOB NETWORK_INCS src/network/*.h)
 
+file(GLOB_RECURSE JSON_CPP_SRCS ${PROJECT_SOURCE_DIR}/3rd/jsoncpp/*.cpp)
+file(GLOB_RECURSE JSON_CPP_INCS ${PROJECT_SOURCE_DIR}/3rd/jsoncpp/*.h)
+
+file(GLOB_RECURSE SOCKET_SERVER_SRCS ${PROJECT_SOURCE_DIR}/3rd/socket_server/*.c)
+file(GLOB_RECURSE SOCKET_SERVER_INCS ${PROJECT_SOURCE_DIR}/3rd/socket_server/*.h)
+
+set (JSON_CPP_XX_FILES
+    ${JSON_CPP_SRCS}
+    ${JSON_CPP_INCS}
+)
+
+set (SOCKET_SERVER_XX_FILES
+    ${SOCKET_SERVER_SRCS}
+    ${SOCKET_SERVER_INCS}
+)
 
 source_group("strings\\Source Files" FILES ${STRING_SRCS})
 source_group("strings\\Header Files" FILES ${STRING_INCS})
@@ -62,6 +77,10 @@ source_group("task\\Header Files" FILES ${TASK_INCS})
 source_group("network\\Source Files" FILES ${NETWORK_SRCS})
 source_group("network\\Header Files" FILES ${NETWORK_INCS})
 
+source_group("3rd\\socket_server\\" FILES ${SOCKET_SERVER_XX_FILES})
+source_group("3rd\\jsoncpp" FILES ${JSON_CPP_XX_FILES})
+
+
 set (LIB_SRCS
     ${STRING_SRCS}
     ${DIGEST_SRCS}
@@ -71,6 +90,8 @@ set (LIB_SRCS
     ${TIMER_SRCS}
     ${TASK_SRCS}
     ${NETWORK_SRCS}
+    ${JSON_CPP_SRCS}
+    ${SOCKET_SERVER_SRCS}
 )
 
 set(LIB_HEADERS
@@ -82,6 +103,8 @@ set(LIB_HEADERS
     ${TIMER_INCS}
     ${TASK_INCS}
     ${NETWORK_INCS}
+    ${JSON_CPP_INCS}
+    ${SOCKET_SERVER_INCS}
 )
 
 

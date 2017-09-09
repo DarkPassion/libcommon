@@ -3,7 +3,8 @@ RM = rm -rf
 
 default : all
 
-all : libsocket socket-test http-server http-client
+#all : libsocket socket-test http-server http-client
+all : libsocket
 
 libsocket: socket_server.c
 	gcc -c $^
