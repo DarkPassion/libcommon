@@ -54,7 +54,7 @@ public:
             }
 
             do_work(req->c_str());
-            AutoFreeScopePtr(std::string, req);
+            scoped_sample_ptr<std::string> sp(req);
         }
 
         return 0;

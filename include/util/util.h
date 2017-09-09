@@ -55,24 +55,24 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
 
     
     // ----------------------------------
-    // class scoped_ptr
+    // class scoped_ptr2
     // ----------------------------------
     
     template <typename T>
-    class scoped_ptr {
+    class scoped_sample_ptr {
     private:
         
         T* ptr;
         
-        DISALLOW_COPY_AND_ASSIGN(scoped_ptr);
+        DISALLOW_COPY_AND_ASSIGN(scoped_sample_ptr);
         
     public:
         
         typedef T element_type;
         
-        explicit scoped_ptr(T* p = NULL): ptr(p) {}
+        explicit scoped_sample_ptr(T* p = NULL): ptr(p) {}
         
-        ~scoped_ptr() {
+        ~scoped_sample_ptr() {
             typedef char type_must_be_complete[sizeof(T)];
             delete ptr;
         }
@@ -102,7 +102,7 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
             return ptr;
         }
         
-        void swap(scoped_ptr & b) {
+        void swap(scoped_sample_ptr & b) {
             T* tmp = b.ptr;
             b.ptr = ptr;
             ptr = tmp;
@@ -128,7 +128,7 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
     };
     
     template<typename T> inline
-    void swap(scoped_ptr<T>& a, scoped_ptr<T>& b) {
+    void swap(scoped_sample_ptr<T>& a, scoped_sample_ptr<T>& b) {
         a.swap(b);
     }
 
@@ -143,21 +143,21 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
     //  reset(). Use shared_array or std::vector if your needs are more complex.
     
     template<typename T>
-    class scoped_array {
+    class scoped_sample_array {
     private:
         
         T* ptr;
         
-        scoped_array(scoped_array const &);
-        scoped_array & operator=(scoped_array const &);
+        scoped_sample_array(scoped_sample_array const &);
+        scoped_sample_array & operator=(scoped_sample_array const &);
         
     public:
         
         typedef T element_type;
         
-        explicit scoped_array(T* p = NULL) : ptr(p) {}
+        explicit scoped_sample_array(T* p = NULL) : ptr(p) {}
         
-        ~scoped_array() {
+        ~scoped_sample_array() {
             typedef char type_must_be_complete[sizeof(T)];
             delete[] ptr;
         }
@@ -183,7 +183,7 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
             return ptr;
         }
         
-        void swap(scoped_array & b) {
+        void swap(scoped_sample_array & b) {
             T* tmp = b.ptr;
             b.ptr = ptr;
             ptr = tmp;
@@ -205,7 +205,7 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
     };
     
     template<class T> inline
-    void swap(scoped_array<T>& a, scoped_array<T>& b) {
+    void swap(scoped_sample_array<T>& a, scoped_sample_array<T>& b) {
         a.swap(b);
     }
     

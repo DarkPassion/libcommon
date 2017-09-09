@@ -34,9 +34,9 @@ void func_obj0_t(obj0_t* obj)
 
 void test_util_scoped_ptr()
 {
-    scoped_ptr<char> tmp;
+    scoped_sample_ptr<char> tmp;
     
-    scoped_ptr<obj0_t> obj1;
+    scoped_sample_ptr<obj0_t> obj1;
     obj1.reset(new obj0_t());
     if (obj1.get()) {
         obj1->id = 100;
@@ -51,7 +51,7 @@ void test_util_scoped_ptr()
 
 void test_util_scoped_array_ptr()
 {
-    scoped_array<char> obj1;
+    scoped_sample_array<char> obj1;
     char* pt = new char[100];
     obj1.reset(pt);
     if (obj1.get() != pt) {
