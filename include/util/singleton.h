@@ -4,7 +4,6 @@
 
 
 #include "ref_count.h"
-#include <stdlib.h>
 
 namespace libcommon {
     
@@ -18,7 +17,6 @@ namespace libcommon {
 
         // __sync_bool_compare_and_swap(ptr, oval, nval)
         if (ATOM_CAS(once, ONCE_STATE_UNINITIALIZED, ONCE_STATE_DONE)) {
-            printf("GoogleOnceInit ------ \n");
             if (init_func) {
                 init_func();
             }
