@@ -53,6 +53,12 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
         pa = NULL; \
     }
 
+  
+#undef GOOGLE_ARRAYSIZE
+#define GOOGLE_ARRAYSIZE(a) \
+((sizeof(a) / sizeof(*(a))) / \
+static_cast<size_t>(!(sizeof(a) % sizeof(*(a)))))
+    
     
     // ----------------------------------
     // class scoped_ptr2
