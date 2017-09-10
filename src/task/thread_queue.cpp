@@ -90,15 +90,15 @@ namespace libcommon {
     
     void ThreadQueue::enqueue(libcommon::task_t *param)
     {
-    
-        AutoLock __lock(_queue_mutex);
-        _queue.push_back(param);
-        
-        if (_queue.size() > 1) {
-            std::sort(_queue.begin(), _queue.end(), _ThreadQueueCompare);
+        if (_pth->can_loop()) {
+            AutoLock __lock(_queue_mutex);
+            _queue.push_back(param);
+            
+            if (_queue.size() > 1) {
+                std::sort(_queue.begin(), _queue.end(), _ThreadQueueCompare);
+            }
+            _queue_push_cond.notify_all();
         }
-        _queue_push_cond.notify_all();
-
     }
     
     task_t* ThreadQueue::pop_back()
