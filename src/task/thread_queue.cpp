@@ -106,12 +106,11 @@ namespace libcommon {
         AutoLock __lock(_queue_mutex);
         task_t* val = NULL;
         
-        if (_queue.size() == 0) {
+        while (_queue.size() == 0 && _pth->can_loop()) {
             _queue_push_cond.wait();
         }
         
-        if (_queue.size())
-        {
+        if (_pth->can_loop() && _queue.size() > 0) {
             val = _queue.front();
             _queue.erase(_queue.begin());
         }
