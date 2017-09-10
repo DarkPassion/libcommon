@@ -51,6 +51,52 @@ t->start();
 
 ```
 
+###ThreadQueue
+```
+
+using namespace libcommon;
+
+void test_thread_queue();
+
+class obj3
+{
+public:
+void invoke(int cc1, int cc2, int cc3)
+{
+printf("obj3 == > invoke [%d %d %d]\n", cc1, cc2, cc3);
+}
+};
+
+void test_thread_queue()
+{
+ThreadQueue _queue("task.run.queue");
+obj3 _obj;
+
+typedef void (obj3::*PFN)(int, int, int);
+PFN _pf = &obj3::invoke;
+task_t* val1 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 11, 11, 11, 3000);
+task_t* val2 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 22, 22, 22, 2000);
+task_t* val3 = task_t::bind_memfunc_delay<obj3*, PFN, int, int, int>(&_obj, _pf, 33, 33, 33, 1000);
+
+
+_queue.enqueue(val1);
+_queue.enqueue(val2);
+_queue.enqueue(val3);
+
+usleep(8000*1000);
+}
+
+int main()
+{
+
+test_thread_queue();
+
+
+return 0;
+}
+
+```
+
 ### queue
 
 ```C++
@@ -111,23 +157,244 @@ struct obj0_t
 
 // auto free tmp
 char* tmp = new char[100];
-AutoFreeClassA(char, tmp);
+scoped_sample_array<char> tmp_char_arr(tmp);
 
 // auto free tmp1
 char* tmp1 = new char;
-AutoFreeClass(char, tmp1);
+scoped_sample_ptr<char> tmp_char(tmp);
 
 // auto delete obj0
 obj0_t * obj0 = new obj0_t;
-AutoFreeClass(obj0_t, obj0);
+scoped_sample_ptr<obj0_t> tmp_obj_t(obj0);
 
 // auto delete[] obja
 obj0_t* obja = new obj0_t[10];
-AutoDeleteScopePtr(obj0_t[], obja);
+scoped_sample_array<obj0_t> tmp_obj_arr(obja);
 
 // auto free aa1
 char* aa1 = (char*)malloc(100);
-AutoFreeScopePtr(char, aa1);
+scoped_ptr_malloc<char> tmp_char_ma(aa1);
 
 ```
+
+###Task
+```C++
+using namespace libcommon;
+
+// g++ task_test.cpp -I../include/ -L../libs/ -lcommon -o task_test.out
+
+
+
+void test_bind_function0();
+void test_bind_function1();
+void test_bind_function2();
+void test_bind_function3();
+void test_bind_function4();
+
+void test_bind_object0();
+void test_bind_func_obj0();
+void test_bind_object1();
+void test_bind_object2();
+void test_bind_object3();
+void test_bind_object4();
+
+
+void test_ff()
+{
+printf("test ff \n");
+}
+
+void test_bind_function0()
+{
+typedef void (* pf)(void);
+task_t* t = task_t::bind_func_delay<pf>(test_ff, 0);
+t->exec();
+}
+
+void test_ff1(int cc)
+{
+printf("test ff1 [%d]\n", cc);
+}
+void test_bind_function1()
+{
+typedef void (*pf)(int);
+task_t* t = task_t::bind_func_delay<pf>(test_ff1, 11, 0);
+t->exec();
+}
+
+void test_ff2(int cc1, int cc2)
+{
+printf("test ff2 [%d %d]\n", cc1, cc2);
+}
+void test_bind_function2()
+{
+typedef void (*pf)(int, int);
+task_t* t = task_t::bind_func_delay<pf>(test_ff2, 11, 22, 0);
+t->exec();
+}
+
+void test_ff3(int cc1, int cc2, int cc3)
+{
+
+printf("test ff3 [%d %d %d]\n", cc1, cc2, cc3);
+}
+
+void test_bind_function3()
+{
+typedef void (*pf)(int, int, int);
+task_t* t = task_t::bind_func_delay<pf>(test_ff3, 11, 22, 33, 0);
+t->exec();
+}
+
+
+void test_ff4(int cc1, int cc2, int cc3, int cc4)
+{
+
+printf("test ff4 [%d %d %d %d]\n", cc1, cc2, cc3, cc4);
+}
+
+void test_bind_function4()
+{
+typedef void (*pf)(int, int, int, int);
+task_t* t = task_t::bind_func_delay<pf>(test_ff4, 11, 22, 33, 44, 0);
+t->exec();
+}
+
+
+void test_bind_func_obj0()
+{
+struct obj0
+{
+void invoke()
+{
+printf("func obj0 invoke == \n");
+}
+};
+
+typedef void(obj0::*pf)();
+obj0 _obj;
+pf _pf = &obj0::invoke;
+
+#if 0
+task_t* t = task_t::bind_memfunc_delay<obj0*, pf>(&_obj, _pf, 0);
+t->exec();
+#endif
+}
+
+class obj0
+{
+public:
+void invoke()
+{
+printf("obj0 invoke === \n");
+}
+};
+void test_bind_object0()
+{
+typedef void (obj0::*pf)();
+obj0 _obj;
+pf _pf = &obj0::invoke;
+task_t* t = task_t::bind_memfunc_delay<obj0*, pf>(&_obj, _pf, 0);
+t->exec();
+}
+
+class obj1
+{
+public:
+
+void invoke(int cc)
+{
+printf("obj1 == > invoke [%d]\n", cc);
+}
+
+};
+void test_bind_object1()
+{
+typedef void (obj1::*pf)(int);
+obj1 _obj;
+pf _pf = &obj1::invoke;
+task_t* t = task_t::bind_memfunc_delay<obj1*, pf, int>(&_obj, _pf, 11, 0);
+t->exec();
+}
+
+class obj2
+{
+
+public:
+void invoke(int cc1, int cc2)
+{
+printf("obj2 == > invoke [%d %d]\n", cc1, cc2);
+}
+};
+void test_bind_object2()
+{
+typedef void (obj2::*pf)(int, int);
+obj2 _obj;
+pf _pf = &obj2::invoke;
+task_t* t = task_t::bind_memfunc_delay<obj2*, pf, int, int>(&_obj, _pf, 11, 22, 0);
+t->exec();
+}
+
+class obj3
+{
+public:
+void invoke(int cc1, int cc2, int cc3)
+{
+printf("obj3 == > invoke [%d %d %d]\n", cc1, cc2, cc3);
+}
+};
+
+void test_bind_object3()
+{
+typedef void (obj3::*pf)(int, int, int);
+obj3 _obj;
+pf _pf = &obj3::invoke;
+task_t* t = task_t::bind_memfunc_delay<obj3*, pf, int, int, int>(&_obj, _pf, 11, 22, 33, 0);
+t->exec();
+}
+
+
+class obj4
+{
+public:
+void invoke(int cc1, int cc2, int cc3, int cc4)
+{
+printf("obj4 == > invoke [%d %d %d %d]\n", cc1, cc2, cc3, cc4);
+}
+};
+
+void test_bind_object4()
+{
+typedef void (obj4::*pf)(int, int, int, int);
+obj4 _obj;
+pf _pf = &obj4::invoke;
+task_t* t = task_t::bind_memfunc_delay<obj4*, pf, int, int, int, int>(&_obj, _pf, 11, 22, 33, 44, 0);
+t->exec();
+}
+
+int main()
+{
+
+test_bind_function0();
+test_bind_function1();
+test_bind_function2();
+test_bind_function3();
+test_bind_function4();
+
+
+test_bind_object0();
+test_bind_object1();
+test_bind_object2();
+test_bind_object3();
+test_bind_object4();
+
+test_bind_func_obj0();
+return 0;
+}
+```
+
+### TEST
+[Test Source Code] (https://github.com/DarkPassion/libcommon/tree/master/test)
+
+
 
