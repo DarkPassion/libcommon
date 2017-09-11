@@ -9,8 +9,9 @@
 #ifndef _Signal_H_
 #define _Signal_H_
 
-#include "Delegate.h"
 #include <set>
+#include "util/delegate.h"
+#include "thread/lock.h"
 
 namespace libcommon {
 
@@ -24,49 +25,61 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)() )
-	{
-		delegateList.insert( MakeDelegate( obj, func ) );
+    {
+        AutoLock __lock(mutex);
+        delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)() const )
 	{
+        AutoLock __lock(mutex);
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)() )
 	{
+        AutoLock __lock(mutex);
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)() const )
 	{
+        AutoLock __lock(mutex);
+        
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+        
 		delegateList.clear();
 	}
 
 	void Emit() const
 	{
+        AutoLock __lock(mutex);
+        
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))();
@@ -95,49 +108,67 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
+
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1 );
@@ -166,49 +197,67 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
+
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2 );
@@ -237,49 +286,66 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3 );
@@ -308,49 +374,67 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
+
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3, p4 );
@@ -379,49 +463,67 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
+
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3, p4, p5 );
@@ -450,49 +552,67 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
+
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3, p4, p5, p6 );
@@ -521,49 +641,66 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3, p4, p5, p6, p7 );
@@ -592,49 +729,66 @@ private:
 	typedef std::set<_Delegate> DelegateList;
 	typedef typename DelegateList::const_iterator DelegateIterator;
 	DelegateList delegateList;
+    CMutex      mutex;
 
 public:
 	void Connect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( delegate );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Connect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.insert( MakeDelegate( obj, func ) );
 	}
 
 	void Disconnect( _Delegate delegate )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( delegate );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	template< class X, class Y >
 	void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) const )
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.erase( MakeDelegate( obj, func ) );
 	}
 
 	void Clear()
 	{
+        AutoLock __lock(mutex);
+
 		delegateList.clear();
 	}
 
 	void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) const
 	{
+        AutoLock __lock(mutex);
+
 		for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
 		{
 			(*(i++))( p1, p2, p3, p4, p5, p6, p7, p8 );
