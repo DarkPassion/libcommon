@@ -10,8 +10,8 @@
 
 #include <stdio.h>
 
-#include "util/Delegate.h"
-#include "util/Signal.h"
+#include "util/delegate.h"
+#include "util/signal.h"
 
 using namespace libcommon;
 

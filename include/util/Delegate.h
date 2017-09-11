@@ -67,8 +67,8 @@
 //				  * Bundled with Signals.h for signals and slots library
 //				  * Changed namespace to "Gallant"
 
-#ifndef _Delegate_H_
-#define _Delegate_H_
+#ifndef _UTIL_DELEGATE_H_
+#define _UTIL_DELEGATE_H_
 
 #if _MSC_VER > 1000
 	#pragma once
