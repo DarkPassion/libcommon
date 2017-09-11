@@ -52,7 +52,7 @@ t->start();
 ```
 
 ### ThreadQueue
-```
+```C++
 
 using namespace libcommon;
 
