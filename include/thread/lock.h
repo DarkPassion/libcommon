@@ -60,7 +60,8 @@ namespace libcommon
     {
         
     public:
-        AutoLock(ILock& mutex);
+        explicit AutoLock(ILock& mutex);
+
         
         ~AutoLock();
         

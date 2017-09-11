@@ -79,8 +79,8 @@ namespace libcommon {
         
         void Emit() const
         {
-            AutoLock __lock(mutex);
-            
+            AutoLock __lock((ILock&)mutex);
+
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
                 (*(i++))();
@@ -89,6 +89,7 @@ namespace libcommon {
         
         void operator() () const
         {
+
             Emit();
         }
         
@@ -168,7 +169,7 @@ namespace libcommon {
         
         void Emit( Param1 p1 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -257,7 +258,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -345,7 +346,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2, Param3 p3 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -434,7 +435,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -523,7 +524,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -612,7 +613,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
@@ -686,7 +687,7 @@ namespace libcommon {
         template< class X, class Y >
         void Disconnect( Y * obj, void (X::*func)( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7 ) const )
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             delegateList.erase( MakeDelegate( obj, func ) );
         }
@@ -788,7 +789,7 @@ namespace libcommon {
         
         void Emit( Param1 p1, Param2 p2, Param3 p3, Param4 p4, Param5 p5, Param6 p6, Param7 p7, Param8 p8 ) const
         {
-            AutoLock __lock(mutex);
+            AutoLock __lock((ILock&)mutex);
             
             for (DelegateIterator i = delegateList.begin(); i != delegateList.end(); )
             {
