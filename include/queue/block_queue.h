@@ -6,14 +6,16 @@
 #include <pthread.h>
 #include "util/util.h"
 #include "thread/lock.h"
+#include "util/ref_count.h"
 
 namespace libcommon
 {
+
     template <class T>
     class BlockQueue
     {
     public:
-        BlockQueue() : _cond(_mutex)
+        BlockQueue() : _cond(_mutex), _no_block(0)
         {
             
         }
@@ -36,7 +38,9 @@ namespace libcommon
         {
             AutoLock __lock(_mutex);
             T* val = NULL;
-            while (_q.size() == 0)
+            
+            // __sync_bool_compare_and_swap(ptr, oval, nval)
+            while (_q.size() == 0 && ATOM_CAS(&_no_block, 0, _no_block))
             {
                 _cond.wait();
             }
@@ -48,7 +52,12 @@ namespace libcommon
             }
             
             return val;
-            
+        }
+        
+        void set_noblock()
+        {
+            ATOM_CAS(&_no_block, 0, 1);
+            _cond.notify_all();
         }
         
         void clear()
@@ -81,8 +90,7 @@ namespace libcommon
         
         CMutex          _mutex;
         CCond           _cond;
-        //pthread_mutex_t _mutex;
-        //pthread_cond_t  _cond;
+        volatile long   _no_block;
         
     };
 

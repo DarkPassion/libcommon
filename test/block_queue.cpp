@@ -99,6 +99,9 @@ int main()
         i->id = 1122;
         _q.push_back(i);
 
+        if (num == 5) {
+            _q.set_noblock();
+        }
         usleep(1000* 1000);
 
         printf("producer add sitem [%d %d ]\n", i->seq, i->id);
