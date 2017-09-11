@@ -128,42 +128,7 @@ void test_ip_bind_func(struct sockaddr* addr, int len)
 void test_ip_addr2()
 {
 
-    if (true) {
-        int len = 0;
-        struct sockaddr addr = {0};
-        bind_addr_t t("127.0.0.1", 8080);
-        if (t.get_bind_addr(AF_INET, &addr, len) == 0) {
-            printf("got bind addr success 127.0.0.1 !! \n");
-            test_ip_bind_func(&addr, len);
-        } else {
-            printf("got bind addr error! \n");
-        }
-    }
-
-    if (true) {
-        int len = 0;
-        struct sockaddr addr = {0};
-        bind_addr_t t("128.1.0.1", 8080);
-        if (t.get_bind_addr(AF_INET, &addr, len) == 0) {
-            printf("got bind addr success localhost !! \n");
-            test_ip_bind_func(&addr, len);
-        } else {
-            printf("got bind addr error! \n");
-        }
-    }
-
-    if (true) {
-        int len = 0;
-        struct sockaddr addr = {0};
-        bind_addr_t t("0.0.0.0", 8080);
-        if (t.get_bind_addr(AF_INET, &addr, len) == 0) {
-            printf("got bind addr success 0.0.0.0 !! \n");
-            test_ip_bind_func(&addr, len);
-        } else {
-            printf("got bind addr error! \n");
-        }
-    }
-
+   
 }
 
 

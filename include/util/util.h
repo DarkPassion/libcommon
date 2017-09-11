@@ -59,6 +59,12 @@ DISALLOW_EVIL_CONSTRUCTORS(TypeName)
 ((sizeof(a) / sizeof(*(a))) / \
 static_cast<size_t>(!(sizeof(a) % sizeof(*(a)))))
     
+    enum {
+        ONCE_STATE_UNINITIALIZED = 0,
+        ONCE_STATE_DONE = 1,
+    };
+
+    void GoogleOnceInit(int* once, void(*init_func)(void));
     
     // ----------------------------------
     // class scoped_ptr2

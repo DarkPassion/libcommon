@@ -13,6 +13,70 @@
 using namespace libcommon;
 
 #define TS_PORT 8080
+
+
+class ServerPeer : public ThreadHandle
+{
+public:
+    ServerPeer(int fd) : _fd(fd)
+    {
+        _pth = new ThreadImp("ServerImp", this, 1000, true);
+        _pth->start();
+
+    }
+    
+    ~ServerPeer()
+    {
+        delete _pth;
+    }
+    
+    virtual int cycle()
+    {
+    
+        while (_pth->can_loop()) {
+            char buff[1024] = {0};
+
+            int ret = ::recv(_fd, buff, sizeof(buff) -1, 0);
+            
+            if (ret < 0) {
+                printf(" %s == ServerPeer recv error %d! \n", __FUNCTION__, ret);
+                
+                if (ret == EAGAIN) {
+                    printf("%s == ServerPeer recv error EAGAIN \n", __FUNCTION__);
+                }
+            } else if (ret == 0) {
+                printf("ServerPeer BOKEN pipe line! \n");
+                _pth->stop_loop();
+            }else {
+                printf("%s == ServerPeer recv succ %d [%s]! \n", __FUNCTION__, ret, buff);
+            }
+            
+            ret = ::send(_fd, buff, ret, 0);
+            if (ret < 0) {
+                printf(" %s == client send error %d! \n", __FUNCTION__, ret);
+                
+                if (ret == EAGAIN) {
+                    printf("%s == client send error EAGAIN \n", __FUNCTION__);
+                }
+            } else if (ret == 0) {
+                printf("client send BOKEN pipe line! \n");
+                _pth->stop_loop();
+            } else {
+                printf("%s == client send succ %d [%s]! \n", __FUNCTION__, ret, buff);
+            }
+            
+            usleep(400 * 1000);
+        }
+        return 0;
+    }
+    
+    
+    
+private:
+    ThreadImp*      _pth;
+    int             _fd;
+
+};
 class ServerImp : public ThreadHandle
 {
 public:
@@ -37,23 +101,9 @@ public:
         }
 
         bind_addr_t bind_t("127.0.0.1", TS_PORT);
-        struct sockaddr addr;
-        int addr_len = 0;
-        memset(&addr, 0, sizeof(addr));
-        if (bind_t.get_bind_addr(AF_INET, &addr, addr_len) != 0) {
-            printf("get_bind_addr fail! \n");
-            return ;
+        if (bind_t.bind(s) == 0) {
+            printf("socket bind success! \n");
         }
-
-        printf("get_bind_addr succ! \n");
-
-        if (::bind(s, &addr, addr_len) != 0) {
-            printf("socket bind error! \n");
-            return ;
-        }
-
-        printf("socket bind success! \n");
-
 
         if (::listen(s, 10) != 0) {
             printf("socket listen error! \n");
@@ -82,6 +132,9 @@ public:
             struct sockaddr_in * sa = (struct sockaddr_in *)(&addr);
             printf("accept client ip: [%s] port [%d] \n", inet_ntoa(sa->sin_addr), ntohs(sa->sin_port));
             // process client fd
+            
+            ServerPeer* peer = new ServerPeer(s);
+            
         }
         return 0;
     }
@@ -133,8 +186,23 @@ public:
     {
         while(_pth->can_loop()) {
 
+            char send_buf[] = "Hello World";
+            int ret = ::send(_fd, send_buf, sizeof(send_buf), 0);
+            if (ret < 0) {
+                printf(" %s == client send error %d! \n", __FUNCTION__, ret);
+                
+                if (ret == EAGAIN) {
+                    printf("%s == client send error EAGAIN \n", __FUNCTION__);
+                }
+            } else if (ret == 0) {
+                printf("client send BOKEN pipe line! \n");
+                _pth->stop_loop();
+            } else {
+                printf("%s == client send succ %d [%s]! \n", __FUNCTION__, ret, send_buf);
+            }
+            
             char buff[1024] = {0};
-            int ret = ::recv(_fd, buff, sizeof(buff) -1, 0);
+            ret = ::recv(_fd, buff, sizeof(buff) -1, 0);
             if (ret < 0) {
                 printf(" %s == client recv error %d! \n", __FUNCTION__, ret);
 
@@ -142,18 +210,23 @@ public:
                     printf("%s == client recv error EAGAIN \n", __FUNCTION__);
                 }
             } else if (ret == 0) {
-                printf("client BOKEN pipe line! \n");
+                printf("client recv BOKEN pipe line! \n");
                 _pth->stop_loop();
             }else {
                 printf("%s == client recv succ %d [%s]! \n", __FUNCTION__, ret, buff);
             }
 
-            usleep(10 * 1000);
+            usleep(600 * 1000);
 
         }
         return 0;
     }
 
+    void close_fd()
+    {
+        ::close(_fd);
+        printf("client close_fd -- \n");
+    }
 private:
     ThreadImp*  _pth;
     int         _fd;
@@ -168,10 +241,14 @@ int main()
     ServerImp server;
     ClientImp client;
 
+    int i = 0;
     while(1) {
         usleep(100* 1000);
-
+        
     }
+    
+    usleep(1000* 1000);
+
 
     return 0;
 }

@@ -18,6 +18,8 @@ namespace libcommon
     SOCK_CONNECT_TIMEOUT = 2, // 链接timeout
     };
     
+    void set_socket_block(int fd, bool isblock);
+    
     class ip_addr_t
     {
     public:
@@ -60,8 +62,10 @@ namespace libcommon
         
         ~bind_addr_t();
         
+        int bind(int fd);
+    private:
         int get_bind_addr(int af, sockaddr* info, int &len);
-        
+
     private:
         std::string _ip;
         int _port;
