@@ -102,7 +102,7 @@ sp_release(int efd) {
 
 static int 
 sp_add(int efd, int sock, void *ud) {
-	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL) {
+	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL && sock >= 0 && sock < MAX_SELECT_NUM) {
 		struct s_select_t* sel = SELECT[efd];
 		sel->event_fds = sock > sel->event_fds ? sock : sel->event_fds;
 		FD_SET(sock, &sel->readset_in);
@@ -118,7 +118,7 @@ sp_add(int efd, int sock, void *ud) {
 
 static void 
 sp_del(int efd, int sock) {
-	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL) {
+	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL && sock >= 0 && sock < MAX_SELECT_NUM) {
 		struct s_select_t* sel = SELECT[efd];
 		FD_CLR(sock, &sel->readset_in);
 		FD_CLR(sock, &sel->writeset_in);
@@ -132,7 +132,7 @@ sp_del(int efd, int sock) {
 
 static void 
 sp_write(int efd, int sock, void *ud, bool enable) {
-	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL) {
+	if (efd >= 0 && efd < MAX_SELECT_NUM && SELECT[efd] != NULL && sock >= 0 && sock < MAX_SELECT_NUM) {
 		struct s_select_t* sel = SELECT[efd];
 		sel->st[sock]->fd = sock;
 		sel->st[sock]->mask = sel->st[sock]->mask | (enable ? E_SOCKET_WRITE : 0);
@@ -161,7 +161,7 @@ sp_wait(int efd, struct event *e, int max) {
 		int n = select(nfds, &sel->readset_out, &sel->writeset_out, &sel->errorset_out, NULL);
 		if (n > 0) {
 			int i = 0;
-			max = max > nfds ?  max : nfds;
+			max = max > nfds ?  nfds : max;
 			int idx = 0;
 			for (i = 0; i < max; i++) {
 				int event_r = 0;
