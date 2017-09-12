@@ -20,7 +20,7 @@ namespace libcommon
     void set_socket_block(int fd, bool isblock)
     {
         int flags = fcntl(fd, F_GETFL, 0);
-        flags = isblock ? flags ^ O_NONBLOCK : flags | O_NONBLOCK;
+        flags = isblock ? flags & ~O_NONBLOCK : flags | O_NONBLOCK;
         fcntl(fd, F_SETFL, flags);
     }
     
