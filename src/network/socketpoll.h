@@ -27,13 +27,11 @@
 #include <map>
 
 #include "network/socketbreaker.h"
-//#include "comm/socket/unix_socket.h"
-//#include "comm/socket/socketbreaker.h"
+#include "network/unix_socket.h"
 
 namespace libcommon {
     
     struct PollEvent {
-        typedef int SOCKET;
 
         friend class SocketPoll;
     public:
@@ -54,7 +52,6 @@ namespace libcommon {
     };
     
     class SocketPoll {
-        typedef int SOCKET;
 
     public:
         SocketPoll(SocketBreaker& _breaker, bool _autoclear = false);

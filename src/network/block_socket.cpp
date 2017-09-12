@@ -19,8 +19,10 @@
 
 #include "network/socketselect.h"
 #include "network/socketbreaker.h"
-
-//#include "network/socket_address.h"
+#include "network/unix_socket.h"
+#include "network/socket_address.h"
+#include "network/autobuffer.h"
+#include "timer/timer.h"
 #include "util/log.h"
 
 namespace libcommon {
@@ -46,15 +48,10 @@ namespace libcommon {
         int ret = socket_set_nobio(sock);
         if (ret != 0) {
             _errcode = socket_errno;
-            ::close(sock);
+            ::socket_close(sock);
             return INVALID_SOCKET;
         }
         
-        if (::getNetInfo() == kWifi && socket_fix_tcp_mss(sock) < 0) {
-#ifdef ANDROID
-            xinfo2(TSF"wifi set tcp mss error:%0", strerror(socket_errno));
-#endif
-        }
         
         //connect
         ret = connect(sock, &_address.address(), _address.address_length());

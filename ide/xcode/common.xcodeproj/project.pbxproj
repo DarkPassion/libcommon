@@ -9,9 +9,9 @@
 /* Begin PBXAggregateTarget section */
 		1C677E90FCB34A3CBBC87FDE /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 3278C3E0E992487D9637E1F8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 7A64F4F286A8498ABD5D51A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				AA3E9980F740462CA28F9219 /* CMake Rules */,
+				540E502F06AE4C9E808E8640 /* CMake Rules */,
 			);
 			dependencies = (
 			);
@@ -20,13 +20,13 @@
 		};
 		F1D72D24AAC8451FAE6584B8 /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 52DCADDC8C314FB7B45276F6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 844CAD09A9544BC08CD87E52 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				5749735B6F7B463496918C3A /* CMake Rules */,
+				0F99A485412E4630A97F5E41 /* CMake Rules */,
 			);
 			dependencies = (
-				C7D7926DC3CC4EB9BEED5B81 /* PBXTargetDependency */,
-				3BF093882B1C4B098C1A3940 /* PBXTargetDependency */,
+				1717748CA6E84256A9526853 /* PBXTargetDependency */,
+				4751701FA67F44FFAE53ABBA /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
@@ -34,612 +34,633 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		01415A2718274488A1CD8B1C /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */ = {isa = PBXBuildFile; fileRef = EE53A4C9054A4C279DE4D575 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */; };
-		01865570946343858E60CA29 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */ = {isa = PBXBuildFile; fileRef = 31F6B6A3C4FF456295AAABE6 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */; };
-		033626D35A904B35AF0DC05F /* /Users/zhangzhifan/github/libcommon/src/util/util.h */ = {isa = PBXBuildFile; fileRef = E38C3646FDCE45E2A2285335 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */; };
-		0336C5EEEEE94AF48E2B525F /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */ = {isa = PBXBuildFile; fileRef = 764C4942424B4DC2B3004276 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */; };
-		0BFF8DD1D0A5488F9BEBD946 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXBuildFile; fileRef = FA7825ECAE8843C1969C2F2A /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */; };
-		0DC48EFB5E894D7DBB3FB819 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */ = {isa = PBXBuildFile; fileRef = C3D828BD71E046368C165531 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */; };
-		12F2005C572D495ABEEC163F /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */ = {isa = PBXBuildFile; fileRef = 43A10C0821BB41EA9D90C474 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */; };
-		16BD389A966B4647A3981078 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */ = {isa = PBXBuildFile; fileRef = 2E2EFE47E1C44B4FA80A1868 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */; };
-		182DCE0425A649CC950190AB /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */ = {isa = PBXBuildFile; fileRef = 50FF81063F934EBBBC96DF7A /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */; };
-		23DA75F3FA084BF99BF158A4 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */ = {isa = PBXBuildFile; fileRef = C14BEE4C1A2A447FA9334F85 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */; };
-		241C11BF30BE4246AB3FE8CC /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXBuildFile; fileRef = BE307E4DE30F49D59BC3B650 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */; };
-		29A698B34EF845AB8A4A9AB3 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */ = {isa = PBXBuildFile; fileRef = B81D584916B6404589661ABB /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */; };
-		2A3CB6D0B92C4397B166DF74 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXBuildFile; fileRef = D0C1CE141D5B40BD800E4122 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */; };
-		2CBCD7C4E3E1477BAE0D8F6E /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */ = {isa = PBXBuildFile; fileRef = 9940393EB0154E6A91411445 /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */; };
-		2E28B4C5D4C94B0E9A35B9AB /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXBuildFile; fileRef = 4A0F812D18D2465B9649ED22 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */; };
-		3043864E5C7E450DA9ECDE92 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXBuildFile; fileRef = 160C784573284A4789915983 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */; };
-		306DDA0D33D64DC3ABC3569B /* /Users/zhangzhifan/github/libcommon/src/util/log.h */ = {isa = PBXBuildFile; fileRef = 6DB5BFA7953E4B9C84AB62D0 /* /Users/zhangzhifan/github/libcommon/src/util/log.h */; };
-		30A9221C0A1E492A857AE01C /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */ = {isa = PBXBuildFile; fileRef = 56E87912A06C499FA88AE671 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */; };
-		32F63D4013094F1D870E8C8D /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXBuildFile; fileRef = 2BABA461746F4B41A051CF2A /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */; };
-		3389B1E1E902490198C08455 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXBuildFile; fileRef = C084E1000E974F35B47D893A /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */; };
-		363DE0AB9B644066887F58D9 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */ = {isa = PBXBuildFile; fileRef = E6486E304CA84669A39AACB7 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */; };
-		3AAB976300364AC18605285C /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */ = {isa = PBXBuildFile; fileRef = 868BDC92F5DC4FB381E833B5 /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */; };
-		423C056976224896A0736F26 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */ = {isa = PBXBuildFile; fileRef = 58162EEE9E85450DBC21B932 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */; };
-		4272733E238F40EDBD024CD4 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */ = {isa = PBXBuildFile; fileRef = 4F929A13405843EAB5EFC979 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */; };
-		466586CA3EC142658ADAA954 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXBuildFile; fileRef = FA9BCD1A49F944E6AEB3F7E0 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */; };
-		472E3BAAC5AE44B8BCBD88CC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */ = {isa = PBXBuildFile; fileRef = 25B3B9837ED1483795E6A4DC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */; };
-		4A6382674B5045CEBE4213F6 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXBuildFile; fileRef = C010699FA9684B66AFB304AA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */; };
-		4E16AE1F0D524D1B91BF82B2 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXBuildFile; fileRef = 7E65403E1C4A43E5A97D8B18 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */; };
-		5728531C91DC42BB9A065483 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */ = {isa = PBXBuildFile; fileRef = F772208F3130453CA0228B90 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */; };
-		576C58A69BFB40FD8CDCE238 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXBuildFile; fileRef = 1B6B01216A224C24BA905345 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */; };
-		5D4B136F9EFE4165A1CC7DBE /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */ = {isa = PBXBuildFile; fileRef = F70432A836E64772B10F4099 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */; };
-		5EEE78637A1A4E5CACC88401 /* /Users/zhangzhifan/github/libcommon/src/util/json.h */ = {isa = PBXBuildFile; fileRef = CC9C654956074559A528E2EE /* /Users/zhangzhifan/github/libcommon/src/util/json.h */; };
-		5FD8FD9CE9EF44C9A8947A28 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */ = {isa = PBXBuildFile; fileRef = F2EE0437AC494E2DAADADA4B /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */; };
-		60852CA0350A4AEA9C58EA97 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXBuildFile; fileRef = B1FEFB02CC2E421C8140433D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */; };
-		60E009293E01433BAD6DB45A /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */ = {isa = PBXBuildFile; fileRef = 03DE9DA5132640A29A88485C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */; };
-		61D6540F081B480AAA6E9847 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXBuildFile; fileRef = C40FAD6158CE450085E5E1BA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */; };
-		644F96757A344F5395827B7E /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXBuildFile; fileRef = 83167894E442417DA8743FFF /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */; };
-		64D59CCF1AA44BD2AD1424DC /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXBuildFile; fileRef = F72D9514FC6249779D93FB28 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */; };
-		656035BE93B0455FB9C4C5A5 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXBuildFile; fileRef = 9892C6D73F3A403F9BC12FCE /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */; };
-		67222D9F70BD456DA70F553F /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */ = {isa = PBXBuildFile; fileRef = 86DDFAB3A7CD48F59ACD4303 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */; };
-		6766D0454CD64D05821BF21D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */ = {isa = PBXBuildFile; fileRef = DC80AE6CAB1749E5890FD558 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */; };
-		6784E4D1FC3543C08C4EBF48 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXBuildFile; fileRef = C39C97F6046C4436ADC28023 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */; };
-		6A272417202A4DB6A3BE4689 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXBuildFile; fileRef = 59C22A0F369F420C9A5E1DF8 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */; };
-		6B79CA6787E946FAB389B380 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */ = {isa = PBXBuildFile; fileRef = FB02997B03E6487894397552 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */; };
-		6F9B04D2105C44E184E09470 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXBuildFile; fileRef = B8958B555D914C65B11F742C /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */; };
-		768F14E42240477BBACEC86C /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */ = {isa = PBXBuildFile; fileRef = FBF4DB103A8541FBBAF5E20E /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */; };
-		7848B61F839549E9A583F63A /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */ = {isa = PBXBuildFile; fileRef = 5A957C0606B142A48481D43E /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */; };
-		81AB9FD528AA47A5BC01543C /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */ = {isa = PBXBuildFile; fileRef = 5F29664FB5C14031978D0F23 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */; };
-		88B2890B78C74E26900DE500 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXBuildFile; fileRef = 7E17453934FF40A4ACF11978 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */; };
-		8DA919CBA2DF4310B988EEE6 /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */ = {isa = PBXBuildFile; fileRef = A63847B17835485A89419A6D /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */; };
-		938CA84E404B427D87048F6C /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */ = {isa = PBXBuildFile; fileRef = 4E4D81D15AF74BBD9BF7B043 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */; };
-		97D62D2BF92C46F4BB5499B4 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXBuildFile; fileRef = E51E11E85B8E41CEAF4DFA86 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */; };
-		98094283DA6E4349A1523A8C /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */ = {isa = PBXBuildFile; fileRef = 7A560A266EEF45D0B1446893 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */; };
-		99A8D9CD571B40E69C47F02A /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXBuildFile; fileRef = F183AFFB82D44ABFA3A832D2 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */; };
-		9C8D91D219704A49A52E6AC9 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */ = {isa = PBXBuildFile; fileRef = EE8C206B5BDD4F86B5F05763 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */; };
-		9F16E14DB72941E3834A1245 /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */ = {isa = PBXBuildFile; fileRef = 83374153726F44BD8F303B18 /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */; };
-		A3DF6269AD1343DE974C9B9D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXBuildFile; fileRef = 180FEB0E1C22464D89618991 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */; };
-		ABA67F87DD3A4B108EE43494 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXBuildFile; fileRef = 544CC32288EB452BAC8CD4A2 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */; };
-		ABC633E2E5184EFD87AE9207 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXBuildFile; fileRef = EBB77E5CB1D245E2BDC70D3A /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */; };
-		AE4DCB4DE7C54EFBA654B145 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */ = {isa = PBXBuildFile; fileRef = 3DB9FC516FFF4A7A9C466A56 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */; };
-		B2D4817D50CB40BFB2FFAE7E /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */ = {isa = PBXBuildFile; fileRef = 9675A83DF2394D099FE340A9 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */; };
-		B5274FCD0C4D4E12AE1376DF /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */ = {isa = PBXBuildFile; fileRef = 1BCEF970C47248C69A0B4D45 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */; };
-		BA6F7283375B47CC9F62A65E /* /Users/zhangzhifan/github/libcommon/src/task/task.h */ = {isa = PBXBuildFile; fileRef = FB3F0A6BCAF246558F320869 /* /Users/zhangzhifan/github/libcommon/src/task/task.h */; };
-		BAAEB47C4C2A4E7C88F6DB02 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXBuildFile; fileRef = A139C033DCAE4D21BBF3AE5D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */; };
-		C588BE7FD9DE4D4286DB6BEF /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */ = {isa = PBXBuildFile; fileRef = B3C9A173CB2A494995BA410E /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */; };
-		C93072169AF04D00BAE2B325 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */ = {isa = PBXBuildFile; fileRef = 52752AF898B543F6A8A0A711 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */; };
-		CCD95190A70B4A1BBAA34542 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXBuildFile; fileRef = 60AF1B9191584539BEC7A5CD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */; };
-		CFA05D2A21944345B1204AB3 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */ = {isa = PBXBuildFile; fileRef = 62D69576DAC34489825BA371 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */; };
-		D6E7ECBC9FD34270BC8330D4 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */ = {isa = PBXBuildFile; fileRef = A49134A4B805497B9358BD1F /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */; };
-		D91F6BF888D84A0190D0B52A /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */ = {isa = PBXBuildFile; fileRef = 49364FE19B634F93A67D0653 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */; };
-		DB10EBA2144B43DC89CB17B4 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXBuildFile; fileRef = A03350E561754F0EB6613EBC /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */; };
-		DB74965FD792479FACAD4F23 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */ = {isa = PBXBuildFile; fileRef = 02CEFD02F2754C9485A240B5 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */; };
-		DC2423FE8AC24446BBEA312D /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXBuildFile; fileRef = A77195FC3E114D6CAFDD39C1 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */; };
-		E0D372E264C64A89A82C6A19 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXBuildFile; fileRef = DC62BDCC8DA743D6A9E79548 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */; };
-		E1538BDBBDA84A7FAADAF978 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */ = {isa = PBXBuildFile; fileRef = F35C886FDCF84CFD88767387 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */; };
-		E1CF9FD06FC6444D84D601E5 /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */ = {isa = PBXBuildFile; fileRef = 2C342E0470F54D83B411F4AA /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */; };
-		E2A8416AD1A04364A66761AF /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */ = {isa = PBXBuildFile; fileRef = B530190B25924D1D9FB33044 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */; };
-		E9C2E95B2AF34CC29E37EA5C /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXBuildFile; fileRef = AE73C7E7D9BB47728E4EE9AF /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */; };
-		EAB0D6ADAAAB454D883B0AB4 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXBuildFile; fileRef = 581737555D244F03BF1331E1 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */; };
-		ECB3A859A5704DBAA4A7C9F3 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXBuildFile; fileRef = C7F913FCC57D4928A358760D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */; };
-		EF994D7A7E6D43A2AE16EFF4 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8EA88B7FA1A44B0FB23D294F /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */; };
-		F053CA3217FC499D8789F8B1 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXBuildFile; fileRef = 450BEE38263B42A4BAD49ECB /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */; };
-		F26F20F3C76A464289620545 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXBuildFile; fileRef = D247118CC0AB48A1A154AE0C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */; };
-		FC18305081254BCBBDFC1895 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXBuildFile; fileRef = 7241CF3089BB49BD83DEAEC7 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */; };
+		0384E5712A8C4B63960E810C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */ = {isa = PBXBuildFile; fileRef = 6C9EBDBBD1464EB68D3C9D25 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */; };
+		05FC15EF1A364074B36ED37A /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */ = {isa = PBXBuildFile; fileRef = 695FD5AD89174E3BA592EF07 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */; };
+		07D808B5C0994D62B1B3858A /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXBuildFile; fileRef = 28264C6BC48947719FB4EDFD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */; };
+		085D5A886EEF4D46BB2AF9A2 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXBuildFile; fileRef = 4B3BF0B89429442784B26D3D /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */; };
+		0A21F4E2DFF045959D48FD99 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.h */ = {isa = PBXBuildFile; fileRef = 856B2BCF241E42E4BB9CB9CB /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.h */; };
+		102D6D3AE29A42BEA8596102 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */ = {isa = PBXBuildFile; fileRef = 01FC683DDA3B4812A86F4EB0 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */; };
+		121FBF8479604F909DFF6A46 /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */ = {isa = PBXBuildFile; fileRef = A6B15DE55DA94964A3E5E656 /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */; };
+		12646D9960AD4EB48658B450 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */ = {isa = PBXBuildFile; fileRef = 0339E5F365D14E36A353CC84 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */; };
+		17685F3E58844C81B3278E48 /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */ = {isa = PBXBuildFile; fileRef = 2D6A6DDC4A324B56B62D4E3C /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */; };
+		1E89F81A91584DEE90249B12 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXBuildFile; fileRef = BA7B17B8C71046588233A102 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */; };
+		2074993C3FA94EC1A41890DD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXBuildFile; fileRef = C0B3BDDE982F4105A26106E9 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */; };
+		222FEE732A6B4B23841DE465 /* /Users/zhangzhifan/github/libcommon/src/util/json.h */ = {isa = PBXBuildFile; fileRef = 100BE5BC18924330B6B547C1 /* /Users/zhangzhifan/github/libcommon/src/util/json.h */; };
+		24D9338727994497A88EB258 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.cpp */ = {isa = PBXBuildFile; fileRef = 003ABB48A32F4A13BD222540 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.cpp */; };
+		250968D6F30E4BE4BEAEDA1D /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXBuildFile; fileRef = BFDFE45D2C0148E3AC09F45A /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */; };
+		35A5D8E9EA2F4B09820B49F3 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXBuildFile; fileRef = B465EAF1007C47A791C548F4 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */; };
+		39BDDB086B5043638B4FE034 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */ = {isa = PBXBuildFile; fileRef = 71B75864CC59429C88726720 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */; };
+		3B92747E9DC5495582EB94B4 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */ = {isa = PBXBuildFile; fileRef = F2433CF06E6C49459CDEE3F6 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */; };
+		3C49A112D29D4E86A7C5188F /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXBuildFile; fileRef = B592746CA9B3437BBE6C2F0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */; };
+		4410C06B859144E3B6CB2C7E /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXBuildFile; fileRef = 532DA79772F34148A5E43B72 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */; };
+		44236700545C4830A6C462C5 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXBuildFile; fileRef = 51800E599A6B4B619EB5AB23 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */; };
+		4CE94D61A2CC4F68AF2D3604 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */ = {isa = PBXBuildFile; fileRef = B52677E77654407799793180 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */; };
+		56A559C32CDB4C2A9BED5A7B /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */ = {isa = PBXBuildFile; fileRef = E25B86912DDA4AE6BAC01EB1 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */; };
+		59BA6E1A93D5486ABA1BD88B /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */ = {isa = PBXBuildFile; fileRef = 7E36C98D3DA54EE3B2F0AC7C /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */; };
+		5F6B23D518234FFA8F884828 /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */ = {isa = PBXBuildFile; fileRef = B27E58A3C00A4C948EA3C9BE /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */; };
+		5FE57D55B73E483CA1011291 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C0D172A43AFA4E81A4FB434B /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */; };
+		60D9C6ECC65E451C8559D421 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */ = {isa = PBXBuildFile; fileRef = 1A9A5F595CA541D7B00F7A3E /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */; };
+		6119AFD2AA974FD69347B458 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */ = {isa = PBXBuildFile; fileRef = D972E8279B1A4EDFBFF79FE2 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */; };
+		687C24EA517C4AD09AE72EFC /* /Users/zhangzhifan/github/libcommon/src/util/move.h */ = {isa = PBXBuildFile; fileRef = 7E0DB72305C045E9AE2D8C73 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */; };
+		6908A274E95D49199465473B /* /Users/zhangzhifan/github/libcommon/src/network/ipv6_address_utils.h */ = {isa = PBXBuildFile; fileRef = B17FEFADD7A346D8B4ECE08D /* /Users/zhangzhifan/github/libcommon/src/network/ipv6_address_utils.h */; };
+		69FB0CB9CD4A42E9BFB24550 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXBuildFile; fileRef = 7861E09334394CBD8E7CB471 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */; };
+		6BC9EF583C7443399EF99A6A /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */ = {isa = PBXBuildFile; fileRef = 0A92662690344BC78694E711 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */; };
+		70FB451B9B9A4A89AB8DCF52 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */ = {isa = PBXBuildFile; fileRef = 66AE8B62102746E5BF03EC89 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */; };
+		749630C7E65E4CF49D907A56 /* /Users/zhangzhifan/github/libcommon/src/util/log.h */ = {isa = PBXBuildFile; fileRef = 5751692F28354EFFA13BB67D /* /Users/zhangzhifan/github/libcommon/src/util/log.h */; };
+		755016D97B754C8BA95C2B2A /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXBuildFile; fileRef = 94950DFB7D8649C7A85DCD04 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */; };
+		75CA6A9C89D440BB895EC537 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */ = {isa = PBXBuildFile; fileRef = FAA39602D6A04896ACEF4994 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */; };
+		7753DB2396A444D1A0AF0EC7 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXBuildFile; fileRef = A5B8B2557F734BBEBE9BED27 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */; };
+		78A2FD7AB5354AFCB10E337B /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */ = {isa = PBXBuildFile; fileRef = 72601456ACBC4E6B98699CE1 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */; };
+		7B327C61B2D443B482A7FE46 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */ = {isa = PBXBuildFile; fileRef = C29BECDE621340E1A3157C63 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */; };
+		7EBB5F69937F4076859A2FCD /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */ = {isa = PBXBuildFile; fileRef = EE0BA1D3E98B46A1AB2EC674 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */; };
+		7F91D00F79D940B38E0E9D16 /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */ = {isa = PBXBuildFile; fileRef = F364CE34D2F541CFB74F140B /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */; };
+		838639294A804B4BB5648F4C /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */ = {isa = PBXBuildFile; fileRef = AC5A600A671447E9A2F431AD /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */; };
+		865BFDFDF5DC4805AD1D6F94 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXBuildFile; fileRef = 7FAF6C42FB1446B89C91BDF8 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */; };
+		8912D8F3D4904C4F9B05DD71 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXBuildFile; fileRef = E3FFF2C595FD466E87E8EC3D /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */; };
+		8B994C95EBDC4CC59B79A9D9 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */ = {isa = PBXBuildFile; fileRef = B52791618DCC422589AE5288 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */; };
+		8D0577325FFD4396B05F51E7 /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */ = {isa = PBXBuildFile; fileRef = 4DA6FA1A8F11484E9E96E9DD /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */; };
+		8DBF55127AD94D3C8DCFB4FC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */ = {isa = PBXBuildFile; fileRef = 91700955270042A9A97A5147 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */; };
+		8DDF8E1377B24F31A583ADD3 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */ = {isa = PBXBuildFile; fileRef = BDCF3D475F89483C97CD3F96 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */; };
+		92EE0ACA16724641874B97B5 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */ = {isa = PBXBuildFile; fileRef = 8F0B0743222E4155BECC62A4 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */; };
+		934E5B7DEBEF497DB3D8C833 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXBuildFile; fileRef = A1C703792F364DCCA6B5865E /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */; };
+		946DF60FA3284CE2A3E33EB2 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */ = {isa = PBXBuildFile; fileRef = A8650E5B7BD2426EA8E81EA1 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */; };
+		96B675F5F7B74C1790504ACF /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXBuildFile; fileRef = F4CE9127C9574501BE124173 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */; };
+		9933560EB0414C21A2C8F7EF /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXBuildFile; fileRef = 2D3F98A358ED4136B9E52966 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */; };
+		9CEE613130114054AB9DB715 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */ = {isa = PBXBuildFile; fileRef = A614DD426F4D4D2285BEF6E5 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */; };
+		9DF8DB4FB3C44751968DF366 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXBuildFile; fileRef = 4DFCEA8717DB4E31ACADFED6 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */; };
+		A0A8A538AC7948E39521A43A /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXBuildFile; fileRef = 40DD656CCCAA4D32B1E0C895 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */; };
+		A1C6824CE4844B47BDD17708 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.h */ = {isa = PBXBuildFile; fileRef = ACED41CC193F40FDA6704B87 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.h */; };
+		A2334CF2A38F4AB7A1AF4260 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */ = {isa = PBXBuildFile; fileRef = 06C610F09FBD41FB8BB47712 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */; };
+		A28064290C844C35A7E1681D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXBuildFile; fileRef = 48F49AB0C4BD4462AFE10FE8 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */; };
+		A2A41E9687D54E73AB21BBEC /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXBuildFile; fileRef = AF60A345E29443F4B96B04B5 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */; };
+		A83063B916CC4F1AA63F704F /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXBuildFile; fileRef = 4FA096DF20A2454D9B725686 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */; };
+		ABCD0F88021346A3B77C51B3 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */ = {isa = PBXBuildFile; fileRef = 22454D1F7A084D58BD7FBFC8 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */; };
+		AE0BBCA831D5477EB7DC0AAF /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */ = {isa = PBXBuildFile; fileRef = 5B9DD64A7EE742D0B12C0596 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */; };
+		B776053A91F141918808BEAA /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXBuildFile; fileRef = 8B9010C482BC4080BA050180 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */; };
+		BA34D38A5C6148A7BC6D5059 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXBuildFile; fileRef = 7DB70AC5BFDD4FBC898DAF0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */; };
+		BA805AB39B9D4307AF588F9D /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.cpp */ = {isa = PBXBuildFile; fileRef = 092BC364BFDB4C3196BCE2E7 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.cpp */; };
+		BEA04D1E4CD346E8883680D8 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXBuildFile; fileRef = FC0C6BFDE9EB40CF9EF1E2FD /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */; };
+		C0235D92B7CC4EB6A3024136 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */ = {isa = PBXBuildFile; fileRef = 8580FF367D7A4426AF0CD359 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */; };
+		C16A60EA33BF4C31A7CEE087 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */ = {isa = PBXBuildFile; fileRef = 22331B98581F436BB1B88AF3 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */; };
+		C37B57E2496A40B989623F92 /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */ = {isa = PBXBuildFile; fileRef = B0322109278D469DA2D11E8B /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */; };
+		C4BE5494B2694B4EA83DBC83 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXBuildFile; fileRef = 34D0BD4EBA0142B9AD657E30 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */; };
+		C4D5585B9D3E4BB1ADC7701F /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */ = {isa = PBXBuildFile; fileRef = C0813BABD31544BEA27DC0C7 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */; };
+		C747FC77C80245119F79077F /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */ = {isa = PBXBuildFile; fileRef = 262D0BF7BDE443EDBE69F3FA /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */; };
+		CD8CBCFB238041B1AE09D3B2 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */ = {isa = PBXBuildFile; fileRef = D3CEB89FD6244970BBD6B818 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */; };
+		D0476DD7F07A416C988AEB55 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXBuildFile; fileRef = 53D2AA1238E340D78D5E672F /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */; };
+		D161814A7E8847B48B810288 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXBuildFile; fileRef = 8BF2D076457A4EFF879D4D16 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */; };
+		D2057CC32813476C86469653 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXBuildFile; fileRef = 4A825E64F8824706B28304D9 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */; };
+		D3E05DCF13F6494DB310E957 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXBuildFile; fileRef = 0B0AFFFB5B0F44DBB2AA1AD1 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */; };
+		D45246ED1B1B47679FBF8149 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */ = {isa = PBXBuildFile; fileRef = A5425911C4B94463BA48FDC7 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */; };
+		DE866B0E778E444BB712EFA9 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXBuildFile; fileRef = 884B98E72B7C4F2F80F889EA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */; };
+		E47BA67666934EA386D440A2 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */ = {isa = PBXBuildFile; fileRef = EADC0F52F215439194C54A54 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */; };
+		E6EA378E132C40A19F874A78 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXBuildFile; fileRef = B1E064D5986B4C2086299934 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */; };
+		E72BD1A312D54AC59ECD2D17 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */ = {isa = PBXBuildFile; fileRef = 588E7D7814D742AB85D296B9 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */; };
+		EB2B5AB1DB014464A86DA68B /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.h */ = {isa = PBXBuildFile; fileRef = 131C65709CA2483BB58DA9A4 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.h */; };
+		EF95F5852B7949169AD59A53 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXBuildFile; fileRef = 9233D6E409F344BC91A74381 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */; };
+		F07FF613F05D4B01883CA54B /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXBuildFile; fileRef = F863A8FD7CE84CB4BE31E1D7 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */; };
+		F15C1EC716BA4371BC26735F /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXBuildFile; fileRef = D1129B9F26264828A1E859DA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */; };
+		F77D0FD0A9F0466DA2204F88 /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */ = {isa = PBXBuildFile; fileRef = 03173364E73A4649A3CF7A89 /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */; };
+		F8656FEE4FD7436E982CB786 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXBuildFile; fileRef = 0E01CFAF127E4CD4B71B322E /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */; };
+		F907941BA2844A0984861413 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */ = {isa = PBXBuildFile; fileRef = 06E5C90B75DD49FE81269053 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */; };
+		FB023942DC134FB48CFB32A5 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.cpp */ = {isa = PBXBuildFile; fileRef = CF7A76FB50714C159BB4F751 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.cpp */; };
+		FCB468F766B2474F9FED6484 /* /Users/zhangzhifan/github/libcommon/src/task/task.h */ = {isa = PBXBuildFile; fileRef = 86A2B9D07CE94AEAB162A63E /* /Users/zhangzhifan/github/libcommon/src/task/task.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		0E8608A48EC442FA9147A932 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		BA7078760B314BD798BAC414 = {
-			isa = PBXBuildStyle;
-		};
-		C365953CF9784DF0805CD55A /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		D5AFD0C67C804D9AB10133C3 /* Debug */ = {
+		5B42E312B389489EA2226064 /* Debug */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Debug;
 		};
-		F07D79B80EC54B9D9C635645 /* MinSizeRel */ = {
+		6FBDCE76FAF14356A2156017 /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
+		9CD886B89BF944E789A9FEAD /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		A41F6F99CC544152BAB39E75 = {
+			isa = PBXBuildStyle;
+		};
+		BB3D7E3A4ACA48C289AE7ABD /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		19E038307BEB4B85AD3D0A5A /* PBXContainerItemProxy */ = {
+		2D7AF1D8AD2A4820A7A3AB34 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 12D0D2539AC745E5A1A5FFC0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1C677E90FCB34A3CBBC87FDE;
 			remoteInfo = ZERO_CHECK;
 		};
-		1A06E8315A4F43D38CF81328 /* PBXContainerItemProxy */ = {
+		4B707B912E1446B39985CC2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 12D0D2539AC745E5A1A5FFC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C677E90FCB34A3CBBC87FDE;
+			remoteInfo = ZERO_CHECK;
+		};
+		AC52BD7CADD24CBBA9FBAAFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 12D0D2539AC745E5A1A5FFC0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 91440FE372F34EFF82EE1D16;
 			remoteInfo = common;
 		};
-		44C85C2833354C9EB1A45DC4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 12D0D2539AC745E5A1A5FFC0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C677E90FCB34A3CBBC87FDE;
-			remoteInfo = ZERO_CHECK;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02CEFD02F2754C9485A240B5 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = queue.h; path = src/queue/queue.h; sourceTree = SOURCE_ROOT; };
-		03DE9DA5132640A29A88485C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ip_addr.h; path = src/network/ip_addr.h; sourceTree = SOURCE_ROOT; };
-		160C784573284A4789915983 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread_queue.cpp; path = src/task/thread_queue.cpp; sourceTree = SOURCE_ROOT; };
-		180FEB0E1C22464D89618991 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = assertions.h; path = 3rd/jsoncpp/include/json/assertions.h; sourceTree = SOURCE_ROOT; };
-		1B6B01216A224C24BA905345 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = crc32.cpp; path = src/digest/crc32.cpp; sourceTree = SOURCE_ROOT; };
-		1BCEF970C47248C69A0B4D45 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_object.h; path = src/task/bind_object.h; sourceTree = SOURCE_ROOT; };
-		25B3B9837ED1483795E6A4DC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = md5.cpp; path = src/digest/md5.cpp; sourceTree = SOURCE_ROOT; };
-		2BABA461746F4B41A051CF2A /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = bytebuffer.cpp; path = src/util/bytebuffer.cpp; sourceTree = SOURCE_ROOT; };
-		2C342E0470F54D83B411F4AA /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = delegate.h; path = src/util/delegate.h; sourceTree = SOURCE_ROOT; };
-		2E2EFE47E1C44B4FA80A1868 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = move.h; path = src/util/move.h; sourceTree = SOURCE_ROOT; };
-		31F6B6A3C4FF456295AAABE6 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer/timer.h; sourceTree = SOURCE_ROOT; };
-		3DB9FC516FFF4A7A9C466A56 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringutils.h; path = src/string/stringutils.h; sourceTree = SOURCE_ROOT; };
-		43A10C0821BB41EA9D90C474 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/digest/base64.cpp; sourceTree = SOURCE_ROOT; };
-		450BEE38263B42A4BAD49ECB /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bytebuffer.h; path = src/util/bytebuffer.h; sourceTree = SOURCE_ROOT; };
-		49364FE19B634F93A67D0653 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal.h; path = src/util/signal.h; sourceTree = SOURCE_ROOT; };
-		4A0F812D18D2465B9649ED22 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = features.h; path = 3rd/jsoncpp/include/json/features.h; sourceTree = SOURCE_ROOT; };
-		4E4D81D15AF74BBD9BF7B043 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log.cpp; path = src/util/log.cpp; sourceTree = SOURCE_ROOT; };
-		4F929A13405843EAB5EFC979 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crc32.h; path = src/digest/crc32.h; sourceTree = SOURCE_ROOT; };
-		50FF81063F934EBBBC96DF7A /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stl_util.h; path = src/util/stl_util.h; sourceTree = SOURCE_ROOT; };
-		52752AF898B543F6A8A0A711 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = lock.h; path = src/thread/lock.h; sourceTree = SOURCE_ROOT; };
-		544CC32288EB452BAC8CD4A2 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_kqueue.h; path = 3rd/socket_server/socket_kqueue.h; sourceTree = SOURCE_ROOT; };
-		56E87912A06C499FA88AE671 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ref_count.h; path = src/util/ref_count.h; sourceTree = SOURCE_ROOT; };
-		58162EEE9E85450DBC21B932 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_queue.h; path = src/queue/block_queue.h; sourceTree = SOURCE_ROOT; };
-		581737555D244F03BF1331E1 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = time_format.cpp; path = src/timer/time_format.cpp; sourceTree = SOURCE_ROOT; };
-		59C22A0F369F420C9A5E1DF8 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = 3rd/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
-		5A957C0606B142A48481D43E /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = typedefs.h; path = src/util/typedefs.h; sourceTree = SOURCE_ROOT; };
-		5F29664FB5C14031978D0F23 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_queue.h; path = src/task/thread_queue.h; sourceTree = SOURCE_ROOT; };
-		60AF1B9191584539BEC7A5CD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_epoll.h; path = 3rd/socket_server/socket_epoll.h; sourceTree = SOURCE_ROOT; };
-		62D69576DAC34489825BA371 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread.h; path = src/thread/thread.h; sourceTree = SOURCE_ROOT; };
-		6DB5BFA7953E4B9C84AB62D0 /* /Users/zhangzhifan/github/libcommon/src/util/log.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log.h; path = src/util/log.h; sourceTree = SOURCE_ROOT; };
-		7241CF3089BB49BD83DEAEC7 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketbreaker.cpp; path = src/network/socketbreaker.cpp; sourceTree = SOURCE_ROOT; };
-		74C3B7A6F2E547A5967E9938 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		764C4942424B4DC2B3004276 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = singleton.h; path = src/util/singleton.h; sourceTree = SOURCE_ROOT; };
-		7A560A266EEF45D0B1446893 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tuple.h; path = src/util/tuple.h; sourceTree = SOURCE_ROOT; };
-		7E17453934FF40A4ACF11978 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_server.h; path = 3rd/socket_server/socket_server.h; sourceTree = SOURCE_ROOT; };
-		7E65403E1C4A43E5A97D8B18 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = src/network/socketbreaker.h; sourceTree = SOURCE_ROOT; };
-		83167894E442417DA8743FFF /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_queue.cpp; path = src/queue/block_queue.cpp; sourceTree = SOURCE_ROOT; };
-		83374153726F44BD8F303B18 /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = byteorder.h; path = src/util/byteorder.h; sourceTree = SOURCE_ROOT; };
-		868BDC92F5DC4FB381E833B5 /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = shared_ptr.hpp; path = src/util/shared_ptr.hpp; sourceTree = SOURCE_ROOT; };
-		86DDFAB3A7CD48F59ACD4303 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = src/network/socketselect.h; sourceTree = SOURCE_ROOT; };
-		8EA88B7FA1A44B0FB23D294F /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		9675A83DF2394D099FE340A9 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = src/network/socketpoll.h; sourceTree = SOURCE_ROOT; };
-		9892C6D73F3A403F9BC12FCE /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketselect.cpp; path = src/network/socketselect.cpp; sourceTree = SOURCE_ROOT; };
-		9940393EB0154E6A91411445 /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scoped_ptr.h; path = src/util/scoped_ptr.h; sourceTree = SOURCE_ROOT; };
-		9CC52F74E3784E39A0021B4F /* common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A03350E561754F0EB6613EBC /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringprintf.cpp; path = src/string/stringprintf.cpp; sourceTree = SOURCE_ROOT; };
-		A139C033DCAE4D21BBF3AE5D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_poll.h; path = 3rd/socket_server/socket_poll.h; sourceTree = SOURCE_ROOT; };
-		A49134A4B805497B9358BD1F /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = src/digest/md5.h; sourceTree = SOURCE_ROOT; };
-		A63847B17835485A89419A6D /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_function.h; path = src/task/bind_function.h; sourceTree = SOURCE_ROOT; };
-		A77195FC3E114D6CAFDD39C1 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringutils.cpp; path = src/string/stringutils.cpp; sourceTree = SOURCE_ROOT; };
-		AE73C7E7D9BB47728E4EE9AF /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = allocator.h; path = 3rd/jsoncpp/include/json/allocator.h; sourceTree = SOURCE_ROOT; };
-		B1FEFB02CC2E421C8140433D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = socket_server.c; path = 3rd/socket_server/socket_server.c; sourceTree = SOURCE_ROOT; };
-		B3C9A173CB2A494995BA410E /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread.cpp; path = src/thread/thread.cpp; sourceTree = SOURCE_ROOT; };
-		B530190B25924D1D9FB33044 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basictypes.h; path = src/util/basictypes.h; sourceTree = SOURCE_ROOT; };
-		B81D584916B6404589661ABB /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json.cpp; path = src/util/json.cpp; sourceTree = SOURCE_ROOT; };
-		B8958B555D914C65B11F742C /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = forwards.h; path = 3rd/jsoncpp/include/json/forwards.h; sourceTree = SOURCE_ROOT; };
-		BE307E4DE30F49D59BC3B650 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_writer.cpp; path = 3rd/jsoncpp/src/json_writer.cpp; sourceTree = SOURCE_ROOT; };
-		C010699FA9684B66AFB304AA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_tool.h; path = 3rd/jsoncpp/src/json_tool.h; sourceTree = SOURCE_ROOT; };
-		C084E1000E974F35B47D893A /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_socket.cpp; path = src/network/block_socket.cpp; sourceTree = SOURCE_ROOT; };
-		C14BEE4C1A2A447FA9334F85 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer/timer.cpp; sourceTree = SOURCE_ROOT; };
-		C39C97F6046C4436ADC28023 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_reader.cpp; path = 3rd/jsoncpp/src/json_reader.cpp; sourceTree = SOURCE_ROOT; };
-		C3D828BD71E046368C165531 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lock.cpp; path = src/thread/lock.cpp; sourceTree = SOURCE_ROOT; };
-		C40FAD6158CE450085E5E1BA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = value.h; path = 3rd/jsoncpp/include/json/value.h; sourceTree = SOURCE_ROOT; };
-		C7F913FCC57D4928A358760D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringencode.cpp; path = src/string/stringencode.cpp; sourceTree = SOURCE_ROOT; };
-		CC9C654956074559A528E2EE /* /Users/zhangzhifan/github/libcommon/src/util/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = src/util/json.h; sourceTree = SOURCE_ROOT; };
-		D0C1CE141D5B40BD800E4122 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = reader.h; path = 3rd/jsoncpp/include/json/reader.h; sourceTree = SOURCE_ROOT; };
-		D247118CC0AB48A1A154AE0C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ip_addr.cpp; path = src/network/ip_addr.cpp; sourceTree = SOURCE_ROOT; };
-		DB7B4E6AB3FC49CEBDC20FA0 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DC62BDCC8DA743D6A9E79548 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = 3rd/jsoncpp/include/json/version.h; sourceTree = SOURCE_ROOT; };
-		DC80AE6CAB1749E5890FD558 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringencode.h; path = src/string/stringencode.h; sourceTree = SOURCE_ROOT; };
-		E38C3646FDCE45E2A2285335 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = util.h; path = src/util/util.h; sourceTree = SOURCE_ROOT; };
-		E51E11E85B8E41CEAF4DFA86 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autolink.h; path = 3rd/jsoncpp/include/json/autolink.h; sourceTree = SOURCE_ROOT; };
-		E6486E304CA84669A39AACB7 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_base.h; path = src/task/bind_base.h; sourceTree = SOURCE_ROOT; };
-		EBB77E5CB1D245E2BDC70D3A /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_value.cpp; path = 3rd/jsoncpp/src/json_value.cpp; sourceTree = SOURCE_ROOT; };
-		EE53A4C9054A4C279DE4D575 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base64.h; path = src/digest/base64.h; sourceTree = SOURCE_ROOT; };
-		EE8C206B5BDD4F86B5F05763 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = unique_ptr.hpp; path = src/util/unique_ptr.hpp; sourceTree = SOURCE_ROOT; };
-		F183AFFB82D44ABFA3A832D2 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = writer.h; path = 3rd/jsoncpp/include/json/writer.h; sourceTree = SOURCE_ROOT; };
-		F2EE0437AC494E2DAADADA4B /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = queue.cpp; path = src/queue/queue.cpp; sourceTree = SOURCE_ROOT; };
-		F35C886FDCF84CFD88767387 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time_format.h; path = src/timer/time_format.h; sourceTree = SOURCE_ROOT; };
-		F70432A836E64772B10F4099 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_socket.h; path = src/network/block_socket.h; sourceTree = SOURCE_ROOT; };
-		F72D9514FC6249779D93FB28 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketpoll.cpp; path = src/network/socketpoll.cpp; sourceTree = SOURCE_ROOT; };
-		F772208F3130453CA0228B90 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = util.cpp; path = src/util/util.cpp; sourceTree = SOURCE_ROOT; };
-		FA7825ECAE8843C1969C2F2A /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_select.h; path = 3rd/socket_server/socket_select.h; sourceTree = SOURCE_ROOT; };
-		FA9BCD1A49F944E6AEB3F7E0 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = config.h; path = 3rd/jsoncpp/include/json/config.h; sourceTree = SOURCE_ROOT; };
-		FB02997B03E6487894397552 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringprintf.h; path = src/string/stringprintf.h; sourceTree = SOURCE_ROOT; };
-		FB3F0A6BCAF246558F320869 /* /Users/zhangzhifan/github/libcommon/src/task/task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = task.h; path = src/task/task.h; sourceTree = SOURCE_ROOT; };
-		FBF4DB103A8541FBBAF5E20E /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = template_util.h; path = src/util/template_util.h; sourceTree = SOURCE_ROOT; };
+		003ABB48A32F4A13BD222540 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socket_address.cpp; path = src/network/socket_address.cpp; sourceTree = SOURCE_ROOT; };
+		01FC683DDA3B4812A86F4EB0 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer/timer.h; sourceTree = SOURCE_ROOT; };
+		03173364E73A4649A3CF7A89 /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stl_util.h; path = src/util/stl_util.h; sourceTree = SOURCE_ROOT; };
+		0339E5F365D14E36A353CC84 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringutils.h; path = src/string/stringutils.h; sourceTree = SOURCE_ROOT; };
+		06C610F09FBD41FB8BB47712 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = util.cpp; path = src/util/util.cpp; sourceTree = SOURCE_ROOT; };
+		06E5C90B75DD49FE81269053 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer/timer.cpp; sourceTree = SOURCE_ROOT; };
+		092BC364BFDB4C3196BCE2E7 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autobuffer.cpp; path = src/network/autobuffer.cpp; sourceTree = SOURCE_ROOT; };
+		0A92662690344BC78694E711 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread.h; path = src/thread/thread.h; sourceTree = SOURCE_ROOT; };
+		0B0AFFFB5B0F44DBB2AA1AD1 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringprintf.cpp; path = src/string/stringprintf.cpp; sourceTree = SOURCE_ROOT; };
+		0CD945E0EF844E1C8386AE3F /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0E01CFAF127E4CD4B71B322E /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = config.h; path = 3rd/jsoncpp/include/json/config.h; sourceTree = SOURCE_ROOT; };
+		100BE5BC18924330B6B547C1 /* /Users/zhangzhifan/github/libcommon/src/util/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = src/util/json.h; sourceTree = SOURCE_ROOT; };
+		1106C72E8F7F45988E206737 /* common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		131C65709CA2483BB58DA9A4 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_address.h; path = src/network/socket_address.h; sourceTree = SOURCE_ROOT; };
+		1A9A5F595CA541D7B00F7A3E /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = lock.h; path = src/thread/lock.h; sourceTree = SOURCE_ROOT; };
+		22331B98581F436BB1B88AF3 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ref_count.h; path = src/util/ref_count.h; sourceTree = SOURCE_ROOT; };
+		22454D1F7A084D58BD7FBFC8 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lock.cpp; path = src/thread/lock.cpp; sourceTree = SOURCE_ROOT; };
+		262D0BF7BDE443EDBE69F3FA /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/digest/base64.cpp; sourceTree = SOURCE_ROOT; };
+		28264C6BC48947719FB4EDFD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_epoll.h; path = 3rd/socket_server/socket_epoll.h; sourceTree = SOURCE_ROOT; };
+		2D3F98A358ED4136B9E52966 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autolink.h; path = 3rd/jsoncpp/include/json/autolink.h; sourceTree = SOURCE_ROOT; };
+		2D6A6DDC4A324B56B62D4E3C /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = byteorder.h; path = src/util/byteorder.h; sourceTree = SOURCE_ROOT; };
+		34D0BD4EBA0142B9AD657E30 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketpoll.cpp; path = src/network/socketpoll.cpp; sourceTree = SOURCE_ROOT; };
+		40DD656CCCAA4D32B1E0C895 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ip_addr.cpp; path = src/network/ip_addr.cpp; sourceTree = SOURCE_ROOT; };
+		48F49AB0C4BD4462AFE10FE8 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringencode.cpp; path = src/string/stringencode.cpp; sourceTree = SOURCE_ROOT; };
+		4A825E64F8824706B28304D9 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketbreaker.cpp; path = src/network/socketbreaker.cpp; sourceTree = SOURCE_ROOT; };
+		4B3BF0B89429442784B26D3D /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread_queue.cpp; path = src/task/thread_queue.cpp; sourceTree = SOURCE_ROOT; };
+		4DA6FA1A8F11484E9E96E9DD /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = typedefs.h; path = src/util/typedefs.h; sourceTree = SOURCE_ROOT; };
+		4DFCEA8717DB4E31ACADFED6 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = allocator.h; path = 3rd/jsoncpp/include/json/allocator.h; sourceTree = SOURCE_ROOT; };
+		4FA096DF20A2454D9B725686 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = reader.h; path = 3rd/jsoncpp/include/json/reader.h; sourceTree = SOURCE_ROOT; };
+		51800E599A6B4B619EB5AB23 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringutils.cpp; path = src/string/stringutils.cpp; sourceTree = SOURCE_ROOT; };
+		532DA79772F34148A5E43B72 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_server.h; path = 3rd/socket_server/socket_server.h; sourceTree = SOURCE_ROOT; };
+		53D2AA1238E340D78D5E672F /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = bytebuffer.cpp; path = src/util/bytebuffer.cpp; sourceTree = SOURCE_ROOT; };
+		5751692F28354EFFA13BB67D /* /Users/zhangzhifan/github/libcommon/src/util/log.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log.h; path = src/util/log.h; sourceTree = SOURCE_ROOT; };
+		588E7D7814D742AB85D296B9 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = util.h; path = src/util/util.h; sourceTree = SOURCE_ROOT; };
+		5B9DD64A7EE742D0B12C0596 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringprintf.h; path = src/string/stringprintf.h; sourceTree = SOURCE_ROOT; };
+		66AE8B62102746E5BF03EC89 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = src/network/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		695FD5AD89174E3BA592EF07 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basictypes.h; path = src/util/basictypes.h; sourceTree = SOURCE_ROOT; };
+		6C9EBDBBD1464EB68D3C9D25 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ip_addr.h; path = src/network/ip_addr.h; sourceTree = SOURCE_ROOT; };
+		71B75864CC59429C88726720 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base64.h; path = src/digest/base64.h; sourceTree = SOURCE_ROOT; };
+		72601456ACBC4E6B98699CE1 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_base.h; path = src/task/bind_base.h; sourceTree = SOURCE_ROOT; };
+		7861E09334394CBD8E7CB471 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_reader.cpp; path = 3rd/jsoncpp/src/json_reader.cpp; sourceTree = SOURCE_ROOT; };
+		7DB70AC5BFDD4FBC898DAF0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_writer.cpp; path = 3rd/jsoncpp/src/json_writer.cpp; sourceTree = SOURCE_ROOT; };
+		7E0DB72305C045E9AE2D8C73 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = move.h; path = src/util/move.h; sourceTree = SOURCE_ROOT; };
+		7E36C98D3DA54EE3B2F0AC7C /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = template_util.h; path = src/util/template_util.h; sourceTree = SOURCE_ROOT; };
+		7FAF6C42FB1446B89C91BDF8 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_kqueue.h; path = 3rd/socket_server/socket_kqueue.h; sourceTree = SOURCE_ROOT; };
+		856B2BCF241E42E4BB9CB9CB /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = unix_socket.h; path = src/network/unix_socket.h; sourceTree = SOURCE_ROOT; };
+		8580FF367D7A4426AF0CD359 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_socket.h; path = src/network/block_socket.h; sourceTree = SOURCE_ROOT; };
+		86A2B9D07CE94AEAB162A63E /* /Users/zhangzhifan/github/libcommon/src/task/task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = task.h; path = src/task/task.h; sourceTree = SOURCE_ROOT; };
+		884B98E72B7C4F2F80F889EA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = value.h; path = 3rd/jsoncpp/include/json/value.h; sourceTree = SOURCE_ROOT; };
+		8B9010C482BC4080BA050180 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_select.h; path = 3rd/socket_server/socket_select.h; sourceTree = SOURCE_ROOT; };
+		8BF2D076457A4EFF879D4D16 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_socket.cpp; path = src/network/block_socket.cpp; sourceTree = SOURCE_ROOT; };
+		8F0B0743222E4155BECC62A4 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = src/digest/md5.h; sourceTree = SOURCE_ROOT; };
+		91700955270042A9A97A5147 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = md5.cpp; path = src/digest/md5.cpp; sourceTree = SOURCE_ROOT; };
+		9233D6E409F344BC91A74381 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = forwards.h; path = 3rd/jsoncpp/include/json/forwards.h; sourceTree = SOURCE_ROOT; };
+		94950DFB7D8649C7A85DCD04 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = writer.h; path = 3rd/jsoncpp/include/json/writer.h; sourceTree = SOURCE_ROOT; };
+		A1C703792F364DCCA6B5865E /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_poll.h; path = 3rd/socket_server/socket_poll.h; sourceTree = SOURCE_ROOT; };
+		A5425911C4B94463BA48FDC7 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_queue.h; path = src/task/thread_queue.h; sourceTree = SOURCE_ROOT; };
+		A5B8B2557F734BBEBE9BED27 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bytebuffer.h; path = src/util/bytebuffer.h; sourceTree = SOURCE_ROOT; };
+		A614DD426F4D4D2285BEF6E5 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal.h; path = src/util/signal.h; sourceTree = SOURCE_ROOT; };
+		A6B15DE55DA94964A3E5E656 /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = delegate.h; path = src/util/delegate.h; sourceTree = SOURCE_ROOT; };
+		A8650E5B7BD2426EA8E81EA1 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json.cpp; path = src/util/json.cpp; sourceTree = SOURCE_ROOT; };
+		AC5A600A671447E9A2F431AD /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringencode.h; path = src/string/stringencode.h; sourceTree = SOURCE_ROOT; };
+		ACED41CC193F40FDA6704B87 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autobuffer.h; path = src/network/autobuffer.h; sourceTree = SOURCE_ROOT; };
+		AF60A345E29443F4B96B04B5 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_queue.cpp; path = src/queue/block_queue.cpp; sourceTree = SOURCE_ROOT; };
+		B0322109278D469DA2D11E8B /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_function.h; path = src/task/bind_function.h; sourceTree = SOURCE_ROOT; };
+		B17FEFADD7A346D8B4ECE08D /* /Users/zhangzhifan/github/libcommon/src/network/ipv6_address_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ipv6_address_utils.h; path = src/network/ipv6_address_utils.h; sourceTree = SOURCE_ROOT; };
+		B1E064D5986B4C2086299934 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_tool.h; path = 3rd/jsoncpp/src/json_tool.h; sourceTree = SOURCE_ROOT; };
+		B27E58A3C00A4C948EA3C9BE /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scoped_ptr.h; path = src/util/scoped_ptr.h; sourceTree = SOURCE_ROOT; };
+		B465EAF1007C47A791C548F4 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = time_format.cpp; path = src/timer/time_format.cpp; sourceTree = SOURCE_ROOT; };
+		B52677E77654407799793180 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_queue.h; path = src/queue/block_queue.h; sourceTree = SOURCE_ROOT; };
+		B52791618DCC422589AE5288 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_object.h; path = src/task/bind_object.h; sourceTree = SOURCE_ROOT; };
+		B592746CA9B3437BBE6C2F0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = assertions.h; path = 3rd/jsoncpp/include/json/assertions.h; sourceTree = SOURCE_ROOT; };
+		BA7B17B8C71046588233A102 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketselect.cpp; path = src/network/socketselect.cpp; sourceTree = SOURCE_ROOT; };
+		BDCF3D475F89483C97CD3F96 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tuple.h; path = src/util/tuple.h; sourceTree = SOURCE_ROOT; };
+		BFDFE45D2C0148E3AC09F45A /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = crc32.cpp; path = src/digest/crc32.cpp; sourceTree = SOURCE_ROOT; };
+		C0813BABD31544BEA27DC0C7 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = unique_ptr.hpp; path = src/util/unique_ptr.hpp; sourceTree = SOURCE_ROOT; };
+		C0B3BDDE982F4105A26106E9 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = socket_server.c; path = 3rd/socket_server/socket_server.c; sourceTree = SOURCE_ROOT; };
+		C0D172A43AFA4E81A4FB434B /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C29BECDE621340E1A3157C63 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = queue.h; path = src/queue/queue.h; sourceTree = SOURCE_ROOT; };
+		C9C773288C5447F5A89A7B40 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CF7A76FB50714C159BB4F751 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unix_socket.cpp; path = src/network/unix_socket.cpp; sourceTree = SOURCE_ROOT; };
+		D1129B9F26264828A1E859DA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = features.h; path = 3rd/jsoncpp/include/json/features.h; sourceTree = SOURCE_ROOT; };
+		D3CEB89FD6244970BBD6B818 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time_format.h; path = src/timer/time_format.h; sourceTree = SOURCE_ROOT; };
+		D972E8279B1A4EDFBFF79FE2 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log.cpp; path = src/util/log.cpp; sourceTree = SOURCE_ROOT; };
+		E25B86912DDA4AE6BAC01EB1 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = singleton.h; path = src/util/singleton.h; sourceTree = SOURCE_ROOT; };
+		E3FFF2C595FD466E87E8EC3D /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = src/network/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		EADC0F52F215439194C54A54 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crc32.h; path = src/digest/crc32.h; sourceTree = SOURCE_ROOT; };
+		EE0BA1D3E98B46A1AB2EC674 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = src/network/socketselect.h; sourceTree = SOURCE_ROOT; };
+		F2433CF06E6C49459CDEE3F6 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = queue.cpp; path = src/queue/queue.cpp; sourceTree = SOURCE_ROOT; };
+		F364CE34D2F541CFB74F140B /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = shared_ptr.hpp; path = src/util/shared_ptr.hpp; sourceTree = SOURCE_ROOT; };
+		F4CE9127C9574501BE124173 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = 3rd/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
+		F863A8FD7CE84CB4BE31E1D7 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = 3rd/jsoncpp/include/json/version.h; sourceTree = SOURCE_ROOT; };
+		FAA39602D6A04896ACEF4994 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread.cpp; path = src/thread/thread.cpp; sourceTree = SOURCE_ROOT; };
+		FC0C6BFDE9EB40CF9EF1E2FD /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_value.cpp; path = 3rd/jsoncpp/src/json_value.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		026FA242DAD7459299986B4B /* Source Files */ = {
+		00C4A8EDCA3B4D5AA3A236B4 /* digets */ = {
 			isa = PBXGroup;
 			children = (
-				C7F913FCC57D4928A358760D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */,
-				A03350E561754F0EB6613EBC /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */,
-				A77195FC3E114D6CAFDD39C1 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */,
+				3DC1E58A203747D9878BEFA3 /* Source Files */,
+				8A5ED7F4625A4CA0974DFFCC /* Header Files */,
 			);
-			name = "Source Files";
+			name = digets;
 			sourceTree = "<group>";
 		};
-		05196964F9344B979534A53A /* Resources */ = {
+		080B53CEF15A4359AF0A09D7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		0AB1741833F4423FA23BCCDB /* Header Files */ = {
+		0D4CA37157B440E3A40FAB98 /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				52752AF898B543F6A8A0A711 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */,
-				62D69576DAC34489825BA371 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		0F9C4F4220E340ECA276A4DD /* strings */ = {
-			isa = PBXGroup;
-			children = (
-				026FA242DAD7459299986B4B /* Source Files */,
-				EC23FA813D9E41A29AB9F2D3 /* Header Files */,
-			);
-			name = strings;
-			sourceTree = "<group>";
-		};
-		12270B1C30AA45CE9D1DDDFB /* task */ = {
-			isa = PBXGroup;
-			children = (
-				2C60096A6153477FBC81ADD2 /* Source Files */,
-				84B72743EDB842FAADCA993E /* Header Files */,
-			);
-			name = task;
-			sourceTree = "<group>";
-		};
-		1B754A8737E1449DA8252FD8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9CC52F74E3784E39A0021B4F /* common */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		200A35278F054BB09CB447C1 /* socket_server */ = {
-			isa = PBXGroup;
-			children = (
-				60AF1B9191584539BEC7A5CD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */,
-				544CC32288EB452BAC8CD4A2 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */,
-				A139C033DCAE4D21BBF3AE5D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */,
-				FA7825ECAE8843C1969C2F2A /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */,
-				B1FEFB02CC2E421C8140433D /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */,
-				7E17453934FF40A4ACF11978 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */,
-			);
-			name = socket_server;
-			sourceTree = "<group>";
-		};
-		2C60096A6153477FBC81ADD2 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				160C784573284A4789915983 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */,
+				53D2AA1238E340D78D5E672F /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */,
+				A8650E5B7BD2426EA8E81EA1 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */,
+				D972E8279B1A4EDFBFF79FE2 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */,
+				06C610F09FBD41FB8BB47712 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		3860712DE4424BF1BB76B713 /* Source Files */ = {
+		1007B38A233646CA9A61D90F /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				C084E1000E974F35B47D893A /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */,
-				D247118CC0AB48A1A154AE0C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */,
-				7241CF3089BB49BD83DEAEC7 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */,
-				F72D9514FC6249779D93FB28 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */,
-				9892C6D73F3A403F9BC12FCE /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */,
+				48F49AB0C4BD4462AFE10FE8 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */,
+				0B0AFFFB5B0F44DBB2AA1AD1 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */,
+				51800E599A6B4B619EB5AB23 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		48164D83202749978CC42B49 /* queue */ = {
+		1EF0311985E94058BB1D7D53 /* common */ = {
 			isa = PBXGroup;
 			children = (
-				C716716B96824988834DD932 /* Source Files */,
-				8028D9D768CA4B8588BB0D51 /* Header Files */,
-			);
-			name = queue;
-			sourceTree = "<group>";
-		};
-		494349CD44BA412DA3D57E1D /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				F35C886FDCF84CFD88767387 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */,
-				31F6B6A3C4FF456295AAABE6 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		4C13FA264B8646AE9E5C80BC /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				581737555D244F03BF1331E1 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */,
-				C14BEE4C1A2A447FA9334F85 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		4C85B98CDAF24B7B8859B25F /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				F70432A836E64772B10F4099 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */,
-				03DE9DA5132640A29A88485C /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */,
-				7E65403E1C4A43E5A97D8B18 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */,
-				9675A83DF2394D099FE340A9 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */,
-				86DDFAB3A7CD48F59ACD4303 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		4C9E2D75657C4DCB9C6BF4D6 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				3860712DE4424BF1BB76B713 /* Source Files */,
-				4C85B98CDAF24B7B8859B25F /* Header Files */,
-			);
-			name = network;
-			sourceTree = "<group>";
-		};
-		4F20DD21E03A4A0C964F99BF /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		673A0DCB39404160AFD2E54B /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				B530190B25924D1D9FB33044 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */,
-				450BEE38263B42A4BAD49ECB /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */,
-				83374153726F44BD8F303B18 /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */,
-				2C342E0470F54D83B411F4AA /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */,
-				CC9C654956074559A528E2EE /* /Users/zhangzhifan/github/libcommon/src/util/json.h */,
-				6DB5BFA7953E4B9C84AB62D0 /* /Users/zhangzhifan/github/libcommon/src/util/log.h */,
-				2E2EFE47E1C44B4FA80A1868 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */,
-				56E87912A06C499FA88AE671 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */,
-				9940393EB0154E6A91411445 /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */,
-				868BDC92F5DC4FB381E833B5 /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */,
-				49364FE19B634F93A67D0653 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */,
-				764C4942424B4DC2B3004276 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */,
-				50FF81063F934EBBBC96DF7A /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */,
-				FBF4DB103A8541FBBAF5E20E /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */,
-				7A560A266EEF45D0B1446893 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */,
-				5A957C0606B142A48481D43E /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */,
-				EE8C206B5BDD4F86B5F05763 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */,
-				E38C3646FDCE45E2A2285335 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		6A689CD5538C4FD49196F475 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C6293E9AE6974824A6C82D22 /* common */,
-				CA12620DF7AA46B284BC772D /* ALL_BUILD */,
-				A2735AA4D20B42CF8EE400F4 /* ZERO_CHECK */,
-			);
-			name = Sources;
-			sourceTree = "<group>";
-		};
-		6E13E68A708749BA944B2F8C /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				2BABA461746F4B41A051CF2A /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */,
-				B81D584916B6404589661ABB /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */,
-				4E4D81D15AF74BBD9BF7B043 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */,
-				F772208F3130453CA0228B90 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		771D75A9B2DC442F8D60F06B /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		78D67BD78DA3496D8DC7D9E3 /* digets */ = {
-			isa = PBXGroup;
-			children = (
-				9CCEAF0A745E47D7BB7561CB /* Source Files */,
-				B4AE36A91B9C4E11B0010FA7 /* Header Files */,
-			);
-			name = digets;
-			sourceTree = "<group>";
-		};
-		8028D9D768CA4B8588BB0D51 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				58162EEE9E85450DBC21B932 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */,
-				02CEFD02F2754C9485A240B5 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		84B72743EDB842FAADCA993E /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				E6486E304CA84669A39AACB7 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */,
-				A63847B17835485A89419A6D /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */,
-				1BCEF970C47248C69A0B4D45 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */,
-				FB3F0A6BCAF246558F320869 /* /Users/zhangzhifan/github/libcommon/src/task/task.h */,
-				5F29664FB5C14031978D0F23 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		9CCEAF0A745E47D7BB7561CB /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				43A10C0821BB41EA9D90C474 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */,
-				1B6B01216A224C24BA905345 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */,
-				25B3B9837ED1483795E6A4DC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		A2735AA4D20B42CF8EE400F4 /* ZERO_CHECK */ = {
-			isa = PBXGroup;
-			children = (
-				4F20DD21E03A4A0C964F99BF /* CMake Rules */,
-				DB7B4E6AB3FC49CEBDC20FA0 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
-			);
-			name = ZERO_CHECK;
-			sourceTree = "<group>";
-		};
-		A9FB7DAD883240579DDEF8BA /* util */ = {
-			isa = PBXGroup;
-			children = (
-				6E13E68A708749BA944B2F8C /* Source Files */,
-				673A0DCB39404160AFD2E54B /* Header Files */,
-			);
-			name = util;
-			sourceTree = "<group>";
-		};
-		B3249822CFDA4B0CAC11F8CF /* thread */ = {
-			isa = PBXGroup;
-			children = (
-				F06A72A1B90144F3BF162CA2 /* Source Files */,
-				0AB1741833F4423FA23BCCDB /* Header Files */,
-			);
-			name = thread;
-			sourceTree = "<group>";
-		};
-		B4AE36A91B9C4E11B0010FA7 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				EE53A4C9054A4C279DE4D575 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */,
-				4F929A13405843EAB5EFC979 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */,
-				A49134A4B805497B9358BD1F /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		B658F42FA82D48B1B1096BDF /* timer */ = {
-			isa = PBXGroup;
-			children = (
-				4C13FA264B8646AE9E5C80BC /* Source Files */,
-				494349CD44BA412DA3D57E1D /* Header Files */,
-			);
-			name = timer;
-			sourceTree = "<group>";
-		};
-		C6293E9AE6974824A6C82D22 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				0F9C4F4220E340ECA276A4DD /* strings */,
-				78D67BD78DA3496D8DC7D9E3 /* digets */,
-				B3249822CFDA4B0CAC11F8CF /* thread */,
-				A9FB7DAD883240579DDEF8BA /* util */,
-				48164D83202749978CC42B49 /* queue */,
-				B658F42FA82D48B1B1096BDF /* timer */,
-				12270B1C30AA45CE9D1DDDFB /* task */,
-				4C9E2D75657C4DCB9C6BF4D6 /* network */,
-				CE2CF7E084A24EF6BC6A36BD /* 3rd */,
-				8EA88B7FA1A44B0FB23D294F /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
+				AA14D07E12B346CBBDB82600 /* strings */,
+				00C4A8EDCA3B4D5AA3A236B4 /* digets */,
+				D35DA4DE1D7E4BFCB6A01F23 /* thread */,
+				AAB174A80C1D493FAC0BDB42 /* util */,
+				56D3E6A7E05A4AEBAE064FDB /* queue */,
+				55D66E6172644DB98C4C71F6 /* timer */,
+				3600A4D5F6954B3DA469573D /* task */,
+				20EAD4B72C76477D808A8247 /* network */,
+				EE731D82AFC2418F8E6191C7 /* 3rd */,
+				C0D172A43AFA4E81A4FB434B /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
 			);
 			name = common;
 			sourceTree = "<group>";
 		};
-		C716716B96824988834DD932 /* Source Files */ = {
+		20921923840C49E2AC1B7221 /* jsoncpp */ = {
 			isa = PBXGroup;
 			children = (
-				83167894E442417DA8743FFF /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */,
-				F2EE0437AC494E2DAADADA4B /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		CA12620DF7AA46B284BC772D /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				771D75A9B2DC442F8D60F06B /* CMake Rules */,
-				74C3B7A6F2E547A5967E9938 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		CE2CF7E084A24EF6BC6A36BD /* 3rd */ = {
-			isa = PBXGroup;
-			children = (
-				F5F88BD298B54F5DBB9D11F4 /* jsoncpp */,
-				200A35278F054BB09CB447C1 /* socket_server */,
-			);
-			name = 3rd;
-			sourceTree = "<group>";
-		};
-		EC23FA813D9E41A29AB9F2D3 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				DC80AE6CAB1749E5890FD558 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */,
-				FB02997B03E6487894397552 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */,
-				3DB9FC516FFF4A7A9C466A56 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		F06A72A1B90144F3BF162CA2 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				C3D828BD71E046368C165531 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */,
-				B3C9A173CB2A494995BA410E /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		F5F88BD298B54F5DBB9D11F4 /* jsoncpp */ = {
-			isa = PBXGroup;
-			children = (
-				AE73C7E7D9BB47728E4EE9AF /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */,
-				180FEB0E1C22464D89618991 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */,
-				E51E11E85B8E41CEAF4DFA86 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */,
-				FA9BCD1A49F944E6AEB3F7E0 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */,
-				4A0F812D18D2465B9649ED22 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */,
-				B8958B555D914C65B11F742C /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */,
-				59C22A0F369F420C9A5E1DF8 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */,
-				D0C1CE141D5B40BD800E4122 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */,
-				C40FAD6158CE450085E5E1BA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */,
-				DC62BDCC8DA743D6A9E79548 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */,
-				F183AFFB82D44ABFA3A832D2 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */,
-				C39C97F6046C4436ADC28023 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
-				C010699FA9684B66AFB304AA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */,
-				EBB77E5CB1D245E2BDC70D3A /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
-				BE307E4DE30F49D59BC3B650 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
+				4DFCEA8717DB4E31ACADFED6 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/allocator.h */,
+				B592746CA9B3437BBE6C2F0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/assertions.h */,
+				2D3F98A358ED4136B9E52966 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/autolink.h */,
+				0E01CFAF127E4CD4B71B322E /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/config.h */,
+				D1129B9F26264828A1E859DA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/features.h */,
+				9233D6E409F344BC91A74381 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/forwards.h */,
+				F4CE9127C9574501BE124173 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/json.h */,
+				4FA096DF20A2454D9B725686 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/reader.h */,
+				884B98E72B7C4F2F80F889EA /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/value.h */,
+				F863A8FD7CE84CB4BE31E1D7 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/version.h */,
+				94950DFB7D8649C7A85DCD04 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include/json/writer.h */,
+				7861E09334394CBD8E7CB471 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
+				B1E064D5986B4C2086299934 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_tool.h */,
+				FC0C6BFDE9EB40CF9EF1E2FD /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
+				7DB70AC5BFDD4FBC898DAF0D /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
 			);
 			name = jsoncpp;
 			sourceTree = "<group>";
 		};
-		F7A36748DB3B4B13A09F1FEB = {
+		20EAD4B72C76477D808A8247 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				6A689CD5538C4FD49196F475 /* Sources */,
-				05196964F9344B979534A53A /* Resources */,
-				1B754A8737E1449DA8252FD8 /* Products */,
+				AC83BAF6C5DF49EA8B6C54B8 /* Source Files */,
+				B25D6AB880534FA78445DC6B /* Header Files */,
 			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		3600A4D5F6954B3DA469573D /* task */ = {
+			isa = PBXGroup;
+			children = (
+				F98C85D7597848F2B305BCB1 /* Source Files */,
+				6CCB6FBF22804D2B819FB987 /* Header Files */,
+			);
+			name = task;
+			sourceTree = "<group>";
+		};
+		3B98F1B6A9194090A29270EE /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B52677E77654407799793180 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.h */,
+				C29BECDE621340E1A3157C63 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3DC1E58A203747D9878BEFA3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				262D0BF7BDE443EDBE69F3FA /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */,
+				BFDFE45D2C0148E3AC09F45A /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */,
+				91700955270042A9A97A5147 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		48A22D35DB4346488ECFD9CB /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				B465EAF1007C47A791C548F4 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */,
+				06E5C90B75DD49FE81269053 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4ACF35CDA621462E9221207B /* socket_server */ = {
+			isa = PBXGroup;
+			children = (
+				28264C6BC48947719FB4EDFD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_epoll.h */,
+				7FAF6C42FB1446B89C91BDF8 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_kqueue.h */,
+				A1C703792F364DCCA6B5865E /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_poll.h */,
+				8B9010C482BC4080BA050180 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_select.h */,
+				C0B3BDDE982F4105A26106E9 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */,
+				532DA79772F34148A5E43B72 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.h */,
+			);
+			name = socket_server;
+			sourceTree = "<group>";
+		};
+		55D66E6172644DB98C4C71F6 /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				48A22D35DB4346488ECFD9CB /* Source Files */,
+				DACD203D8DEE4C869F35A87D /* Header Files */,
+			);
+			name = timer;
+			sourceTree = "<group>";
+		};
+		56D3E6A7E05A4AEBAE064FDB /* queue */ = {
+			isa = PBXGroup;
+			children = (
+				5F69CD543B4C4992A1530B05 /* Source Files */,
+				3B98F1B6A9194090A29270EE /* Header Files */,
+			);
+			name = queue;
+			sourceTree = "<group>";
+		};
+		5F69CD543B4C4992A1530B05 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				AF60A345E29443F4B96B04B5 /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */,
+				F2433CF06E6C49459CDEE3F6 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		60E978362970454CBB3C2039 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC5A600A671447E9A2F431AD /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.h */,
+				5B9DD64A7EE742D0B12C0596 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.h */,
+				0339E5F365D14E36A353CC84 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		65695C3629074F268248789C /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				F127D97EDFA94890B674D1B3 /* CMake Rules */,
+				0CD945E0EF844E1C8386AE3F /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6CCB6FBF22804D2B819FB987 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				72601456ACBC4E6B98699CE1 /* /Users/zhangzhifan/github/libcommon/src/task/bind_base.h */,
+				B0322109278D469DA2D11E8B /* /Users/zhangzhifan/github/libcommon/src/task/bind_function.h */,
+				B52791618DCC422589AE5288 /* /Users/zhangzhifan/github/libcommon/src/task/bind_object.h */,
+				86A2B9D07CE94AEAB162A63E /* /Users/zhangzhifan/github/libcommon/src/task/task.h */,
+				A5425911C4B94463BA48FDC7 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		72BC6BDBD36B4ED6B5618EF6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1EF0311985E94058BB1D7D53 /* common */,
+				65695C3629074F268248789C /* ALL_BUILD */,
+				A1542EB992C24096B1C3C95E /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		8068C956638E4BD2A3ABC5F3 = {
+			isa = PBXGroup;
+			children = (
+				72BC6BDBD36B4ED6B5618EF6 /* Sources */,
+				080B53CEF15A4359AF0A09D7 /* Resources */,
+				84E35F8922324AFF9742CFF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84E35F8922324AFF9742CFF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1106C72E8F7F45988E206737 /* common */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A5ED7F4625A4CA0974DFFCC /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				71B75864CC59429C88726720 /* /Users/zhangzhifan/github/libcommon/src/digest/base64.h */,
+				EADC0F52F215439194C54A54 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.h */,
+				8F0B0743222E4155BECC62A4 /* /Users/zhangzhifan/github/libcommon/src/digest/md5.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		9AAEE03612244388B689B5CA /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				22454D1F7A084D58BD7FBFC8 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */,
+				FAA39602D6A04896ACEF4994 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A1542EB992C24096B1C3C95E /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				A8D9AEE55BBD4F2E8BD58099 /* CMake Rules */,
+				C9C773288C5447F5A89A7B40 /* /Users/zhangzhifan/github/libcommon/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		A8D9AEE55BBD4F2E8BD58099 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		AA14D07E12B346CBBDB82600 /* strings */ = {
+			isa = PBXGroup;
+			children = (
+				1007B38A233646CA9A61D90F /* Source Files */,
+				60E978362970454CBB3C2039 /* Header Files */,
+			);
+			name = strings;
+			sourceTree = "<group>";
+		};
+		AAB174A80C1D493FAC0BDB42 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				0D4CA37157B440E3A40FAB98 /* Source Files */,
+				B93DDD9ECA8B4963ABB11246 /* Header Files */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		AC83BAF6C5DF49EA8B6C54B8 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				092BC364BFDB4C3196BCE2E7 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.cpp */,
+				8BF2D076457A4EFF879D4D16 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */,
+				40DD656CCCAA4D32B1E0C895 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */,
+				003ABB48A32F4A13BD222540 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.cpp */,
+				4A825E64F8824706B28304D9 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */,
+				34D0BD4EBA0142B9AD657E30 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */,
+				BA7B17B8C71046588233A102 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */,
+				CF7A76FB50714C159BB4F751 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		AF2619CBCE0B4E25A35AE716 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A9A5F595CA541D7B00F7A3E /* /Users/zhangzhifan/github/libcommon/src/thread/lock.h */,
+				0A92662690344BC78694E711 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B25D6AB880534FA78445DC6B /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACED41CC193F40FDA6704B87 /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.h */,
+				8580FF367D7A4426AF0CD359 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.h */,
+				6C9EBDBBD1464EB68D3C9D25 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.h */,
+				B17FEFADD7A346D8B4ECE08D /* /Users/zhangzhifan/github/libcommon/src/network/ipv6_address_utils.h */,
+				131C65709CA2483BB58DA9A4 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.h */,
+				E3FFF2C595FD466E87E8EC3D /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.h */,
+				66AE8B62102746E5BF03EC89 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.h */,
+				EE0BA1D3E98B46A1AB2EC674 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.h */,
+				856B2BCF241E42E4BB9CB9CB /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B93DDD9ECA8B4963ABB11246 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				695FD5AD89174E3BA592EF07 /* /Users/zhangzhifan/github/libcommon/src/util/basictypes.h */,
+				A5B8B2557F734BBEBE9BED27 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.h */,
+				2D6A6DDC4A324B56B62D4E3C /* /Users/zhangzhifan/github/libcommon/src/util/byteorder.h */,
+				A6B15DE55DA94964A3E5E656 /* /Users/zhangzhifan/github/libcommon/src/util/delegate.h */,
+				100BE5BC18924330B6B547C1 /* /Users/zhangzhifan/github/libcommon/src/util/json.h */,
+				5751692F28354EFFA13BB67D /* /Users/zhangzhifan/github/libcommon/src/util/log.h */,
+				7E0DB72305C045E9AE2D8C73 /* /Users/zhangzhifan/github/libcommon/src/util/move.h */,
+				22331B98581F436BB1B88AF3 /* /Users/zhangzhifan/github/libcommon/src/util/ref_count.h */,
+				B27E58A3C00A4C948EA3C9BE /* /Users/zhangzhifan/github/libcommon/src/util/scoped_ptr.h */,
+				F364CE34D2F541CFB74F140B /* /Users/zhangzhifan/github/libcommon/src/util/shared_ptr.hpp */,
+				A614DD426F4D4D2285BEF6E5 /* /Users/zhangzhifan/github/libcommon/src/util/signal.h */,
+				E25B86912DDA4AE6BAC01EB1 /* /Users/zhangzhifan/github/libcommon/src/util/singleton.h */,
+				03173364E73A4649A3CF7A89 /* /Users/zhangzhifan/github/libcommon/src/util/stl_util.h */,
+				7E36C98D3DA54EE3B2F0AC7C /* /Users/zhangzhifan/github/libcommon/src/util/template_util.h */,
+				BDCF3D475F89483C97CD3F96 /* /Users/zhangzhifan/github/libcommon/src/util/tuple.h */,
+				4DA6FA1A8F11484E9E96E9DD /* /Users/zhangzhifan/github/libcommon/src/util/typedefs.h */,
+				C0813BABD31544BEA27DC0C7 /* /Users/zhangzhifan/github/libcommon/src/util/unique_ptr.hpp */,
+				588E7D7814D742AB85D296B9 /* /Users/zhangzhifan/github/libcommon/src/util/util.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		D35DA4DE1D7E4BFCB6A01F23 /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				9AAEE03612244388B689B5CA /* Source Files */,
+				AF2619CBCE0B4E25A35AE716 /* Header Files */,
+			);
+			name = thread;
+			sourceTree = "<group>";
+		};
+		DACD203D8DEE4C869F35A87D /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3CEB89FD6244970BBD6B818 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.h */,
+				01FC683DDA3B4812A86F4EB0 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		EE731D82AFC2418F8E6191C7 /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				20921923840C49E2AC1B7221 /* jsoncpp */,
+				4ACF35CDA621462E9221207B /* socket_server */,
+			);
+			name = 3rd;
+			sourceTree = "<group>";
+		};
+		F127D97EDFA94890B674D1B3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F98C85D7597848F2B305BCB1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4B3BF0B89429442784B26D3D /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */,
+			);
+			name = "Source Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -647,18 +668,18 @@
 /* Begin PBXNativeTarget section */
 		91440FE372F34EFF82EE1D16 /* common */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D8E399750ED47B6AB59FB42 /* Build configuration list for PBXNativeTarget "common" */;
+			buildConfigurationList = DAE10304B2F14CF8B9A500DA /* Build configuration list for PBXNativeTarget "common" */;
 			buildPhases = (
-				728AF28C3615404D84E44F74 /* Sources */,
+				99B326B058184D41ACE65BA2 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AD6A0A17BE06427EAB734868 /* PBXTargetDependency */,
+				211297F14EDA473096E60709 /* PBXTargetDependency */,
 			);
 			name = common;
 			productName = common;
-			productReference = 9CC52F74E3784E39A0021B4F /* common */;
+			productReference = 1106C72E8F7F45988E206737 /* common */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -670,18 +691,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0830;
 			};
-			buildConfigurationList = F95D9E7066034C81A0EF9FB4 /* Build configuration list for PBXProject "common" */;
+			buildConfigurationList = 3E1219FC649C4584957EB9CA /* Build configuration list for PBXProject "common" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				D5AFD0C67C804D9AB10133C3 /* Debug */,
-				C365953CF9784DF0805CD55A /* Release */,
-				F07D79B80EC54B9D9C635645 /* MinSizeRel */,
-				0E8608A48EC442FA9147A932 /* RelWithDebInfo */,
+				5B42E312B389489EA2226064 /* Debug */,
+				BB3D7E3A4ACA48C289AE7ABD /* Release */,
+				6FBDCE76FAF14356A2156017 /* MinSizeRel */,
+				9CD886B89BF944E789A9FEAD /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = F7A36748DB3B4B13A09F1FEB;
+			mainGroup = 8068C956638E4BD2A3ABC5F3;
 			projectDirPath = ../../;
 			projectRoot = "";
 			targets = (
@@ -693,7 +714,7 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5749735B6F7B463496918C3A /* CMake Rules */ = {
+		0F99A485412E4630A97F5E41 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -704,7 +725,7 @@
 			shellScript = "make -C /Users/zhangzhifan/github/libcommon/ide/xcode -f /Users/zhangzhifan/github/libcommon/ide/xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		AA3E9980F740462CA28F9219 /* CMake Rules */ = {
+		540E502F06AE4C9E808E8640 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -715,7 +736,7 @@
 			shellScript = "make -C /Users/zhangzhifan/github/libcommon/ide/xcode -f /Users/zhangzhifan/github/libcommon/ide/xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		CCB9A975CB484B67A1465AF3 = {
+		5B03F10D37FA4FC0BF4E23E1 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -730,7 +751,7 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		E7B1204B768E4E33BDBFD47D = {
+		F28AAAD4E446444C86DD1ADE = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -748,127 +769,64 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		728AF28C3615404D84E44F74 /* Sources */ = {
+		99B326B058184D41ACE65BA2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6784E4D1FC3543C08C4EBF48 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
-				ABC633E2E5184EFD87AE9207 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
-				241C11BF30BE4246AB3FE8CC /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
-				60852CA0350A4AEA9C58EA97 /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */,
-				12F2005C572D495ABEEC163F /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */,
-				576C58A69BFB40FD8CDCE238 /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */,
-				472E3BAAC5AE44B8BCBD88CC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */,
-				3389B1E1E902490198C08455 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */,
-				F26F20F3C76A464289620545 /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */,
-				FC18305081254BCBBDFC1895 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */,
-				64D59CCF1AA44BD2AD1424DC /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */,
-				656035BE93B0455FB9C4C5A5 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */,
-				644F96757A344F5395827B7E /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */,
-				5FD8FD9CE9EF44C9A8947A28 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */,
-				ECB3A859A5704DBAA4A7C9F3 /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */,
-				DB10EBA2144B43DC89CB17B4 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */,
-				DC2423FE8AC24446BBEA312D /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */,
-				3043864E5C7E450DA9ECDE92 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */,
-				0DC48EFB5E894D7DBB3FB819 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */,
-				C588BE7FD9DE4D4286DB6BEF /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */,
-				EAB0D6ADAAAB454D883B0AB4 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */,
-				23DA75F3FA084BF99BF158A4 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */,
-				32F63D4013094F1D870E8C8D /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */,
-				29A698B34EF845AB8A4A9AB3 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */,
-				938CA84E404B427D87048F6C /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */,
-				5728531C91DC42BB9A065483 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */,
+				69FB0CB9CD4A42E9BFB24550 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
+				BEA04D1E4CD346E8883680D8 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
+				BA34D38A5C6148A7BC6D5059 /* /Users/zhangzhifan/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
+				2074993C3FA94EC1A41890DD /* /Users/zhangzhifan/github/libcommon/3rd/socket_server/socket_server.c */,
+				C747FC77C80245119F79077F /* /Users/zhangzhifan/github/libcommon/src/digest/base64.cpp */,
+				250968D6F30E4BE4BEAEDA1D /* /Users/zhangzhifan/github/libcommon/src/digest/crc32.cpp */,
+				8DBF55127AD94D3C8DCFB4FC /* /Users/zhangzhifan/github/libcommon/src/digest/md5.cpp */,
+				BA805AB39B9D4307AF588F9D /* /Users/zhangzhifan/github/libcommon/src/network/autobuffer.cpp */,
+				D161814A7E8847B48B810288 /* /Users/zhangzhifan/github/libcommon/src/network/block_socket.cpp */,
+				A0A8A538AC7948E39521A43A /* /Users/zhangzhifan/github/libcommon/src/network/ip_addr.cpp */,
+				24D9338727994497A88EB258 /* /Users/zhangzhifan/github/libcommon/src/network/socket_address.cpp */,
+				D2057CC32813476C86469653 /* /Users/zhangzhifan/github/libcommon/src/network/socketbreaker.cpp */,
+				C4BE5494B2694B4EA83DBC83 /* /Users/zhangzhifan/github/libcommon/src/network/socketpoll.cpp */,
+				1E89F81A91584DEE90249B12 /* /Users/zhangzhifan/github/libcommon/src/network/socketselect.cpp */,
+				FB023942DC134FB48CFB32A5 /* /Users/zhangzhifan/github/libcommon/src/network/unix_socket.cpp */,
+				A2A41E9687D54E73AB21BBEC /* /Users/zhangzhifan/github/libcommon/src/queue/block_queue.cpp */,
+				3B92747E9DC5495582EB94B4 /* /Users/zhangzhifan/github/libcommon/src/queue/queue.cpp */,
+				A28064290C844C35A7E1681D /* /Users/zhangzhifan/github/libcommon/src/string/stringencode.cpp */,
+				D3E05DCF13F6494DB310E957 /* /Users/zhangzhifan/github/libcommon/src/string/stringprintf.cpp */,
+				44236700545C4830A6C462C5 /* /Users/zhangzhifan/github/libcommon/src/string/stringutils.cpp */,
+				085D5A886EEF4D46BB2AF9A2 /* /Users/zhangzhifan/github/libcommon/src/task/thread_queue.cpp */,
+				ABCD0F88021346A3B77C51B3 /* /Users/zhangzhifan/github/libcommon/src/thread/lock.cpp */,
+				75CA6A9C89D440BB895EC537 /* /Users/zhangzhifan/github/libcommon/src/thread/thread.cpp */,
+				35A5D8E9EA2F4B09820B49F3 /* /Users/zhangzhifan/github/libcommon/src/timer/time_format.cpp */,
+				F907941BA2844A0984861413 /* /Users/zhangzhifan/github/libcommon/src/timer/timer.cpp */,
+				D0476DD7F07A416C988AEB55 /* /Users/zhangzhifan/github/libcommon/src/util/bytebuffer.cpp */,
+				946DF60FA3284CE2A3E33EB2 /* /Users/zhangzhifan/github/libcommon/src/util/json.cpp */,
+				6119AFD2AA974FD69347B458 /* /Users/zhangzhifan/github/libcommon/src/util/log.cpp */,
+				A2334CF2A38F4AB7A1AF4260 /* /Users/zhangzhifan/github/libcommon/src/util/util.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3BF093882B1C4B098C1A3940 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C677E90FCB34A3CBBC87FDE /* ZERO_CHECK */;
-			targetProxy = 19E038307BEB4B85AD3D0A5A /* PBXContainerItemProxy */;
-		};
-		AD6A0A17BE06427EAB734868 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C677E90FCB34A3CBBC87FDE /* ZERO_CHECK */;
-			targetProxy = 44C85C2833354C9EB1A45DC4 /* PBXContainerItemProxy */;
-		};
-		C7D7926DC3CC4EB9BEED5B81 /* PBXTargetDependency */ = {
+		1717748CA6E84256A9526853 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91440FE372F34EFF82EE1D16 /* common */;
-			targetProxy = 1A06E8315A4F43D38CF81328 /* PBXContainerItemProxy */;
+			targetProxy = AC52BD7CADD24CBBA9FBAAFA /* PBXContainerItemProxy */;
+		};
+		211297F14EDA473096E60709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C677E90FCB34A3CBBC87FDE /* ZERO_CHECK */;
+			targetProxy = 4B707B912E1446B39985CC2E /* PBXContainerItemProxy */;
+		};
+		4751701FA67F44FFAE53ABBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C677E90FCB34A3CBBC87FDE /* ZERO_CHECK */;
+			targetProxy = 2D7AF1D8AD2A4820A7A3AB34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		5995F4285FD540F6ADCDAD0A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
-			};
-			name = RelWithDebInfo;
-		};
-		636E0FAB86144987A8C4B864 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/zhangzhifan/github/libcommon/libs/Release;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include    ";
-				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11     -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include  -g  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = common;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		648AC261380B48C59D285DBE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
-			};
-			name = Debug;
-		};
-		85D4A44799864C2995471114 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		9986A1419BAB4B768241292A /* MinSizeRel */ = {
+		01FC36346D634785B6C26946 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
@@ -877,76 +835,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		999C15B8C9F944A881F53B7D /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		B0BF46FE456248D8827FF428 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/zhangzhifan/github/libcommon/libs/RelWithDebInfo;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include   ";
-				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11        -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include   ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = common;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		B0E0EF1930634AE2A65889F2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		B0F1B2715FB34B5F9E65EFE1 /* MinSizeRel */ = {
+		16975FE339AA4A33B9E6729B /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -973,58 +862,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		BF75AD982CFE44F5AD8CB299 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		C3BBB4B59D804036B2B6EE2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
-			};
-			name = Release;
-		};
-		CDBB385DD2A94F379ACB5F88 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		DF2A624B2AEA4B68AFB26BA4 /* Debug */ = {
+		2B55A18B76DD4C5F91AD33B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1051,7 +889,112 @@ exit 0";
 			};
 			name = Debug;
 		};
-		DF8B932376D64100B34AFAC2 /* MinSizeRel */ = {
+		458675173EEB4926863D36A0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4DA3534D88E042BFACB62135 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/zhangzhifan/github/libcommon/libs/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11        -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7EF098FF097549C0A11FC597 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/zhangzhifan/github/libcommon/libs/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include    ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11     -DNDEBUG -I/Users/zhangzhifan/github/libcommon/. -I/Users/zhangzhifan/github/libcommon/src -I/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include  -g  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		995A9F19B4664694843E35BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		A6A776A48D41453BA5D15B5E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
+			};
+			name = RelWithDebInfo;
+		};
+		A820B5A3A9894F1B96FBCB18 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1072,7 +1015,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		E6F1CF3340EB40689DC74A11 /* Debug */ = {
+		AC3E6F3A3C7346E98210DDCE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1093,7 +1036,58 @@ exit 0";
 			};
 			name = Debug;
 		};
-		F93D61E0F6AB486F94A9EF2C /* MinSizeRel */ = {
+		BBF35E9102494AC9966E8A74 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BCAAAD41A2754A73A8072928 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D0D6D61A84FA4E0097695652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
+			};
+			name = Debug;
+		};
+		D918839226DA4F979E4FF0E3 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1114,49 +1108,79 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
+		DCA574FF07CA4C388C9AFDB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk;
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode/build;
+			};
+			name = Release;
+		};
+		F2AA3958D21D48A0879D5DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/zhangzhifan/github/libcommon/.,/Users/zhangzhifan/github/libcommon/src,/Users/zhangzhifan/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/zhangzhifan/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3278C3E0E992487D9637E1F8 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		3E1219FC649C4584957EB9CA /* Build configuration list for PBXProject "common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0E0EF1930634AE2A65889F2 /* Debug */,
-				CDBB385DD2A94F379ACB5F88 /* Release */,
-				DF8B932376D64100B34AFAC2 /* MinSizeRel */,
-				BF75AD982CFE44F5AD8CB299 /* RelWithDebInfo */,
+				D0D6D61A84FA4E0097695652 /* Debug */,
+				DCA574FF07CA4C388C9AFDB0 /* Release */,
+				01FC36346D634785B6C26946 /* MinSizeRel */,
+				A6A776A48D41453BA5D15B5E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		3D8E399750ED47B6AB59FB42 /* Build configuration list for PBXNativeTarget "common" */ = {
+		7A64F4F286A8498ABD5D51A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DF2A624B2AEA4B68AFB26BA4 /* Debug */,
-				636E0FAB86144987A8C4B864 /* Release */,
-				B0F1B2715FB34B5F9E65EFE1 /* MinSizeRel */,
-				B0BF46FE456248D8827FF428 /* RelWithDebInfo */,
+				F2AA3958D21D48A0879D5DD4 /* Debug */,
+				BCAAAD41A2754A73A8072928 /* Release */,
+				A820B5A3A9894F1B96FBCB18 /* MinSizeRel */,
+				BBF35E9102494AC9966E8A74 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		52DCADDC8C314FB7B45276F6 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		844CAD09A9544BC08CD87E52 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E6F1CF3340EB40689DC74A11 /* Debug */,
-				85D4A44799864C2995471114 /* Release */,
-				F93D61E0F6AB486F94A9EF2C /* MinSizeRel */,
-				999C15B8C9F944A881F53B7D /* RelWithDebInfo */,
+				AC3E6F3A3C7346E98210DDCE /* Debug */,
+				995A9F19B4664694843E35BC /* Release */,
+				D918839226DA4F979E4FF0E3 /* MinSizeRel */,
+				458675173EEB4926863D36A0 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F95D9E7066034C81A0EF9FB4 /* Build configuration list for PBXProject "common" */ = {
+		DAE10304B2F14CF8B9A500DA /* Build configuration list for PBXNativeTarget "common" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				648AC261380B48C59D285DBE /* Debug */,
-				C3BBB4B59D804036B2B6EE2E /* Release */,
-				9986A1419BAB4B768241292A /* MinSizeRel */,
-				5995F4285FD540F6ADCDAD0A /* RelWithDebInfo */,
+				2B55A18B76DD4C5F91AD33B6 /* Debug */,
+				7EF098FF097549C0A11FC597 /* Release */,
+				16975FE339AA4A33B9E6729B /* MinSizeRel */,
+				4DA3534D88E042BFACB62135 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
