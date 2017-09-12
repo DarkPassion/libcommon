@@ -14,6 +14,7 @@
 namespace libcommon
 {
     
+    uint64_t gettickcount();
     
     class ITimerHandle
     {
@@ -51,7 +52,6 @@ namespace libcommon
         
         
     private:
-        uint64_t get_tick_count();
         
         void tick();
         

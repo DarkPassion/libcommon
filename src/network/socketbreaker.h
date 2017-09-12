@@ -22,9 +22,9 @@
 #define _NETWORK_SOCKSTBREAKER_H_
 
 #include "thread/lock.h"
+#include "network/unix_socket.h"
 
 namespace libcommon {
-    typedef int SOCKET;
 
     class SocketBreaker {
     public:

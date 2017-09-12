@@ -20,6 +20,8 @@
 #ifndef _NETWORK_BLOCK_SOCKET_H_
 #define _NETWORK_BLOCK_SOCKET_H_
 
+#include "network/unix_socket.h"
+
 namespace libcommon {
     
     class SocketSelect;
