@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <assert.h>
 #include <sys/time.h>
+#include <algorithm>
 #include "timer/timer.h"
 #include "util/log.h"
 
@@ -81,18 +82,23 @@ namespace libcommon
     void CTimer::tick()
     {
         AutoLock __lock(_mutex);
-        uint64_t curr_timestamp = gettickcount();
-        for (TypeQueue::iterator iter = _queue.begin(); iter != _queue.end(); iter++)
-        {
-            stimer_t_0* t = *iter;
+        if (_queue.size() > 0) {
+            uint64_t curr_timestamp = gettickcount();
+
             
-            if (curr_timestamp - t->last_timestamp > (uint64_t)t->elapse)
+            for (TypeQueue::iterator iter = _queue.begin(); iter != _queue.end(); iter++)
             {
-                _handle->on_time(t->id);
-                t->last_timestamp = curr_timestamp;
+                stimer_t_0* t = *iter;
+                
+                if (curr_timestamp - t->last_timestamp > (uint64_t)t->elapse)
+                {
+                    _handle->on_time(t->id);
+                    t->last_timestamp = curr_timestamp;
+                } else {
+                    break;
+                }
             }
         }
-        
     }
     
    
@@ -109,6 +115,11 @@ namespace libcommon
         }
     }
     
+    
+    static bool CTimerComparison(const stimer_t_0* lhs, const stimer_t_0* rhs)
+    {
+        return lhs->last_timestamp + lhs->elapse < rhs->last_timestamp + rhs->elapse;
+    }
     
     void CTimer::set_timer(int id, int elapse)
     {
@@ -139,6 +150,10 @@ namespace libcommon
             t->elapse = elapse;
             t->last_timestamp = gettickcount();
             _queue.push_back(t);
+            
+            if (_queue.size() > 0) {
+                std::sort(_queue.begin(), _queue.end(), CTimerComparison);
+            }
         }
         
     }
