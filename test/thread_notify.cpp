@@ -49,8 +49,9 @@ void test_thread_notify()
     notify->connect_signal1(name1, test_signal1_com_xx1);
     notify->connect_signal1(name1, test_signal1_com_xxx1);
     
-    notify->connect_signal1(name1, MakeDelegate(&_sig, fn));
-
+    notify->connect_signal1(name1, MakeDelegate<notify_signal1, notify_signal1>(&_sig, fn));
+    
+    cout << "post connect signal----" << endl;
     notify->post_signal1(name1, NULL);
     
     usleep(800*1000);

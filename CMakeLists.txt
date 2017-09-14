@@ -11,7 +11,7 @@ include_directories( ${PROJECT_SOURCE_DIR}/.
 ${PROJECT_SOURCE_DIR}/src
 ${PROJECT_SOURCE_DIR}/3rd/jsoncpp/include)
 
-set(CMAKE_CXX_FLAGS "-DWEBRTC_POSIX -g -DUSE_GNUTLS -Wall -O2 -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11")
+set(CMAKE_CXX_FLAGS "-DWEBRTC_POSIX -g -DUSE_GNUTLS -Wall -O2 -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11 -DSIGSLOT_USE_POSIX_THREADS")
 
 file(GLOB STRING_SRCS src/string/*.cpp)
 file(GLOB STRING_INCS src/string/*.h)
