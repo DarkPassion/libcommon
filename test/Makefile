@@ -75,13 +75,16 @@ http_server:
 http_client:
 	@($(GCC) -I$(INC_PATH) -I$(SOCKET_SERVER_PATH) $(CFLAGS)  http_client.c $(LIB_PATH) -o http_client.out)
 
+smart_ptr:
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  smart_ptr_test.cpp $(LIB_PATH) -o smart_ptr_test.out)
+
 
 
 
 
 all:  block_queue byte_buffer digest queue scoped_ptr task_test \
 	thread timer util json dns_detect gfw_dns_resolver ip_addr ip_server signal_test thread_queue \
-	http_server http_client
+	http_server http_client smart_ptr
 
 clean:
 	@($(RM) *.a *.so *.o *.out)

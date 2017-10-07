@@ -23,6 +23,7 @@
 
 #ifndef __SMART_PTR_H__
 #define __SMART_PTR_H__
+#include "util/ref_count.h"
 
 namespace libcommon {
 
@@ -40,13 +41,13 @@ public:
     // increment use count
     int inc_ref()
     {
-        return ++m_strong_ref_count;
+        return ATOM_INC(&m_strong_ref_count);
     }
 
     // increment weak reference count
     int inc_weak_ref()
     {
-        return ++m_weak_ref_count;
+        return ATOM_INC(&m_weak_ref_count);
     }
 
     // decrement use count
@@ -54,7 +55,7 @@ public:
     {
         int nRs = 0;
         if (m_strong_ref_count > 0) {
-            nRs = --m_strong_ref_count;
+            nRs = ATOM_DEC(&m_strong_ref_count);
         }
         return nRs;
     }
@@ -64,7 +65,7 @@ public:
     {
         int nRs = 0;
         if (m_weak_ref_count > 0) {
-            nRs = --m_weak_ref_count;
+            nRs = ATOM_DEC(&m_weak_ref_count);
         }
         return nRs;
     }
@@ -87,8 +88,8 @@ public:
     }
 
 private:
-    int m_strong_ref_count;
-    int m_weak_ref_count;
+    volatile int m_strong_ref_count;
+    volatile int m_weak_ref_count;
 }; 
 
 
