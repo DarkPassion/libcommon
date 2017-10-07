@@ -154,7 +154,46 @@ void test2(void)
         std::cout << "Equal" <<std::endl;
     }
 
+    sp1.reset();
+
+    if (sp1.get() == NULL) {
+        std::cout << "sp1 == NULL" << std::endl;
+    }
+
+    if (wsp.expired()) {
+        std::cout << "wsp expired " << std::endl;
+    }
+
+
+    if (sp1 == wsp.lock()) {
+        std::cout << "== Equal" <<std::endl;
+    }
+
 #endif
+}
+
+void test3()
+{
+    const int CI = 10;
+    strong_array<CDevide> sp1;
+    CDevide* pobj = new CDevide[CI];
+    sp1.reset(pobj);
+
+    for (int i = 0; i < CI; i++) {
+        sp1[i].data0 = i + 1;
+
+    }
+
+    for (int i = 0; i < CI; i++) {
+        std::cout << " spi " << i << " data0 "<< sp1[i].data0 << std::endl;
+    }
+}
+
+
+void test4()
+{
+
+
 }
 
 
@@ -164,5 +203,7 @@ int CDECL main(void)
 {
     test1();
     test2();
+    test3();
+    test4();
     return 0;
 }
