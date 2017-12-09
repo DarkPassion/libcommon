@@ -1,0 +1,1231 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		3E939C9F540149858CD3A271 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 95947645172647FABC668663 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				4C36014538C144B29D7675B2 /* CMake Rules */,
+			);
+			dependencies = (
+				100172F473A34123B4F06811 /* PBXTargetDependency */,
+				52F3B9BC766A438CA15CCF29 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		E63CEF963E62414EA1158FF3 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DE246DE9F4C54474B2E2F519 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				FBDDF9AF062840F8B081F726 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		007E9DC38CFF484CA835D53B /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D7B327CDD7B74E0F85521D89 /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */; };
+		01234E74F2014F75BF51BB9B /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXBuildFile; fileRef = 35F8592C3882446799E46DFE /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.h */; };
+		013B7287200F4FDFA0B892FC /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXBuildFile; fileRef = E2872839ECC0423CBA17154D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_kqueue.h */; };
+		01A844A56C37422783B6CAA0 /* /Volumes/Transcend/github/libcommon/src/task/bind_function.h */ = {isa = PBXBuildFile; fileRef = 7BB076344131412C89CD42B6 /* /Volumes/Transcend/github/libcommon/src/task/bind_function.h */; };
+		03443F8ACB464F0ABAC0D2F7 /* /Volumes/Transcend/github/libcommon/src/util/singleton.h */ = {isa = PBXBuildFile; fileRef = 47B47084CE1E422594F9741F /* /Volumes/Transcend/github/libcommon/src/util/singleton.h */; };
+		067B9D13439D4A8A8BE96101 /* /Volumes/Transcend/github/libcommon/src/util/delegate.h */ = {isa = PBXBuildFile; fileRef = 8225752178104CF1AF14BB33 /* /Volumes/Transcend/github/libcommon/src/util/delegate.h */; };
+		0BD896F52E25438A8DC3FA1B /* /Volumes/Transcend/github/libcommon/src/smart_ptr/shared_ptr.h */ = {isa = PBXBuildFile; fileRef = 34BC75E7D0054C96A003A613 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/shared_ptr.h */; };
+		0CB4F9AB985F406D84478E23 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.h */ = {isa = PBXBuildFile; fileRef = 5AFD7174F5EC4B9B8669D366 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.h */; };
+		10EB60C3BE3A43F7BC730C49 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.h */ = {isa = PBXBuildFile; fileRef = 5A0C74D765BA4B9696ED5442 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.h */; };
+		116C21EAA1A1402588B4DDF2 /* /Volumes/Transcend/github/libcommon/src/network/socket_address.h */ = {isa = PBXBuildFile; fileRef = EFC96E6E4A924B63B6C92146 /* /Volumes/Transcend/github/libcommon/src/network/socket_address.h */; };
+		11925257033046628D7591A8 /* /Volumes/Transcend/github/libcommon/src/util/typedefs.h */ = {isa = PBXBuildFile; fileRef = 2CDE80BAE5C44A98B9C70E4E /* /Volumes/Transcend/github/libcommon/src/util/typedefs.h */; };
+		14518BB8366240A0A727F2CF /* /Volumes/Transcend/github/libcommon/src/network/socket_address.cpp */ = {isa = PBXBuildFile; fileRef = 24C88BD28FA747D68C6628DE /* /Volumes/Transcend/github/libcommon/src/network/socket_address.cpp */; };
+		1894BD883E624AA3BAC833FC /* /Volumes/Transcend/github/libcommon/src/thread/lock.cpp */ = {isa = PBXBuildFile; fileRef = C08C171A7B53417BA8B765CB /* /Volumes/Transcend/github/libcommon/src/thread/lock.cpp */; };
+		1AD91F3039C24055BCF7576B /* /Volumes/Transcend/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXBuildFile; fileRef = 1EB098444CC84CA492BA84B5 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.cpp */; };
+		1BD5AF9E95384677A4744A9C /* /Volumes/Transcend/github/libcommon/src/thread/thread.h */ = {isa = PBXBuildFile; fileRef = D137BE9E9823403193F728D3 /* /Volumes/Transcend/github/libcommon/src/thread/thread.h */; };
+		1BDF0176B25F4AE2BE1039C3 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.h */ = {isa = PBXBuildFile; fileRef = 4925AD2CC9ED4A09837CB984 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.h */; };
+		1EBC62F82A294B379B5B9B8F /* /Volumes/Transcend/github/libcommon/src/task/sigslot.h */ = {isa = PBXBuildFile; fileRef = 2D634C8DE37E47D7BB929955 /* /Volumes/Transcend/github/libcommon/src/task/sigslot.h */; };
+		203128D6888F43F2A4250A94 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXBuildFile; fileRef = 0E93B5325BCC440188D2697D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.h */; };
+		2079AD88E40D4960B4789AD8 /* /Volumes/Transcend/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXBuildFile; fileRef = 0F4517CC17084C5A9DAFC07F /* /Volumes/Transcend/github/libcommon/src/network/block_socket.cpp */; };
+		2130BDF8EB1F49D8A4EDDF7F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXBuildFile; fileRef = 17E11F3FC6784A6C9EA819F4 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/assertions.h */; };
+		2444C6B73C5E4BB6A1937254 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/smart_ptr.h */ = {isa = PBXBuildFile; fileRef = C52B8B8DD9C741838E21419C /* /Volumes/Transcend/github/libcommon/src/smart_ptr/smart_ptr.h */; };
+		2830B3C70FD2470FB375E120 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/ref_count.h */ = {isa = PBXBuildFile; fileRef = DFC1E7A14BAC4395895ACE04 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/ref_count.h */; };
+		28D96B748C844222911AB1F5 /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXBuildFile; fileRef = 9CC915405D1D48CAAD13DD01 /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.cpp */; };
+		2B8A627AD0B8482B86C40A6B /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXBuildFile; fileRef = 74C69C1F8FE5438892258A22 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_select.h */; };
+		343CF586B6D849A38321DDE9 /* /Volumes/Transcend/github/libcommon/src/digest/md5.cpp */ = {isa = PBXBuildFile; fileRef = DA469B7BF0454156ABAB1717 /* /Volumes/Transcend/github/libcommon/src/digest/md5.cpp */; };
+		36B2FECD28D84F33BEE12BD6 /* /Volumes/Transcend/github/libcommon/src/util/tuple.h */ = {isa = PBXBuildFile; fileRef = 6D13A45D032845508534AD59 /* /Volumes/Transcend/github/libcommon/src/util/tuple.h */; };
+		3868AF7031A946B8A145158C /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.cpp */ = {isa = PBXBuildFile; fileRef = 11EBBAEB95B246BC9176F618 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.cpp */; };
+		3B15A027E68244BCB722594E /* /Volumes/Transcend/github/libcommon/src/task/task.h */ = {isa = PBXBuildFile; fileRef = CE5DFCE01410472DAEE99BFA /* /Volumes/Transcend/github/libcommon/src/task/task.h */; };
+		42E2CE5399BC46BBB9CA78A9 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXBuildFile; fileRef = AFDAA9E4A6824367AD205B3F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_poll.h */; };
+		44C91445602E47E687CCE17C /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXBuildFile; fileRef = C6F5956B881045B8B8FEB450 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/allocator.h */; };
+		47AA24668EBC41ADA2E25D13 /* /Volumes/Transcend/github/libcommon/src/task/bind_object.h */ = {isa = PBXBuildFile; fileRef = E3A4542B182C4D04803DA610 /* /Volumes/Transcend/github/libcommon/src/task/bind_object.h */; };
+		4AB34783B1CF45AB98A28F05 /* /Volumes/Transcend/github/libcommon/src/task/bind_base.h */ = {isa = PBXBuildFile; fileRef = B8FE72D7CCB64DC38CE0B319 /* /Volumes/Transcend/github/libcommon/src/task/bind_base.h */; };
+		4DBC201402A84824A77FC279 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.h */ = {isa = PBXBuildFile; fileRef = ED0D0999E2E14EBCADBD65A1 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.h */; };
+		4DD2926F4B35437298606C35 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXBuildFile; fileRef = 2E28C63527564452A4B80350 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.cpp */; };
+		4F125CD480F849C7870A6E5C /* /Volumes/Transcend/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXBuildFile; fileRef = F716D78EF07A4D038A8BF363 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.cpp */; };
+		502E978006334FC089A5ACCC /* /Volumes/Transcend/github/libcommon/src/util/basictypes.h */ = {isa = PBXBuildFile; fileRef = 8B70936893C5401AA166F548 /* /Volumes/Transcend/github/libcommon/src/util/basictypes.h */; };
+		50725D89345045968839DA5D /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXBuildFile; fileRef = 6C710359BE3C44AF976CA916 /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.cpp */; };
+		5299DEFA23A74815A0805C33 /* /Volumes/Transcend/github/libcommon/src/digest/base64.h */ = {isa = PBXBuildFile; fileRef = 7D1D797BDC33429D8E7C1B2B /* /Volumes/Transcend/github/libcommon/src/digest/base64.h */; };
+		5348EDB40FDA41F1A9471131 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXBuildFile; fileRef = 567CBD8B8EED43BE9C5A7AD0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/json.h */; };
+		5A3F5666B0DB4B729544D564 /* /Volumes/Transcend/github/libcommon/src/thread/lock.h */ = {isa = PBXBuildFile; fileRef = 6BC508305F24452BA491C6E0 /* /Volumes/Transcend/github/libcommon/src/thread/lock.h */; };
+		5B83D0F6E0DA49AAA2F8A58E /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.h */ = {isa = PBXBuildFile; fileRef = C6C1974E3E54465BBB13379F /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.h */; };
+		5CD88740058E46B9B2340EFA /* /Volumes/Transcend/github/libcommon/src/smart_ptr/unique_ptr.h */ = {isa = PBXBuildFile; fileRef = 3ED0B82105B6487FB2E8B405 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/unique_ptr.h */; };
+		60D274AA955245C386ADFD3F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXBuildFile; fileRef = A262B26BDAC6451586E86130 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */; };
+		60EDF892B0524AEAB15411B0 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXBuildFile; fileRef = 88BC1532325D440590D2754F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.c */; };
+		60F53CF086944614B9B9094C /* /Volumes/Transcend/github/libcommon/src/util/json.h */ = {isa = PBXBuildFile; fileRef = 56C210D188E146C8994D4F62 /* /Volumes/Transcend/github/libcommon/src/util/json.h */; };
+		63890B79A24E462D8E8AEBA2 /* /Volumes/Transcend/github/libcommon/src/util/util.cpp */ = {isa = PBXBuildFile; fileRef = E24FB56BD7174053A76A5629 /* /Volumes/Transcend/github/libcommon/src/util/util.cpp */; };
+		6628B3EAF874419C8B7B565A /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXBuildFile; fileRef = 0C908394601349E282F2E1B9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/version.h */; };
+		6C2108DDD4E942ABBAA8C21A /* /Volumes/Transcend/github/libcommon/src/util/template_util.h */ = {isa = PBXBuildFile; fileRef = BC037ED8683D4018B7AFD936 /* /Volumes/Transcend/github/libcommon/src/util/template_util.h */; };
+		6D5DDD4E726C48A8B333C065 /* /Volumes/Transcend/github/libcommon/src/digest/md5.h */ = {isa = PBXBuildFile; fileRef = 9593B92E98464ABEB4B622FC /* /Volumes/Transcend/github/libcommon/src/digest/md5.h */; };
+		6F0A2893DD94493882F4BBDF /* /Volumes/Transcend/github/libcommon/src/timer/timer.cpp */ = {isa = PBXBuildFile; fileRef = AE9D8046DE9041F9B7D4CAE9 /* /Volumes/Transcend/github/libcommon/src/timer/timer.cpp */; };
+		720A5746735D44538AF37699 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.cpp */ = {isa = PBXBuildFile; fileRef = 6F3EBA364F0842EE86C9F1FE /* /Volumes/Transcend/github/libcommon/src/digest/sha1.cpp */; };
+		76053E4032F54FE4B499B1FE /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXBuildFile; fileRef = D4C871529ADD4F45AAA6FB41 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.cpp */; };
+		7837DC03928643B8B515A40C /* /Volumes/Transcend/github/libcommon/src/timer/time_format.h */ = {isa = PBXBuildFile; fileRef = AB8F1BE017B34A92B8BBCF3C /* /Volumes/Transcend/github/libcommon/src/timer/time_format.h */; };
+		7C12A929C4C64BF5B7C6A06C /* /Volumes/Transcend/github/libcommon/src/network/block_socket.h */ = {isa = PBXBuildFile; fileRef = 3BD113A44E784FC78ACF3D18 /* /Volumes/Transcend/github/libcommon/src/network/block_socket.h */; };
+		831D31DCCDB74241AF7BED87 /* /Volumes/Transcend/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXBuildFile; fileRef = 3A736FD20EEC4AC693B1CE88 /* /Volumes/Transcend/github/libcommon/src/digest/crc32.cpp */; };
+		86CF7548B52E4153A80D3097 /* /Volumes/Transcend/github/libcommon/src/util/log.cpp */ = {isa = PBXBuildFile; fileRef = 442FB4DDD754462D829ABBAB /* /Volumes/Transcend/github/libcommon/src/util/log.cpp */; };
+		8827744B197843628FBA41F9 /* /Volumes/Transcend/github/libcommon/src/util/move.h */ = {isa = PBXBuildFile; fileRef = B176A84245A948AEAAD64774 /* /Volumes/Transcend/github/libcommon/src/util/move.h */; };
+		8BFE88C0E08B4ED8A6764DF5 /* /Volumes/Transcend/github/libcommon/src/util/byteorder.h */ = {isa = PBXBuildFile; fileRef = D664FC01CCB24B86AF7E4F59 /* /Volumes/Transcend/github/libcommon/src/util/byteorder.h */; };
+		8F4CD9D5D5BD4F07AC06ABB9 /* /Volumes/Transcend/github/libcommon/src/util/stl_util.h */ = {isa = PBXBuildFile; fileRef = AD630B47052240E7AF926AC6 /* /Volumes/Transcend/github/libcommon/src/util/stl_util.h */; };
+		8F8918E52E07494393E483B8 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXBuildFile; fileRef = 8827C36D5D5F4C52B225B19B /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/forwards.h */; };
+		903A43DEEFC34BE2BD4052F6 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXBuildFile; fileRef = B5E6D85C78F64640930E9D2F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/features.h */; };
+		914A1199684B49B9B9BC5E95 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.h */ = {isa = PBXBuildFile; fileRef = FBF0A0D087C7414A8E018D13 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.h */; };
+		9614D242921D40698842AD35 /* /Volumes/Transcend/github/libcommon/src/queue/queue.cpp */ = {isa = PBXBuildFile; fileRef = DC7925AF3C234F2293181D84 /* /Volumes/Transcend/github/libcommon/src/queue/queue.cpp */; };
+		9B9191AFDC7A462ABA71A5B7 /* /Volumes/Transcend/github/libcommon/src/thread/thread.cpp */ = {isa = PBXBuildFile; fileRef = 6D31C874737B42EAA427BC4B /* /Volumes/Transcend/github/libcommon/src/thread/thread.cpp */; };
+		A229E9E729334C869C13542F /* /Volumes/Transcend/github/libcommon/src/network/socketselect.h */ = {isa = PBXBuildFile; fileRef = CC40C611E96342C0815366B1 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.h */; };
+		A2D8E654C6F9488FB3EE4D67 /* /Volumes/Transcend/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXBuildFile; fileRef = 432BB6CC2D3A40A3B72186FE /* /Volumes/Transcend/github/libcommon/src/string/stringutils.cpp */; };
+		A365AD4314E14787841F459A /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXBuildFile; fileRef = D972F8B3F8C240508ED715B0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/writer.h */; };
+		A6DC7CA4C24A4CA282D9AA3A /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXBuildFile; fileRef = 841F6E34997E4FBDB388A759 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/autolink.h */; };
+		B1D97436635E4EFAB43DE0DD /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXBuildFile; fileRef = 0BB5284268674BB49F740678 /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.h */; };
+		B2A9470874C247AAA35456E8 /* /Volumes/Transcend/github/libcommon/src/util/signal.h */ = {isa = PBXBuildFile; fileRef = 0E055353BAB2405A8E5C78A9 /* /Volumes/Transcend/github/libcommon/src/util/signal.h */; };
+		B62D228CA22D4EB9801DDAA9 /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.h */ = {isa = PBXBuildFile; fileRef = D353C23E9A89420C8716863F /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.h */; };
+		B9A4D73678F44509B1D8201A /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXBuildFile; fileRef = 970E7136C69847D0B762DEA9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */; };
+		BB253D14D7454767B28A599D /* /Volumes/Transcend/github/libcommon/src/smart_ptr/scoped_ptr.h */ = {isa = PBXBuildFile; fileRef = D0F0742256164E30A9D84D4F /* /Volumes/Transcend/github/libcommon/src/smart_ptr/scoped_ptr.h */; };
+		BD23758D4EFE410AA76304E1 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXBuildFile; fileRef = 80974E08666145C4B27FB51E /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_tool.h */; };
+		BF19D6031FE24B239D10539D /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXBuildFile; fileRef = C8A761A70FAB4A28B442CEBA /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.cpp */; };
+		C5D4D1B0EF6C4092BB889D10 /* /Volumes/Transcend/github/libcommon/src/digest/base64.cpp */ = {isa = PBXBuildFile; fileRef = 61C6D91D78D24664A39621E1 /* /Volumes/Transcend/github/libcommon/src/digest/base64.cpp */; };
+		CA51CE1D611B48E588ECF179 /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXBuildFile; fileRef = A8FEC583A45445119F1FB35F /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.cpp */; };
+		CD184C8D73704D779CB98621 /* /Volumes/Transcend/github/libcommon/src/util/json.cpp */ = {isa = PBXBuildFile; fileRef = 3F28B533A7C84CE988155546 /* /Volumes/Transcend/github/libcommon/src/util/json.cpp */; };
+		CDB99D46569A4469B0D88BEA /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.h */ = {isa = PBXBuildFile; fileRef = 12E7922844DD4F4ABEBDCB50 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.h */; };
+		D1F2736DCF3945E2BCDEFC88 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXBuildFile; fileRef = 1721D20E0BBC41B3A862A94F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_epoll.h */; };
+		D3A282585D69471495E7E58D /* /Volumes/Transcend/github/libcommon/src/digest/crc32.h */ = {isa = PBXBuildFile; fileRef = 86FFB0B824F14621BCBEA4BB /* /Volumes/Transcend/github/libcommon/src/digest/crc32.h */; };
+		D4C07647425648CC8E82A767 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXBuildFile; fileRef = 380AD534533D4045884AECB9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/value.h */; };
+		D779D6BB1B7143C096E58862 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXBuildFile; fileRef = 5A12120CB0BE434083643ABD /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/reader.h */; };
+		D7CF6DAF94CE4ECD8678EEEF /* /Volumes/Transcend/github/libcommon/src/util/util.h */ = {isa = PBXBuildFile; fileRef = 8A3F73CB48B44A74A35558D5 /* /Volumes/Transcend/github/libcommon/src/util/util.h */; };
+		D89C5DEDBC8B47A8A7D0058F /* /Volumes/Transcend/github/libcommon/src/string/stringutils.h */ = {isa = PBXBuildFile; fileRef = 3B4E39DD52CA4C9FAEBA5541 /* /Volumes/Transcend/github/libcommon/src/string/stringutils.h */; };
+		DC4C0332395C480B9C51B242 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXBuildFile; fileRef = 337684508EE2444F99CEB38F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/config.h */; };
+		E44EC0D590D64952A02749F7 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.cpp */ = {isa = PBXBuildFile; fileRef = EBBF499AD0AF430C852CFE40 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.cpp */; };
+		E7088000EF494D2099459A52 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXBuildFile; fileRef = C24A2B85F64E4F1889278614 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_value.cpp */; };
+		E853977ABCA74A62A67204CF /* /Volumes/Transcend/github/libcommon/src/network/ipv6_address_utils.h */ = {isa = PBXBuildFile; fileRef = AC18071C797845399995844C /* /Volumes/Transcend/github/libcommon/src/network/ipv6_address_utils.h */; };
+		ED3BE3CDA348434E980BC592 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.h */ = {isa = PBXBuildFile; fileRef = ADD8F182148D4F1D83517CC3 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.h */; };
+		EF6ACF327BFB40C3B3363C44 /* /Volumes/Transcend/github/libcommon/src/util/log.h */ = {isa = PBXBuildFile; fileRef = 65ECEAE77B124C939C8147C0 /* /Volumes/Transcend/github/libcommon/src/util/log.h */; };
+		F1AD76318D324CA88EC0ECCF /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXBuildFile; fileRef = B28B7F3310BB4BC9992F1293 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.cpp */; };
+		F43D8DE4E5C84FC38BBEE0B6 /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.cpp */ = {isa = PBXBuildFile; fileRef = 09675AE9ACED440BAFAFCAD8 /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.cpp */; };
+		F9C5C60DC9AE4DD7B4A268CC /* /Volumes/Transcend/github/libcommon/src/timer/timer.h */ = {isa = PBXBuildFile; fileRef = F9794CA3AF9440D797EE7A25 /* /Volumes/Transcend/github/libcommon/src/timer/timer.h */; };
+		FA15EA9A61F3483281E9602E /* /Volumes/Transcend/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXBuildFile; fileRef = 244A2EA7A57D4098A40AD379 /* /Volumes/Transcend/github/libcommon/src/timer/time_format.cpp */; };
+		FC6198BFDC79424790D9BB4A /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.h */ = {isa = PBXBuildFile; fileRef = 2699A9F5C5324DE78E21C99E /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.h */; };
+		FD62DA33F93E482F86EFB5B4 /* /Volumes/Transcend/github/libcommon/src/queue/queue.h */ = {isa = PBXBuildFile; fileRef = 350C2CE64D6F46518C253E29 /* /Volumes/Transcend/github/libcommon/src/queue/queue.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		28D9D892D75342998B325204 /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		535DAFCFF0C94C1A9C01C74C /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		885A8672344247F195727AEA /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		A95A6189CB6E4E18ACDA9134 = {
+			isa = PBXBuildStyle;
+		};
+		C5D3F61101314AF6B304EB99 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0D6D82DAA7DC4DFDA8DD61F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4566C92058F24A2BA6728AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63CEF963E62414EA1158FF3;
+			remoteInfo = ZERO_CHECK;
+		};
+		9910B43E26D54D3F98528669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4566C92058F24A2BA6728AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E63CEF963E62414EA1158FF3;
+			remoteInfo = ZERO_CHECK;
+		};
+		E2F7F6076FA6467B8AB9D050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4566C92058F24A2BA6728AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDD95E97B20140D6B686F95E;
+			remoteInfo = common;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09675AE9ACED440BAFAFCAD8 /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread_notify.cpp; path = src/task/thread_notify.cpp; sourceTree = SOURCE_ROOT; };
+		0BB5284268674BB49F740678 /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketbreaker.h; path = src/network/socketbreaker.h; sourceTree = SOURCE_ROOT; };
+		0C908394601349E282F2E1B9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/version.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = version.h; path = 3rd/jsoncpp/include/json/version.h; sourceTree = SOURCE_ROOT; };
+		0E055353BAB2405A8E5C78A9 /* /Volumes/Transcend/github/libcommon/src/util/signal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = signal.h; path = src/util/signal.h; sourceTree = SOURCE_ROOT; };
+		0E93B5325BCC440188D2697D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_server.h; path = 3rd/socket_server/socket_server.h; sourceTree = SOURCE_ROOT; };
+		0F4517CC17084C5A9DAFC07F /* /Volumes/Transcend/github/libcommon/src/network/block_socket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_socket.cpp; path = src/network/block_socket.cpp; sourceTree = SOURCE_ROOT; };
+		11EBBAEB95B246BC9176F618 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = unix_socket.cpp; path = src/network/unix_socket.cpp; sourceTree = SOURCE_ROOT; };
+		12E7922844DD4F4ABEBDCB50 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = unix_socket.h; path = src/network/unix_socket.h; sourceTree = SOURCE_ROOT; };
+		1721D20E0BBC41B3A862A94F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_epoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_epoll.h; path = 3rd/socket_server/socket_epoll.h; sourceTree = SOURCE_ROOT; };
+		17E11F3FC6784A6C9EA819F4 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/assertions.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = assertions.h; path = 3rd/jsoncpp/include/json/assertions.h; sourceTree = SOURCE_ROOT; };
+		1EB098444CC84CA492BA84B5 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketselect.cpp; path = src/network/socketselect.cpp; sourceTree = SOURCE_ROOT; };
+		244A2EA7A57D4098A40AD379 /* /Volumes/Transcend/github/libcommon/src/timer/time_format.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = time_format.cpp; path = src/timer/time_format.cpp; sourceTree = SOURCE_ROOT; };
+		24C88BD28FA747D68C6628DE /* /Volumes/Transcend/github/libcommon/src/network/socket_address.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socket_address.cpp; path = src/network/socket_address.cpp; sourceTree = SOURCE_ROOT; };
+		2699A9F5C5324DE78E21C99E /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ip_addr.h; path = src/network/ip_addr.h; sourceTree = SOURCE_ROOT; };
+		2CDE80BAE5C44A98B9C70E4E /* /Volumes/Transcend/github/libcommon/src/util/typedefs.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = typedefs.h; path = src/util/typedefs.h; sourceTree = SOURCE_ROOT; };
+		2D634C8DE37E47D7BB929955 /* /Volumes/Transcend/github/libcommon/src/task/sigslot.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sigslot.h; path = src/task/sigslot.h; sourceTree = SOURCE_ROOT; };
+		2E28C63527564452A4B80350 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketpoll.cpp; path = src/network/socketpoll.cpp; sourceTree = SOURCE_ROOT; };
+		337684508EE2444F99CEB38F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = config.h; path = 3rd/jsoncpp/include/json/config.h; sourceTree = SOURCE_ROOT; };
+		34BC75E7D0054C96A003A613 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/shared_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = shared_ptr.h; path = src/smart_ptr/shared_ptr.h; sourceTree = SOURCE_ROOT; };
+		350C2CE64D6F46518C253E29 /* /Volumes/Transcend/github/libcommon/src/queue/queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = queue.h; path = src/queue/queue.h; sourceTree = SOURCE_ROOT; };
+		35F8592C3882446799E46DFE /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bytebuffer.h; path = src/util/bytebuffer.h; sourceTree = SOURCE_ROOT; };
+		36B38E815ACE46ADABFAE10B /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		380AD534533D4045884AECB9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/value.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = value.h; path = 3rd/jsoncpp/include/json/value.h; sourceTree = SOURCE_ROOT; };
+		3A736FD20EEC4AC693B1CE88 /* /Volumes/Transcend/github/libcommon/src/digest/crc32.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = crc32.cpp; path = src/digest/crc32.cpp; sourceTree = SOURCE_ROOT; };
+		3B4E39DD52CA4C9FAEBA5541 /* /Volumes/Transcend/github/libcommon/src/string/stringutils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringutils.h; path = src/string/stringutils.h; sourceTree = SOURCE_ROOT; };
+		3BD113A44E784FC78ACF3D18 /* /Volumes/Transcend/github/libcommon/src/network/block_socket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_socket.h; path = src/network/block_socket.h; sourceTree = SOURCE_ROOT; };
+		3ED0B82105B6487FB2E8B405 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/unique_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = unique_ptr.h; path = src/smart_ptr/unique_ptr.h; sourceTree = SOURCE_ROOT; };
+		3F28B533A7C84CE988155546 /* /Volumes/Transcend/github/libcommon/src/util/json.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json.cpp; path = src/util/json.cpp; sourceTree = SOURCE_ROOT; };
+		432BB6CC2D3A40A3B72186FE /* /Volumes/Transcend/github/libcommon/src/string/stringutils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringutils.cpp; path = src/string/stringutils.cpp; sourceTree = SOURCE_ROOT; };
+		442FB4DDD754462D829ABBAB /* /Volumes/Transcend/github/libcommon/src/util/log.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = log.cpp; path = src/util/log.cpp; sourceTree = SOURCE_ROOT; };
+		47B47084CE1E422594F9741F /* /Volumes/Transcend/github/libcommon/src/util/singleton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = singleton.h; path = src/util/singleton.h; sourceTree = SOURCE_ROOT; };
+		4925AD2CC9ED4A09837CB984 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = block_queue.h; path = src/queue/block_queue.h; sourceTree = SOURCE_ROOT; };
+		4DA8E781C5D04E8795698FB8 /* common */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		567CBD8B8EED43BE9C5A7AD0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = 3rd/jsoncpp/include/json/json.h; sourceTree = SOURCE_ROOT; };
+		56C210D188E146C8994D4F62 /* /Volumes/Transcend/github/libcommon/src/util/json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json.h; path = src/util/json.h; sourceTree = SOURCE_ROOT; };
+		5A0C74D765BA4B9696ED5442 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autobuffer.h; path = src/network/autobuffer.h; sourceTree = SOURCE_ROOT; };
+		5A12120CB0BE434083643ABD /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/reader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = reader.h; path = 3rd/jsoncpp/include/json/reader.h; sourceTree = SOURCE_ROOT; };
+		5AFD7174F5EC4B9B8669D366 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_queue.h; path = src/task/thread_queue.h; sourceTree = SOURCE_ROOT; };
+		61C6D91D78D24664A39621E1 /* /Volumes/Transcend/github/libcommon/src/digest/base64.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = base64.cpp; path = src/digest/base64.cpp; sourceTree = SOURCE_ROOT; };
+		65ECEAE77B124C939C8147C0 /* /Volumes/Transcend/github/libcommon/src/util/log.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = log.h; path = src/util/log.h; sourceTree = SOURCE_ROOT; };
+		6BC508305F24452BA491C6E0 /* /Volumes/Transcend/github/libcommon/src/thread/lock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = lock.h; path = src/thread/lock.h; sourceTree = SOURCE_ROOT; };
+		6C710359BE3C44AF976CA916 /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ip_addr.cpp; path = src/network/ip_addr.cpp; sourceTree = SOURCE_ROOT; };
+		6D13A45D032845508534AD59 /* /Volumes/Transcend/github/libcommon/src/util/tuple.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tuple.h; path = src/util/tuple.h; sourceTree = SOURCE_ROOT; };
+		6D31C874737B42EAA427BC4B /* /Volumes/Transcend/github/libcommon/src/thread/thread.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread.cpp; path = src/thread/thread.cpp; sourceTree = SOURCE_ROOT; };
+		6F3EBA364F0842EE86C9F1FE /* /Volumes/Transcend/github/libcommon/src/digest/sha1.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = sha1.cpp; path = src/digest/sha1.cpp; sourceTree = SOURCE_ROOT; };
+		74C69C1F8FE5438892258A22 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_select.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_select.h; path = 3rd/socket_server/socket_select.h; sourceTree = SOURCE_ROOT; };
+		7BB076344131412C89CD42B6 /* /Volumes/Transcend/github/libcommon/src/task/bind_function.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_function.h; path = src/task/bind_function.h; sourceTree = SOURCE_ROOT; };
+		7D1D797BDC33429D8E7C1B2B /* /Volumes/Transcend/github/libcommon/src/digest/base64.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = base64.h; path = src/digest/base64.h; sourceTree = SOURCE_ROOT; };
+		80974E08666145C4B27FB51E /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_tool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = json_tool.h; path = 3rd/jsoncpp/src/json_tool.h; sourceTree = SOURCE_ROOT; };
+		8225752178104CF1AF14BB33 /* /Volumes/Transcend/github/libcommon/src/util/delegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = delegate.h; path = src/util/delegate.h; sourceTree = SOURCE_ROOT; };
+		841F6E34997E4FBDB388A759 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/autolink.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = autolink.h; path = 3rd/jsoncpp/include/json/autolink.h; sourceTree = SOURCE_ROOT; };
+		86FFB0B824F14621BCBEA4BB /* /Volumes/Transcend/github/libcommon/src/digest/crc32.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = crc32.h; path = src/digest/crc32.h; sourceTree = SOURCE_ROOT; };
+		8827C36D5D5F4C52B225B19B /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/forwards.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = forwards.h; path = 3rd/jsoncpp/include/json/forwards.h; sourceTree = SOURCE_ROOT; };
+		88BC1532325D440590D2754F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = socket_server.c; path = 3rd/socket_server/socket_server.c; sourceTree = SOURCE_ROOT; };
+		8A3F73CB48B44A74A35558D5 /* /Volumes/Transcend/github/libcommon/src/util/util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = util.h; path = src/util/util.h; sourceTree = SOURCE_ROOT; };
+		8B70936893C5401AA166F548 /* /Volumes/Transcend/github/libcommon/src/util/basictypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = basictypes.h; path = src/util/basictypes.h; sourceTree = SOURCE_ROOT; };
+		9593B92E98464ABEB4B622FC /* /Volumes/Transcend/github/libcommon/src/digest/md5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = md5.h; path = src/digest/md5.h; sourceTree = SOURCE_ROOT; };
+		970E7136C69847D0B762DEA9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_writer.cpp; path = 3rd/jsoncpp/src/json_writer.cpp; sourceTree = SOURCE_ROOT; };
+		9C3EC6B9A57D4584AB636C1E /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9CC915405D1D48CAAD13DD01 /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = bytebuffer.cpp; path = src/util/bytebuffer.cpp; sourceTree = SOURCE_ROOT; };
+		A262B26BDAC6451586E86130 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_reader.cpp; path = 3rd/jsoncpp/src/json_reader.cpp; sourceTree = SOURCE_ROOT; };
+		A8FEC583A45445119F1FB35F /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = socketbreaker.cpp; path = src/network/socketbreaker.cpp; sourceTree = SOURCE_ROOT; };
+		AB8F1BE017B34A92B8BBCF3C /* /Volumes/Transcend/github/libcommon/src/timer/time_format.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = time_format.h; path = src/timer/time_format.h; sourceTree = SOURCE_ROOT; };
+		AC18071C797845399995844C /* /Volumes/Transcend/github/libcommon/src/network/ipv6_address_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ipv6_address_utils.h; path = src/network/ipv6_address_utils.h; sourceTree = SOURCE_ROOT; };
+		AD630B47052240E7AF926AC6 /* /Volumes/Transcend/github/libcommon/src/util/stl_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stl_util.h; path = src/util/stl_util.h; sourceTree = SOURCE_ROOT; };
+		ADD8F182148D4F1D83517CC3 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketpoll.h; path = src/network/socketpoll.h; sourceTree = SOURCE_ROOT; };
+		AE9D8046DE9041F9B7D4CAE9 /* /Volumes/Transcend/github/libcommon/src/timer/timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer/timer.cpp; sourceTree = SOURCE_ROOT; };
+		AFDAA9E4A6824367AD205B3F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_poll.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_poll.h; path = 3rd/socket_server/socket_poll.h; sourceTree = SOURCE_ROOT; };
+		B176A84245A948AEAAD64774 /* /Volumes/Transcend/github/libcommon/src/util/move.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = move.h; path = src/util/move.h; sourceTree = SOURCE_ROOT; };
+		B28B7F3310BB4BC9992F1293 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = thread_queue.cpp; path = src/task/thread_queue.cpp; sourceTree = SOURCE_ROOT; };
+		B5E6D85C78F64640930E9D2F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/features.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = features.h; path = 3rd/jsoncpp/include/json/features.h; sourceTree = SOURCE_ROOT; };
+		B8FE72D7CCB64DC38CE0B319 /* /Volumes/Transcend/github/libcommon/src/task/bind_base.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_base.h; path = src/task/bind_base.h; sourceTree = SOURCE_ROOT; };
+		BC037ED8683D4018B7AFD936 /* /Volumes/Transcend/github/libcommon/src/util/template_util.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = template_util.h; path = src/util/template_util.h; sourceTree = SOURCE_ROOT; };
+		C08C171A7B53417BA8B765CB /* /Volumes/Transcend/github/libcommon/src/thread/lock.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = lock.cpp; path = src/thread/lock.cpp; sourceTree = SOURCE_ROOT; };
+		C24A2B85F64E4F1889278614 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_value.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = json_value.cpp; path = 3rd/jsoncpp/src/json_value.cpp; sourceTree = SOURCE_ROOT; };
+		C52B8B8DD9C741838E21419C /* /Volumes/Transcend/github/libcommon/src/smart_ptr/smart_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = smart_ptr.h; path = src/smart_ptr/smart_ptr.h; sourceTree = SOURCE_ROOT; };
+		C6C1974E3E54465BBB13379F /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread_notify.h; path = src/task/thread_notify.h; sourceTree = SOURCE_ROOT; };
+		C6F5956B881045B8B8FEB450 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/allocator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = allocator.h; path = 3rd/jsoncpp/include/json/allocator.h; sourceTree = SOURCE_ROOT; };
+		C8A761A70FAB4A28B442CEBA /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringprintf.cpp; path = src/string/stringprintf.cpp; sourceTree = SOURCE_ROOT; };
+		CC40C611E96342C0815366B1 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socketselect.h; path = src/network/socketselect.h; sourceTree = SOURCE_ROOT; };
+		CE5DFCE01410472DAEE99BFA /* /Volumes/Transcend/github/libcommon/src/task/task.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = task.h; path = src/task/task.h; sourceTree = SOURCE_ROOT; };
+		D0F0742256164E30A9D84D4F /* /Volumes/Transcend/github/libcommon/src/smart_ptr/scoped_ptr.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = scoped_ptr.h; path = src/smart_ptr/scoped_ptr.h; sourceTree = SOURCE_ROOT; };
+		D137BE9E9823403193F728D3 /* /Volumes/Transcend/github/libcommon/src/thread/thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = thread.h; path = src/thread/thread.h; sourceTree = SOURCE_ROOT; };
+		D353C23E9A89420C8716863F /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringprintf.h; path = src/string/stringprintf.h; sourceTree = SOURCE_ROOT; };
+		D4C871529ADD4F45AAA6FB41 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = block_queue.cpp; path = src/queue/block_queue.cpp; sourceTree = SOURCE_ROOT; };
+		D664FC01CCB24B86AF7E4F59 /* /Volumes/Transcend/github/libcommon/src/util/byteorder.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = byteorder.h; path = src/util/byteorder.h; sourceTree = SOURCE_ROOT; };
+		D7B327CDD7B74E0F85521D89 /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D972F8B3F8C240508ED715B0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/writer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = writer.h; path = 3rd/jsoncpp/include/json/writer.h; sourceTree = SOURCE_ROOT; };
+		DA469B7BF0454156ABAB1717 /* /Volumes/Transcend/github/libcommon/src/digest/md5.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = md5.cpp; path = src/digest/md5.cpp; sourceTree = SOURCE_ROOT; };
+		DC7925AF3C234F2293181D84 /* /Volumes/Transcend/github/libcommon/src/queue/queue.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = queue.cpp; path = src/queue/queue.cpp; sourceTree = SOURCE_ROOT; };
+		DFC1E7A14BAC4395895ACE04 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/ref_count.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ref_count.h; path = src/smart_ptr/ref_count.h; sourceTree = SOURCE_ROOT; };
+		E24FB56BD7174053A76A5629 /* /Volumes/Transcend/github/libcommon/src/util/util.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = util.cpp; path = src/util/util.cpp; sourceTree = SOURCE_ROOT; };
+		E2872839ECC0423CBA17154D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_kqueue.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_kqueue.h; path = 3rd/socket_server/socket_kqueue.h; sourceTree = SOURCE_ROOT; };
+		E3A4542B182C4D04803DA610 /* /Volumes/Transcend/github/libcommon/src/task/bind_object.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = bind_object.h; path = src/task/bind_object.h; sourceTree = SOURCE_ROOT; };
+		EBBF499AD0AF430C852CFE40 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = autobuffer.cpp; path = src/network/autobuffer.cpp; sourceTree = SOURCE_ROOT; };
+		ED0D0999E2E14EBCADBD65A1 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = stringencode.h; path = src/string/stringencode.h; sourceTree = SOURCE_ROOT; };
+		EFC96E6E4A924B63B6C92146 /* /Volumes/Transcend/github/libcommon/src/network/socket_address.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = socket_address.h; path = src/network/socket_address.h; sourceTree = SOURCE_ROOT; };
+		F716D78EF07A4D038A8BF363 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = stringencode.cpp; path = src/string/stringencode.cpp; sourceTree = SOURCE_ROOT; };
+		F9794CA3AF9440D797EE7A25 /* /Volumes/Transcend/github/libcommon/src/timer/timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer/timer.h; sourceTree = SOURCE_ROOT; };
+		FBF0A0D087C7414A8E018D13 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = sha1.h; path = src/digest/sha1.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		258A349F816B458E996B099A /* queue */ = {
+			isa = PBXGroup;
+			children = (
+				5FD24D2ED3E5434184F22D8A /* Source Files */,
+				521702240A4A40D8990B9548 /* Header Files */,
+			);
+			name = queue;
+			sourceTree = "<group>";
+		};
+		2B24807DBEB8456EB3F1388A /* common */ = {
+			isa = PBXGroup;
+			children = (
+				D33671B6D3F24150AD6D6378 /* strings */,
+				505CDAA46C534736BFB4612F /* digets */,
+				C0DF3BED06854FA7B2327B92 /* thread */,
+				9F151FADB69F4D958904E3A0 /* util */,
+				258A349F816B458E996B099A /* queue */,
+				5DBEB8C03C8F4C598722885E /* timer */,
+				E6F948D2E7094EEC8E69E9EC /* task */,
+				AE587DFADC39419B9920FD12 /* network */,
+				E3A9FDA4BDD54E368235092D /* 3rd */,
+				74FFD551B5784290AC6E1E64 /* smart_ptr */,
+				D7B327CDD7B74E0F85521D89 /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		329BD2CD176545DFA3DE8004 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B8FE72D7CCB64DC38CE0B319 /* /Volumes/Transcend/github/libcommon/src/task/bind_base.h */,
+				7BB076344131412C89CD42B6 /* /Volumes/Transcend/github/libcommon/src/task/bind_function.h */,
+				E3A4542B182C4D04803DA610 /* /Volumes/Transcend/github/libcommon/src/task/bind_object.h */,
+				2D634C8DE37E47D7BB929955 /* /Volumes/Transcend/github/libcommon/src/task/sigslot.h */,
+				CE5DFCE01410472DAEE99BFA /* /Volumes/Transcend/github/libcommon/src/task/task.h */,
+				C6C1974E3E54465BBB13379F /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.h */,
+				5AFD7174F5EC4B9B8669D366 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		3CE62A68E2E14F35902BC19C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				61C6D91D78D24664A39621E1 /* /Volumes/Transcend/github/libcommon/src/digest/base64.cpp */,
+				3A736FD20EEC4AC693B1CE88 /* /Volumes/Transcend/github/libcommon/src/digest/crc32.cpp */,
+				DA469B7BF0454156ABAB1717 /* /Volumes/Transcend/github/libcommon/src/digest/md5.cpp */,
+				6F3EBA364F0842EE86C9F1FE /* /Volumes/Transcend/github/libcommon/src/digest/sha1.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		4EFCC793DFAD4B97ABCD26F6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D1D797BDC33429D8E7C1B2B /* /Volumes/Transcend/github/libcommon/src/digest/base64.h */,
+				86FFB0B824F14621BCBEA4BB /* /Volumes/Transcend/github/libcommon/src/digest/crc32.h */,
+				9593B92E98464ABEB4B622FC /* /Volumes/Transcend/github/libcommon/src/digest/md5.h */,
+				FBF0A0D087C7414A8E018D13 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		505CDAA46C534736BFB4612F /* digets */ = {
+			isa = PBXGroup;
+			children = (
+				3CE62A68E2E14F35902BC19C /* Source Files */,
+				4EFCC793DFAD4B97ABCD26F6 /* Header Files */,
+			);
+			name = digets;
+			sourceTree = "<group>";
+		};
+		521702240A4A40D8990B9548 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				4925AD2CC9ED4A09837CB984 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.h */,
+				350C2CE64D6F46518C253E29 /* /Volumes/Transcend/github/libcommon/src/queue/queue.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5C50850F71774D038B5A4C77 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				244A2EA7A57D4098A40AD379 /* /Volumes/Transcend/github/libcommon/src/timer/time_format.cpp */,
+				AE9D8046DE9041F9B7D4CAE9 /* /Volumes/Transcend/github/libcommon/src/timer/timer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5DBEB8C03C8F4C598722885E /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				5C50850F71774D038B5A4C77 /* Source Files */,
+				741885DF9299495E89D5D84A /* Header Files */,
+			);
+			name = timer;
+			sourceTree = "<group>";
+		};
+		5FD24D2ED3E5434184F22D8A /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C871529ADD4F45AAA6FB41 /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.cpp */,
+				DC7925AF3C234F2293181D84 /* /Volumes/Transcend/github/libcommon/src/queue/queue.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		614DDB9253684D5FAACDF598 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFC1E7A14BAC4395895ACE04 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/ref_count.h */,
+				D0F0742256164E30A9D84D4F /* /Volumes/Transcend/github/libcommon/src/smart_ptr/scoped_ptr.h */,
+				34BC75E7D0054C96A003A613 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/shared_ptr.h */,
+				C52B8B8DD9C741838E21419C /* /Volumes/Transcend/github/libcommon/src/smart_ptr/smart_ptr.h */,
+				3ED0B82105B6487FB2E8B405 /* /Volumes/Transcend/github/libcommon/src/smart_ptr/unique_ptr.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		620737DEAE774D09ABCE268F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		66CF2A28E2BB4D26A3E6A5A9 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5A0C74D765BA4B9696ED5442 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.h */,
+				3BD113A44E784FC78ACF3D18 /* /Volumes/Transcend/github/libcommon/src/network/block_socket.h */,
+				2699A9F5C5324DE78E21C99E /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.h */,
+				AC18071C797845399995844C /* /Volumes/Transcend/github/libcommon/src/network/ipv6_address_utils.h */,
+				EFC96E6E4A924B63B6C92146 /* /Volumes/Transcend/github/libcommon/src/network/socket_address.h */,
+				0BB5284268674BB49F740678 /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.h */,
+				ADD8F182148D4F1D83517CC3 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.h */,
+				CC40C611E96342C0815366B1 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.h */,
+				12E7922844DD4F4ABEBDCB50 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		67E00F7DA43143B48CF0FCA1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F716D78EF07A4D038A8BF363 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.cpp */,
+				C8A761A70FAB4A28B442CEBA /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.cpp */,
+				432BB6CC2D3A40A3B72186FE /* /Volumes/Transcend/github/libcommon/src/string/stringutils.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		731F855BB1AA458B9A60A42C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				9CC915405D1D48CAAD13DD01 /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.cpp */,
+				3F28B533A7C84CE988155546 /* /Volumes/Transcend/github/libcommon/src/util/json.cpp */,
+				442FB4DDD754462D829ABBAB /* /Volumes/Transcend/github/libcommon/src/util/log.cpp */,
+				E24FB56BD7174053A76A5629 /* /Volumes/Transcend/github/libcommon/src/util/util.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		741885DF9299495E89D5D84A /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB8F1BE017B34A92B8BBCF3C /* /Volumes/Transcend/github/libcommon/src/timer/time_format.h */,
+				F9794CA3AF9440D797EE7A25 /* /Volumes/Transcend/github/libcommon/src/timer/timer.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		74FFD551B5784290AC6E1E64 /* smart_ptr */ = {
+			isa = PBXGroup;
+			children = (
+				614DDB9253684D5FAACDF598 /* Header Files */,
+			);
+			name = smart_ptr;
+			sourceTree = "<group>";
+		};
+		79B714A8A65B42AEA409E121 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				F8DD0CF3DDB146109E683C7A /* CMake Rules */,
+				36B38E815ACE46ADABFAE10B /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		7A40D057CC3E414C9F80D3E8 = {
+			isa = PBXGroup;
+			children = (
+				B87C6768C24D4539A9C2E651 /* Sources */,
+				620737DEAE774D09ABCE268F /* Resources */,
+				D0CC4A8DD7E74AEE9087A342 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BE83CEEB32E4F7C95704732 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED0D0999E2E14EBCADBD65A1 /* /Volumes/Transcend/github/libcommon/src/string/stringencode.h */,
+				D353C23E9A89420C8716863F /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.h */,
+				3B4E39DD52CA4C9FAEBA5541 /* /Volumes/Transcend/github/libcommon/src/string/stringutils.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		9F151FADB69F4D958904E3A0 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				731F855BB1AA458B9A60A42C /* Source Files */,
+				A0165FC6DC974638B2DD5382 /* Header Files */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		A0165FC6DC974638B2DD5382 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B70936893C5401AA166F548 /* /Volumes/Transcend/github/libcommon/src/util/basictypes.h */,
+				35F8592C3882446799E46DFE /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.h */,
+				D664FC01CCB24B86AF7E4F59 /* /Volumes/Transcend/github/libcommon/src/util/byteorder.h */,
+				8225752178104CF1AF14BB33 /* /Volumes/Transcend/github/libcommon/src/util/delegate.h */,
+				56C210D188E146C8994D4F62 /* /Volumes/Transcend/github/libcommon/src/util/json.h */,
+				65ECEAE77B124C939C8147C0 /* /Volumes/Transcend/github/libcommon/src/util/log.h */,
+				B176A84245A948AEAAD64774 /* /Volumes/Transcend/github/libcommon/src/util/move.h */,
+				0E055353BAB2405A8E5C78A9 /* /Volumes/Transcend/github/libcommon/src/util/signal.h */,
+				47B47084CE1E422594F9741F /* /Volumes/Transcend/github/libcommon/src/util/singleton.h */,
+				AD630B47052240E7AF926AC6 /* /Volumes/Transcend/github/libcommon/src/util/stl_util.h */,
+				BC037ED8683D4018B7AFD936 /* /Volumes/Transcend/github/libcommon/src/util/template_util.h */,
+				6D13A45D032845508534AD59 /* /Volumes/Transcend/github/libcommon/src/util/tuple.h */,
+				2CDE80BAE5C44A98B9C70E4E /* /Volumes/Transcend/github/libcommon/src/util/typedefs.h */,
+				8A3F73CB48B44A74A35558D5 /* /Volumes/Transcend/github/libcommon/src/util/util.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		AE587DFADC39419B9920FD12 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				FCF54DC0742F4A9BB99FE287 /* Source Files */,
+				66CF2A28E2BB4D26A3E6A5A9 /* Header Files */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
+		AFCC21F053F14F0288E8F0BB /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				09675AE9ACED440BAFAFCAD8 /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.cpp */,
+				B28B7F3310BB4BC9992F1293 /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B23D3D88A94145339D1D94DF /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BC508305F24452BA491C6E0 /* /Volumes/Transcend/github/libcommon/src/thread/lock.h */,
+				D137BE9E9823403193F728D3 /* /Volumes/Transcend/github/libcommon/src/thread/thread.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B38A490D3F36491688E5EBB9 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B3EC37A4D939406CA727A89E /* jsoncpp */ = {
+			isa = PBXGroup;
+			children = (
+				C6F5956B881045B8B8FEB450 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/allocator.h */,
+				17E11F3FC6784A6C9EA819F4 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/assertions.h */,
+				841F6E34997E4FBDB388A759 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/autolink.h */,
+				337684508EE2444F99CEB38F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/config.h */,
+				B5E6D85C78F64640930E9D2F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/features.h */,
+				8827C36D5D5F4C52B225B19B /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/forwards.h */,
+				567CBD8B8EED43BE9C5A7AD0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/json.h */,
+				5A12120CB0BE434083643ABD /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/reader.h */,
+				380AD534533D4045884AECB9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/value.h */,
+				0C908394601349E282F2E1B9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/version.h */,
+				D972F8B3F8C240508ED715B0 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/include/json/writer.h */,
+				A262B26BDAC6451586E86130 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
+				80974E08666145C4B27FB51E /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_tool.h */,
+				C24A2B85F64E4F1889278614 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
+				970E7136C69847D0B762DEA9 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
+			);
+			name = jsoncpp;
+			sourceTree = "<group>";
+		};
+		B87C6768C24D4539A9C2E651 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2B24807DBEB8456EB3F1388A /* common */,
+				CC7A89A8B7CA458FBB4A9C33 /* ALL_BUILD */,
+				79B714A8A65B42AEA409E121 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		B9D085F5065B49C2B5FAD071 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				C08C171A7B53417BA8B765CB /* /Volumes/Transcend/github/libcommon/src/thread/lock.cpp */,
+				6D31C874737B42EAA427BC4B /* /Volumes/Transcend/github/libcommon/src/thread/thread.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C0DF3BED06854FA7B2327B92 /* thread */ = {
+			isa = PBXGroup;
+			children = (
+				B9D085F5065B49C2B5FAD071 /* Source Files */,
+				B23D3D88A94145339D1D94DF /* Header Files */,
+			);
+			name = thread;
+			sourceTree = "<group>";
+		};
+		CC7A89A8B7CA458FBB4A9C33 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				B38A490D3F36491688E5EBB9 /* CMake Rules */,
+				9C3EC6B9A57D4584AB636C1E /* /Volumes/Transcend/github/libcommon/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		D0CC4A8DD7E74AEE9087A342 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DA8E781C5D04E8795698FB8 /* common */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D33671B6D3F24150AD6D6378 /* strings */ = {
+			isa = PBXGroup;
+			children = (
+				67E00F7DA43143B48CF0FCA1 /* Source Files */,
+				8BE83CEEB32E4F7C95704732 /* Header Files */,
+			);
+			name = strings;
+			sourceTree = "<group>";
+		};
+		DFEDE12F171C48958C5F65F1 /* socket_server */ = {
+			isa = PBXGroup;
+			children = (
+				1721D20E0BBC41B3A862A94F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_epoll.h */,
+				E2872839ECC0423CBA17154D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_kqueue.h */,
+				AFDAA9E4A6824367AD205B3F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_poll.h */,
+				74C69C1F8FE5438892258A22 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_select.h */,
+				88BC1532325D440590D2754F /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.c */,
+				0E93B5325BCC440188D2697D /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.h */,
+			);
+			name = socket_server;
+			sourceTree = "<group>";
+		};
+		E3A9FDA4BDD54E368235092D /* 3rd */ = {
+			isa = PBXGroup;
+			children = (
+				B3EC37A4D939406CA727A89E /* jsoncpp */,
+				DFEDE12F171C48958C5F65F1 /* socket_server */,
+			);
+			name = 3rd;
+			sourceTree = "<group>";
+		};
+		E6F948D2E7094EEC8E69E9EC /* task */ = {
+			isa = PBXGroup;
+			children = (
+				AFCC21F053F14F0288E8F0BB /* Source Files */,
+				329BD2CD176545DFA3DE8004 /* Header Files */,
+			);
+			name = task;
+			sourceTree = "<group>";
+		};
+		F8DD0CF3DDB146109E683C7A /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		FCF54DC0742F4A9BB99FE287 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBBF499AD0AF430C852CFE40 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.cpp */,
+				0F4517CC17084C5A9DAFC07F /* /Volumes/Transcend/github/libcommon/src/network/block_socket.cpp */,
+				6C710359BE3C44AF976CA916 /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.cpp */,
+				24C88BD28FA747D68C6628DE /* /Volumes/Transcend/github/libcommon/src/network/socket_address.cpp */,
+				A8FEC583A45445119F1FB35F /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.cpp */,
+				2E28C63527564452A4B80350 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.cpp */,
+				1EB098444CC84CA492BA84B5 /* /Volumes/Transcend/github/libcommon/src/network/socketselect.cpp */,
+				11EBBAEB95B246BC9176F618 /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DDD95E97B20140D6B686F95E /* common */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 923E69A0EB1E4998B02CEE60 /* Build configuration list for PBXNativeTarget "common" */;
+			buildPhases = (
+				629B70244FE843BA8B3F7178 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FBBE739A2AFB4B7D8E05F43E /* PBXTargetDependency */,
+			);
+			name = common;
+			productName = common;
+			productReference = 4DA8E781C5D04E8795698FB8 /* common */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4566C92058F24A2BA6728AAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0900;
+			};
+			buildConfigurationList = 0216D05860424E15BA6FAB06 /* Build configuration list for PBXProject "common" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				535DAFCFF0C94C1A9C01C74C /* Debug */,
+				C5D3F61101314AF6B304EB99 /* Release */,
+				885A8672344247F195727AEA /* MinSizeRel */,
+				28D9D892D75342998B325204 /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = 7A40D057CC3E414C9F80D3E8;
+			projectDirPath = ../../;
+			projectRoot = "";
+			targets = (
+				3E939C9F540149858CD3A271 /* ALL_BUILD */,
+				E63CEF963E62414EA1158FF3 /* ZERO_CHECK */,
+				DDD95E97B20140D6B686F95E /* common */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C36014538C144B29D7675B2 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Volumes/Transcend/github/libcommon/ide/xcode -f /Volumes/Transcend/github/libcommon/ide/xcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E1788315148B4E389EFBF32F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		EA3CCE8EF35C489C85D4220A = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		FBDDF9AF062840F8B081F726 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Volumes/Transcend/github/libcommon/ide/xcode -f /Volumes/Transcend/github/libcommon/ide/xcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		629B70244FE843BA8B3F7178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60D274AA955245C386ADFD3F /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_reader.cpp */,
+				E7088000EF494D2099459A52 /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_value.cpp */,
+				B9A4D73678F44509B1D8201A /* /Volumes/Transcend/github/libcommon/3rd/jsoncpp/src/json_writer.cpp */,
+				60EDF892B0524AEAB15411B0 /* /Volumes/Transcend/github/libcommon/3rd/socket_server/socket_server.c */,
+				C5D4D1B0EF6C4092BB889D10 /* /Volumes/Transcend/github/libcommon/src/digest/base64.cpp */,
+				831D31DCCDB74241AF7BED87 /* /Volumes/Transcend/github/libcommon/src/digest/crc32.cpp */,
+				343CF586B6D849A38321DDE9 /* /Volumes/Transcend/github/libcommon/src/digest/md5.cpp */,
+				720A5746735D44538AF37699 /* /Volumes/Transcend/github/libcommon/src/digest/sha1.cpp */,
+				E44EC0D590D64952A02749F7 /* /Volumes/Transcend/github/libcommon/src/network/autobuffer.cpp */,
+				2079AD88E40D4960B4789AD8 /* /Volumes/Transcend/github/libcommon/src/network/block_socket.cpp */,
+				50725D89345045968839DA5D /* /Volumes/Transcend/github/libcommon/src/network/ip_addr.cpp */,
+				14518BB8366240A0A727F2CF /* /Volumes/Transcend/github/libcommon/src/network/socket_address.cpp */,
+				CA51CE1D611B48E588ECF179 /* /Volumes/Transcend/github/libcommon/src/network/socketbreaker.cpp */,
+				4DD2926F4B35437298606C35 /* /Volumes/Transcend/github/libcommon/src/network/socketpoll.cpp */,
+				1AD91F3039C24055BCF7576B /* /Volumes/Transcend/github/libcommon/src/network/socketselect.cpp */,
+				3868AF7031A946B8A145158C /* /Volumes/Transcend/github/libcommon/src/network/unix_socket.cpp */,
+				76053E4032F54FE4B499B1FE /* /Volumes/Transcend/github/libcommon/src/queue/block_queue.cpp */,
+				9614D242921D40698842AD35 /* /Volumes/Transcend/github/libcommon/src/queue/queue.cpp */,
+				4F125CD480F849C7870A6E5C /* /Volumes/Transcend/github/libcommon/src/string/stringencode.cpp */,
+				BF19D6031FE24B239D10539D /* /Volumes/Transcend/github/libcommon/src/string/stringprintf.cpp */,
+				A2D8E654C6F9488FB3EE4D67 /* /Volumes/Transcend/github/libcommon/src/string/stringutils.cpp */,
+				F43D8DE4E5C84FC38BBEE0B6 /* /Volumes/Transcend/github/libcommon/src/task/thread_notify.cpp */,
+				F1AD76318D324CA88EC0ECCF /* /Volumes/Transcend/github/libcommon/src/task/thread_queue.cpp */,
+				1894BD883E624AA3BAC833FC /* /Volumes/Transcend/github/libcommon/src/thread/lock.cpp */,
+				9B9191AFDC7A462ABA71A5B7 /* /Volumes/Transcend/github/libcommon/src/thread/thread.cpp */,
+				FA15EA9A61F3483281E9602E /* /Volumes/Transcend/github/libcommon/src/timer/time_format.cpp */,
+				6F0A2893DD94493882F4BBDF /* /Volumes/Transcend/github/libcommon/src/timer/timer.cpp */,
+				28D96B748C844222911AB1F5 /* /Volumes/Transcend/github/libcommon/src/util/bytebuffer.cpp */,
+				CD184C8D73704D779CB98621 /* /Volumes/Transcend/github/libcommon/src/util/json.cpp */,
+				86CF7548B52E4153A80D3097 /* /Volumes/Transcend/github/libcommon/src/util/log.cpp */,
+				63890B79A24E462D8E8AEBA2 /* /Volumes/Transcend/github/libcommon/src/util/util.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		100172F473A34123B4F06811 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDD95E97B20140D6B686F95E /* common */;
+			targetProxy = E2F7F6076FA6467B8AB9D050 /* PBXContainerItemProxy */;
+		};
+		52F3B9BC766A438CA15CCF29 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E63CEF963E62414EA1158FF3 /* ZERO_CHECK */;
+			targetProxy = 9910B43E26D54D3F98528669 /* PBXContainerItemProxy */;
+		};
+		FBBE739A2AFB4B7D8E05F43E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E63CEF963E62414EA1158FF3 /* ZERO_CHECK */;
+			targetProxy = 0D6D82DAA7DC4DFDA8DD61F2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		002797AF0ED4451A83A32EEC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		1F99515E7070432F97E06398 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/Transcend/github/libcommon/libs/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "       -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11 -DSIGSLOT_USE_POSIX_THREADS        -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		22C27C3FD41B4598AC38369B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		3BF782F06B704D67A9CE329A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/Transcend/github/libcommon/libs/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11 -DSIGSLOT_USE_POSIX_THREADS    -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include   ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		497B334A53724965886DF2E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode/build;
+			};
+			name = Release;
+		};
+		6319B49A1CA749DB8DDC5C6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		81CE04F1076B4E2E912FFF0A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode/build;
+			};
+			name = RelWithDebInfo;
+		};
+		857D69F15C084D1686682729 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9B8CDF1EE8674B21944025F9 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode/build;
+			};
+			name = MinSizeRel;
+		};
+		C42F52393D344E6E9B0A66DB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		CC2E9A7426B7405E87B9F82F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/Transcend/github/libcommon/libs/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include    ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11 -DSIGSLOT_USE_POSIX_THREADS     -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include  -g  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		D48B0245F6224AC0A5B18DF4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		D565608003E54069B0BDB0B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode/build;
+			};
+			name = Debug;
+		};
+		D8EBA24167E2432C9DD7DD98 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Volumes/Transcend/github/libcommon/libs/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include    ";
+				OTHER_CPLUSPLUSFLAGS = "-DWEBRTC_POSIX    -DUSE_GNUTLS -Wall     -D_CONSOLE -pipe -Wno-invalid-offsetof -fcheck-new -D_REENTRANT -std=c++11 -DSIGSLOT_USE_POSIX_THREADS     -DNDEBUG -I/Volumes/Transcend/github/libcommon/. -I/Volumes/Transcend/github/libcommon/src -I/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include  -g  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = common;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		DD54735E60184FA8AE1986D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		ED803082B2E4446E8099B21F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Volumes/Transcend/github/libcommon/.,/Volumes/Transcend/github/libcommon/src,/Volumes/Transcend/github/libcommon/3rd/jsoncpp/include);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Volumes/Transcend/github/libcommon/ide/xcode;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0216D05860424E15BA6FAB06 /* Build configuration list for PBXProject "common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D565608003E54069B0BDB0B9 /* Debug */,
+				497B334A53724965886DF2E9 /* Release */,
+				9B8CDF1EE8674B21944025F9 /* MinSizeRel */,
+				81CE04F1076B4E2E912FFF0A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		923E69A0EB1E4998B02CEE60 /* Build configuration list for PBXNativeTarget "common" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BF782F06B704D67A9CE329A /* Debug */,
+				CC2E9A7426B7405E87B9F82F /* Release */,
+				D8EBA24167E2432C9DD7DD98 /* MinSizeRel */,
+				1F99515E7070432F97E06398 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		95947645172647FABC668663 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6319B49A1CA749DB8DDC5C6F /* Debug */,
+				ED803082B2E4446E8099B21F /* Release */,
+				002797AF0ED4451A83A32EEC /* MinSizeRel */,
+				857D69F15C084D1686682729 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DE246DE9F4C54474B2E2F519 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD54735E60184FA8AE1986D7 /* Debug */,
+				22C27C3FD41B4598AC38369B /* Release */,
+				C42F52393D344E6E9B0A66DB /* MinSizeRel */,
+				D48B0245F6224AC0A5B18DF4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4566C92058F24A2BA6728AAA /* Project object */;
+}
