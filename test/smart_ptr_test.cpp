@@ -1,6 +1,6 @@
 #include <iostream>
 #include <memory>
-#include "util/smart_ptr.h"
+#include "smart_ptr/smart_ptr.h"
 using namespace libcommon;
 
 // g++ smart_ptr_test.cpp -I../include/ -L../libs/ -lcommon -o smart_ptr_test.out

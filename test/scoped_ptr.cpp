@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-#include "util/scoped_ptr.h"
+#include "smart_ptr/scoped_ptr.h"
 
 // g++ scoped_ptr.cpp -I../include/ -L../libs/ -lcommon -o scoped_ptr.out
 // valgrind --tool=memcheck --leak-check=full ./scoped_ptr.out

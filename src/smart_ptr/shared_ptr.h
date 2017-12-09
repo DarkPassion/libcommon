@@ -14,7 +14,7 @@
 
 // can be replaced by other error mechanism
 #include <cassert>
-#include "util/ref_count.h"
+#include "smart_ptr/ref_count.h"
 #define SHARED_ASSERT(x)    assert(x)
 
 

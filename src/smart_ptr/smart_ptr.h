@@ -23,7 +23,7 @@
 
 #ifndef __SMART_PTR_H__
 #define __SMART_PTR_H__
-#include "util/ref_count.h"
+#include "smart_ptr/ref_count.h"
 
 namespace libcommon {
 
