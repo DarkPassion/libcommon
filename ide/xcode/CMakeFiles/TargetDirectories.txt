@@ -1,3 +1,0 @@
-/Users/zhangzhifan/github/libcommon/ide/xcode/CMakeFiles/common.dir
-/Users/zhangzhifan/github/libcommon/ide/xcode/CMakeFiles/ALL_BUILD.dir
-/Users/zhangzhifan/github/libcommon/ide/xcode/CMakeFiles/ZERO_CHECK.dir

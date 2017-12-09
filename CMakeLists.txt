@@ -25,6 +25,10 @@ file(GLOB THREAD_INCS src/thread/*.h)
 file(GLOB UTIL_SRCS src/util/*.cpp)
 file(GLOB UTIL_INCS src/util/*.h src/util/*.hpp)
 
+file(GLOB SMART_PTR_SRCS src/smart_ptr/*.cpp)
+file(GLOB SMART_PTR_INCS src/smart_ptr/*.h)
+
+
 file(GLOB QUEUE_SRCS src/queue/*.cpp)
 file(GLOB QUEUE_INCS src/queue/*.h)
 
@@ -65,6 +69,9 @@ source_group("thread\\Header Files" FILES ${THREAD_INCS})
 source_group("util\\Source Files" FILES ${UTIL_SRCS})
 source_group("util\\Header Files" FILES ${UTIL_INCS})
 
+source_group("smart_ptr\\Source Files" FILES ${SMART_PTR_SRCS})
+source_group("smart_ptr\\Header Files" FILES ${SMART_PTR_INCS})
+
 source_group("queue\\Source Files" FILES ${QUEUE_SRCS})
 source_group("queue\\Header Files" FILES ${QUEUE_INCS})
 
@@ -92,6 +99,7 @@ set (LIB_SRCS
     ${NETWORK_SRCS}
     ${JSON_CPP_SRCS}
     ${SOCKET_SERVER_SRCS}
+    ${SMART_PTR_SRCS}
 )
 
 set(LIB_HEADERS
@@ -105,6 +113,7 @@ set(LIB_HEADERS
     ${NETWORK_INCS}
     ${JSON_CPP_INCS}
     ${SOCKET_SERVER_INCS}
+    ${SMART_PTR_INCS}
 )
 
 
