@@ -78,13 +78,15 @@ http_client:
 smart_ptr:
 	@($(CC) -I$(INC_PATH) $(CFLAGS)  smart_ptr_test.cpp $(LIB_PATH) -o smart_ptr_test.out)
 
+weak_ptr:
+	@($(CC) -I$(INC_PATH) $(CFLAGS)  weak_ptr_test.cpp $(LIB_PATH) -o weak_ptr_test.out)
 
 
 
 
 all:  block_queue byte_buffer digest queue scoped_ptr task_test \
 	thread timer util json dns_detect gfw_dns_resolver ip_addr ip_server signal_test thread_queue \
-	http_server http_client smart_ptr
+	http_server http_client smart_ptr weak_ptr
 
 clean:
 	@($(RM) *.a *.so *.o *.out)
