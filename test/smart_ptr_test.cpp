@@ -1,209 +1,115 @@
 #include <iostream>
-#include <memory>
 #include "smart_ptr/smart_ptr.h"
-using namespace libcommon;
-
+using namespace std;
 // g++ smart_ptr_test.cpp -I../include/ -L../libs/ -lcommon -o smart_ptr_test.out
 
-class CBase
+
+class CData
 {
-public:
-    CBase() : data0(0)
-    {
-        std::cout << "CBase()" << std::endl;
-    }
+    public:
+        CData()
+        {
+            p1 = 10;
+            p2 = 20;
+        }
 
-    virtual ~CBase()
-    {
-        std::cout << "~CBase()" << std::endl;
-    }
+        ~CData()
+        {
+            cout << "~CData()" << endl;
+        }
 
-    int data0;
-private:
+    public:
+
+        void func()
+        {
+            cout << "func -- " << endl;
+            cout << " p1 = " << p1 << " p2 = " << p2 << endl;
+        }
+
+        void set(int p1, int p2)
+        {
+            this->p1 = p1;
+            this->p2 = p2;
+        }
+
+    private:
+        int p1;
+        int p2;
 };
 
-class CDevide : public CBase
+
+class CData2
 {
-public:
-    CDevide() : data2(3)
+    public:
+        CData2(libcommon::shared_ptr<CData> sh)
+        {
+            _ptr = sh;
+        }
+
+        ~CData2()
+        {
+            cout << "~CData2() " << endl;
+        }
+
+        void invoke()
+        {
+            cout << "CData2 - invoke" << endl;
+            if (_ptr.expired()) {
+                cout << "shared_ptr has expired " << endl;
+            } else {
+                libcommon::shared_ptr<CData> sh = _ptr.lock();
+                sh->func();
+            }
+        }
+
+
+    private:
+        libcommon::weak_ptr<CData> _ptr;
+};
+
+class CData3 : public libcommon::enable_shared_from_this<CData3>
+{
+    public:
+    CData3() : p1 ( 10 )
     {
-        std::cout << "CDevide()" << std::endl;
+
     }
 
-    ~CDevide()
+    ~CData3()
     {
-        std::cout << "~CDevide()" << std::endl;
+        cout << "~CData3() -" << endl;
     }
 
-    int data2;
-private:
+    private:
+    int p1;
 };
 
 
-#ifndef CDECL
-#if defined(WIN32)
-#define CDECL           _cdecl
-#else
-#define CDECL
-#endif // defined(WIN32)
-#endif // !CDECL
-
-int test1(void)
+void test_func_data0()
 {
-    strong_ptr<CBase> spBase(new CDevide());
+    libcommon::shared_ptr<CData> sc(new CData());
+    sc->func();
 
+    libcommon::shared_ptr<CData2> sc2(new CData2(sc));
+    sc2->invoke();
+
+    sc.reset();
+
+    sc2->invoke();
+
+    libcommon::shared_ptr<CData3> sc3(new CData3());
+    libcommon::weak_ptr<CData3> wc3 = sc3->shared_from_this();
+    sc3.reset();
+    if (wc3.expired())
     {
-        strong_ptr<CDevide> spDummy(spBase);
-
-        weak_ptr<CBase> spW1(spBase);
-        spW1.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CDevide> spW2(spBase);
-        spW2.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CBase> spW3(spW1);
-        spW3.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CDevide> spW4(spW1);
-        spW4.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CBase> spW5;
-        spW5 = spBase;
-        spW5.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CDevide> spW6;
-        spW6 = spBase;
-        spW6.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CBase> spW7;
-        spW7 = spW1;
-        spW7.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-
-        weak_ptr<CDevide> spW8;
-        spW8 = spW1;
-        spW8.lock()->data0++;
-        std::cout << spDummy->data0 << std::endl;
-    }
-
-    {
-        weak_ptr<CBase> wpDummy(spBase);
-
-        strong_ptr<CBase> sp1(spBase);
-        sp1->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CDevide> sp2(spBase);
-        sp2->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CBase> sp3(wpDummy);
-        sp3->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CDevide> sp4(wpDummy);
-        sp4->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CBase> sp5;
-        sp5 = spBase;
-        sp5->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CDevide> sp6;
-        sp6 = spBase;
-        sp6->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CBase> sp7;
-        sp7 = wpDummy;
-        sp7->data0++;
-        std::cout << sp1->data0 << std::endl;
-
-        strong_ptr<CDevide> sp8;
-        sp8 = wpDummy;
-        sp8->data0++;
-        std::cout << sp1->data0 << std::endl;
-    }
-
-    return 0;
-}
-
-#include <memory>
-void test2(void)
-{
-    CBase * pObj = new CDevide();
-#if 0
-    std::shared_ptr<CBase> sp1;
-    sp1 = (pObj);
-    std::weak_ptr<CBase> wsp;
-    wsp = (sp1);
-#else
-    strong_ptr<CBase> sp1;
-    sp1.reset(pObj);
-    weak_ptr<CDevide> wsp;
-    wsp.reset(sp1);
-
-    if (sp1 == wsp.lock()) {
-        std::cout << "Equal" <<std::endl;
-    }
-
-    sp1.reset();
-
-    if (sp1.get() == NULL) {
-        std::cout << "sp1 == NULL" << std::endl;
-    }
-
-    if (wsp.expired()) {
-        std::cout << "wsp expired " << std::endl;
-    }
-
-
-    if (sp1 == wsp.lock()) {
-        std::cout << "== Equal" <<std::endl;
-    }
-
-#endif
-}
-
-void test3()
-{
-    const int CI = 10;
-    strong_array<CDevide> sp1;
-    CDevide* pobj = new CDevide[CI];
-    sp1.reset(pobj);
-
-    for (int i = 0; i < CI; i++) {
-        sp1[i].data0 = i + 1;
-
-    }
-
-    for (int i = 0; i < CI; i++) {
-        std::cout << " spi " << i << " data0 "<< sp1[i].data0 << std::endl;
+        cout << "wc3->expired() true" << endl;
     }
 }
 
 
-void test4()
+
+int main()
 {
-
-
-}
-
-
-
-
-int CDECL main(void)
-{
-    test1();
-    test2();
-    test3();
-    test4();
+    test_func_data0();
     return 0;
 }
