@@ -390,7 +390,8 @@ int main()
 ```
 
 ###Smart Pointer
-```
+```C++
+
 #include <iostream>
 #include "smart_ptr/smart_ptr.h"
 using namespace std;
