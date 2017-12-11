@@ -389,7 +389,7 @@ int main()
 }
 ```
 
-###Smart Pointer
+### Smart Pointer
 ```C++
 
 #include <iostream>
